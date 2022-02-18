@@ -106,55 +106,150 @@
                     <div class="row mt-4 pl-3">
                         <nav class="w-100">
                             <div class="nav nav-tabs" id="product-tab" role="tablist">
-                                <a class="nav-item nav-link active" id="product-desc-tab" data-toggle="tab"
-                                    href="#product-desc" role="tab" aria-controls="product-desc"
-                                    aria-selected="true">Description</a>
-                                <a class="nav-item nav-link" id="product-comments-tab" data-toggle="tab"
-                                    href="#product-comments" role="tab" aria-controls="product-comments"
-                                    aria-selected="false">Comments</a>
-                                <a class="nav-item nav-link" id="product-rating-tab" data-toggle="tab"
-                                    href="#product-rating" role="tab" aria-controls="product-rating"
-                                    aria-selected="false">Rating</a>
+                                <a
+                                  class="nav-item nav-link active"
+                                  id="activity-analysis-tab"
+                                  data-toggle="tab"
+                                  href="#activityAnalysis"
+                                  role="tab"
+                                  aria-controls="activity-analysis"
+                                  aria-selected="true"
+                                >
+                                  TODAY'S ACTIVITY ANALYSIS <i class="fa fa-question-circle text-muted mx-3"></i>
+                                </a>
+                                <a
+                                  class="nav-item nav-link"
+                                  id="outstanding-invoice-tab"
+                                  data-toggle="tab"
+                                  href="#outstanding-invoice"
+                                  role="tab"
+                                  aria-controls="outstanding-invoice"
+                                  aria-selected="true">
+                                  OUTSTANDING INVOICE STATUS <i class="fa fa-question-circle text-muted mx-3"></i>
+                                </a>
                             </div>
                         </nav>
-                        <div class="tab-content p-3" id="nav-tabContent">
-                            <div class="tab-pane fade show active" id="product-desc" role="tabpanel"
-                                aria-labelledby="product-desc-tab"> Lorem ipsum dolor sit amet, consectetur adipiscing
-                                elit. Morbi vitae condimentum erat. Vestibulum ante ipsum primis in faucibus orci luctus
-                                et ultrices posuere cubilia Curae; Sed posuere, purus at efficitur hendrerit, augue elit
-                                lacinia arcu, a eleifend sem elit et nunc. Sed rutrum vestibulum est, sit amet cursus
-                                dolor fermentum vel. Suspendisse mi nibh, congue et ante et, commodo mattis lacus. Duis
-                                varius finibus purus sed venenatis. Vivamus varius metus quam, id dapibus velit mattis
-                                eu. Praesent et semper risus. Vestibulum erat erat, condimentum at elit at, bibendum
-                                placerat orci. Nullam gravida velit mauris, in pellentesque urna pellentesque viverra.
-                                Nullam non pellentesque justo, et ultricies neque. Praesent vel metus rutrum, tempus
-                                erat a, rutrum ante. Quisque interdum efficitur nunc vitae consectetur. Suspendisse
-                                venenatis, tortor non convallis interdum, urna mi molestie eros, vel tempor justo lacus
-                                ac justo. Fusce id enim a erat fringilla sollicitudin ultrices vel metus. </div>
-                            <div class="tab-pane fade" id="product-comments" role="tabpanel"
-                                aria-labelledby="product-comments-tab"> Vivamus rhoncus nisl sed venenatis luctus. Sed
-                                condimentum risus ut tortor feugiat laoreet. Suspendisse potenti. Donec et finibus sem,
-                                ut commodo lectus. Cras eget neque dignissim, placerat orci interdum, venenatis odio.
-                                Nulla turpis elit, consequat eu eros ac, consectetur fringilla urna. Duis gravida ex
-                                pulvinar mauris ornare, eget porttitor enim vulputate. Mauris hendrerit, massa nec
-                                aliquam cursus, ex elit euismod lorem, vehicula rhoncus nisl dui sit amet eros. Nulla
-                                turpis lorem, dignissim a sapien eget, ultrices venenatis dolor. Curabitur vel turpis at
-                                magna elementum hendrerit vel id dui. Curabitur a ex ullamcorper, ornare velit vel,
-                                tincidunt ipsum. </div>
-                            <div class="tab-pane fade" id="product-rating" role="tabpanel"
-                                aria-labelledby="product-rating-tab"> Cras ut ipsum ornare, aliquam ipsum non, posuere
-                                elit. In hac habitasse platea dictumst. Aenean elementum leo augue, id fermentum risus
-                                efficitur vel. Nulla iaculis malesuada scelerisque. Praesent vel ipsum felis. Ut
-                                molestie, purus aliquam placerat sollicitudin, mi ligula euismod neque, non bibendum
-                                nibh neque et erat. Etiam dignissim aliquam ligula, aliquet feugiat nibh rhoncus ut.
-                                Aliquam efficitur lacinia lacinia. Morbi ac molestie lectus, vitae hendrerit nisl.
-                                Nullam metus odio, malesuada in vehicula at, consectetur nec justo. Quisque suscipit
-                                odio velit, at accumsan urna vestibulum a. Proin dictum, urna ut varius consectetur,
-                                sapien justo porta lectus, at mollis nisi orci et nulla. Donec pellentesque tortor vel
-                                nisl commodo ullamcorper. Donec varius massa at semper posuere. Integer finibus orci
-                                vitae vehicula placerat. </div>
+                        <div
+                          class="tab-content p-3"
+                          id="nav-tabContent"
+                        >
+                          <div
+                              class="tab-pane fade show active"
+                              id="activityAnalysis"
+                              role="tabpanel"
+                              aria-labelledby="product-desc-tab"
+                          >
+                            <canvas
+                                        baseChart
+                                        [data]="barChartData"
+                                        [options]="barChartOptions"
+                                        [type]="barChartType"
+                                      >
+                                      </canvas>
+                            <div class="row">
+                              <div class="col-12 p-3">
+                                <div class="card border-0">
+                                  <table class="table table-striped">
+                                    <thead>
+                                    <tr>
+                                      <th></th>
+                                      <th><i class="fas fa-circle color-Unapproved"></i> Unapproved</th>
+                                      <th><i class="fas fa-circle color-Approved"></i> Approved</th>
+                                      <th><i class="fas fa-circle color-SalePending"></i> Sale Pending</th>
+                                      <th><i class="fas fa-circle color-Sold"></i> Sold</th>
+                                      <th> Total</th>
+                                    </tr>
+                                    <tr>
+                                      <th>Consolidated</th>
+                                      <th>$38,755.85</th>
+                                      <th>$49,241,059.71</th>
+                                      <th>$9,928,810.70</th>
+                                      <th>$83,629,099.52 </th>
+                                      <th>$142,837,725.78</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                      <th>GBP</th>
+                                      <td>£4,265.33 </td>
+                                      <td>£9,242,615.55 </td>
+                                      <td>£0.00 </td>
+                                      <td>£37,533,992.37</td>
+                                      <td>£46,780,873.25 </td>
+                                    </tr>
+                                    <tr>
+                                      <th>USD</th>
+                                      <td>$13,054.51 </td>
+                                      <td>$21,815,490.11 </td>
+                                      <td>$0.00 </td>
+                                      <td>$0.0</td>
+                                      <td>$21,828,544.62 </td>
+                                    </tr>
+                                    <tr>
+                                      <th>SGD</th>
+                                      <td>$0.00 </td>
+                                      <td>$3,467,920.47 </td>
+                                      <td>$2,180,094.39  </td>
+                                      <td>$12,772,765.92</td>
+                                      <td>$18,420,780.78 </td>
+                                    </tr>
+                                    <tr>
+                                      <th>EUR</th>
+                                      <td>$0.00 </td>
+                                      <td>€6,612,670.00 </td>
+                                      <td>€5,009,914.48  </td>
+                                      <td>€8,734,225.47</td>
+                                      <td>€20,356,809.95 </td>
+                                    </tr>
+                                    <tr>
+                                      <th>AUD</th>
+                                      <td>$0.00 </td>
+                                      <td>$376,514.55 </td>
+                                      <td>$0.00 </td>
+                                      <td>$0.00</td>
+                                      <td>$376,514.5 </td>
+                                    </tr>
+                                    <tr>
+                                      <th>CAD</th>
+                                      <td>$0.00 </td>
+                                      <td>$85,513.96 </td>
+                                      <td>$0.00 </td>
+                                      <td>$0.00</td>
+                                      <td>$85,513.96 </td>
+                                    </tr>
+                                    <tr>
+                                      <th>AED</th>
+                                      <td>AED16,876.13 </td>
+                                      <td>AED62,369.57 </td>
+                                      <td>AED0.00 </td>
+                                      <td>AED0.00 	</td>
+                                      <td>AED79,245.70 </td>
+                                    </tr>
+                                    </tbody>
+                                    <tfoot>
+                                    <tr>
+                                      <td colspan="6" class="text-center">
+                                        <button class="btn btn-outline-primary btn-lg">Hide Currencies(7)</button>
+                                      </td>
+                                    </tr>
+                                    </tfoot>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="tab-pane fade"
+                            id="outstanding-invoice"
+                            role="tabpanel"
+                            aria-labelledby="outstanding-invoice-tab">
+                            <app-char-line-horizontal [dataset]="datasets"></app-char-line-horizontal>
+                          </div>
+
                         </div>
+
                     </div>
+
                 </div>
             </div>
         </div>

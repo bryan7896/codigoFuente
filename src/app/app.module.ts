@@ -5,16 +5,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CashflowComponent } from './page/cashflow/cashflow.component';
 import { DashboardComponent } from './page/dashboard/dashboard.component';
+import { PaymentNotificationComponent } from './page/payment-notification/payment-notification.component';
+import {NgChartsModule} from "ng2-charts";
+import { CharLineHorizontalComponent } from './page/graphics/char-line-horizontal/char-line-horizontal.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     CashflowComponent,
-    DashboardComponent
+    DashboardComponent,
+    PaymentNotificationComponent,
+    CharLineHorizontalComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
