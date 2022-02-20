@@ -163,7 +163,7 @@
           <!-- Add icons to the links using the .nav-icon class
                  with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
+            <a routerLink="/dashboard" class="nav-link">
               <i class="nav-icon fas fa-home"></i>
               <p>
                 Dashboard
@@ -229,7 +229,7 @@
           </li>
           <li class="nav-header">OPERATIONS</li>
           <li class="nav-item">
-            <a href="pages/calendar.html" class="nav-link">
+            <a routerLink="/LedgerUploads" class="nav-link">
               <i class="nav-icon fas fa-upload"></i>
               <p>
                 Ledger Uploads
@@ -237,7 +237,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="pages/gallery.html" class="nav-link">
+            <a routerLink="/alersAndMessagesComponent" class="nav-link">
               <i class="nav-icon far fa-envelope"></i>
               <p>
                 Alerts and Messages
@@ -309,9 +309,9 @@
   </aside>
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <div class="content-wrapper mb-2">
       <div class="container-fluid">
-        <router-outlet></router-outlet>
+          <router-outlet></router-outlet>
       </div>
   </div>
 

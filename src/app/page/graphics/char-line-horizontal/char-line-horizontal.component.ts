@@ -37,7 +37,7 @@ export class CharLineHorizontalComponent implements OnInit {
   public barChartLabels: string[] = [ '' ];
   public barChartType: ChartType = 'bar';
 
-  @Input('dataset') datasets = [];
+  @Input('dataset') datasets: any = [];
 
 
   public barChartData: ChartData<'bar'> = {
