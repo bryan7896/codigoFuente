@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AlersAndMessagesComponent } from './page/alers-and-messages/alers-and-messages.component';
+import { CalendarComponent } from './page/calendar/calendar.component';
 import { CashflowComponent } from './page/cashflow/cashflow.component';
 import { DashboardComponent } from './page/dashboard/dashboard.component';
 import { LedgerUploadsComponent } from './page/ledger-uploads/ledger-uploads.component';
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: 'payment-notification', component: PaymentNotificationComponent },
   
   { path: 'LedgerUploads', component: LedgerUploadsComponent },
-  { path: 'alersAndMessagesComponent', component: AlersAndMessagesComponent },
+  { path: 'alersAndMessages', component: AlersAndMessagesComponent },
+  { path: 'calendar', component: CalendarComponent },
   { path: '**', redirectTo: 'dashboard' }
 ];
 

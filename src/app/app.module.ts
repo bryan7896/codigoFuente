@@ -10,6 +10,7 @@ import {NgChartsModule} from "ng2-charts";
 import { CharLineHorizontalComponent } from './page/graphics/char-line-horizontal/char-line-horizontal.component';
 import { LedgerUploadsComponent } from './page/ledger-uploads/ledger-uploads.component';
 import { AlersAndMessagesComponent } from './page/alers-and-messages/alers-and-messages.component';
+import { CalendarComponent } from './page/calendar/calendar.component';
 
 
 
@@ -21,7 +22,8 @@ import { AlersAndMessagesComponent } from './page/alers-and-messages/alers-and-m
     PaymentNotificationComponent,
     CharLineHorizontalComponent,
     LedgerUploadsComponent,
-    AlersAndMessagesComponent
+    AlersAndMessagesComponent,
+    CalendarComponent
   ],
   imports: [
     BrowserModule,
