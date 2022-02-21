@@ -14,6 +14,7 @@ import { CalendarComponent } from './page/calendar/calendar.component';
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { InterestRatesComponent } from './page/interest-rates/interest-rates.component';
 
 
 
@@ -26,7 +27,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CharLineHorizontalComponent,
     LedgerUploadsComponent,
     AlersAndMessagesComponent,
-    CalendarComponent
+    CalendarComponent,
+    InterestRatesComponent
   ],
   imports: [
     BrowserAnimationsModule,
