@@ -11,6 +11,9 @@ import { CharLineHorizontalComponent } from './page/graphics/char-line-horizonta
 import { LedgerUploadsComponent } from './page/ledger-uploads/ledger-uploads.component';
 import { AlersAndMessagesComponent } from './page/alers-and-messages/alers-and-messages.component';
 import { CalendarComponent } from './page/calendar/calendar.component';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -26,9 +29,11 @@ import { CalendarComponent } from './page/calendar/calendar.component';
     CalendarComponent
   ],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule,
     AppRoutingModule,
-    NgChartsModule
+    NgChartsModule,
+    CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory })
   ],
   providers: [],
   bootstrap: [AppComponent]
