@@ -8,6 +8,7 @@ import { DashboardComponent } from './page/dashboard/dashboard.component';
 import { PaymentNotificationComponent } from './page/payment-notification/payment-notification.component';
 import {NgChartsModule} from "ng2-charts";
 import { CharLineHorizontalComponent } from './page/graphics/char-line-horizontal/char-line-horizontal.component';
+import { WeekPaymentForecastGraphicComponent } from './page/graphics/week-payment-forecast-graphic/week-payment-forecast-graphic.component';
 
 
 
@@ -17,7 +18,8 @@ import { CharLineHorizontalComponent } from './page/graphics/char-line-horizonta
     CashflowComponent,
     DashboardComponent,
     PaymentNotificationComponent,
-    CharLineHorizontalComponent
+    CharLineHorizontalComponent,
+    WeekPaymentForecastGraphicComponent
   ],
   imports: [
     BrowserModule,

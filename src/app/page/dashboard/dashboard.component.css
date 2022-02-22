@@ -4,15 +4,50 @@ canvas{
 }
 .color-Unapproved{
   color:#D0021B;
+  background-color: #D0021B;
 }
 
 .color-Approved{
   color:#60C3AD;
+  background-color: #60C3AD;
 }
 .color-SalePending{
   color:#FF8100;
+  background-color: #FF8100;
 }
 
 .color-Sold{
   color:#6C4EFA;
+  background-color: #6C4EFA;
 }
+
+.progress{
+  height: 5rem;
+  border-radius: 5px;
+}
+
+.color-sold-text{color:#6C4EFA;}
+
+.color-approved-text{color:#60C3AD;}
+
+.color-deferred-text{color:#2F71B2;}
+
+.text1_2rem {font-size: 1.2rem;}
+
+.color-sold-bg{background-color:#6C4EFA;}
+
+.color-approved-bg{background-color:#60C3AD;}
+
+.color-deferred-bg{background-color:#2F71B2;}
+th{
+  color:#6C4EFA;
+}
+/*
+th{
+  vertical-align: middle;
+  text-align: start;
+}
+tr{
+  text-align: end;
+}
+*/

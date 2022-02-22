@@ -1,4 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, ViewChild} from '@angular/core';
+import {BaseChartDirective} from "ng2-charts";
 import {ChartConfiguration, ChartData, ChartType} from "chart.js";
 
 @Component({
@@ -6,7 +7,12 @@ import {ChartConfiguration, ChartData, ChartType} from "chart.js";
   templateUrl: './char-line-horizontal.component.html',
   styleUrls: ['./char-line-horizontal.component.css']
 })
-export class CharLineHorizontalComponent implements OnInit {
+export class CharLineHorizontalComponent{
+  @Input('barChartData') barChartData: ChartData<'bar'> = {datasets: [], labels: []};
+
+  constructor() {}
+
+  @ViewChild(BaseChartDirective) chart: BaseChartDirective | undefined;
   public barChartOptions: ChartConfiguration['options'] = {
     elements: {
       line: {
@@ -37,16 +43,14 @@ export class CharLineHorizontalComponent implements OnInit {
   public barChartLabels: string[] = [ '' ];
   public barChartType: ChartType = 'bar';
 
-  @Input('dataset') datasets = [];
 
 
-  public barChartData: ChartData<'bar'> = {
-    labels: this.barChartLabels,
-    datasets: this.datasets
-  };
-  constructor() { }
 
-  ngOnInit(): void {
-  }
+
+
+
+
+
+
 
 }

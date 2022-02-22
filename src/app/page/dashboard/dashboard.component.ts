@@ -39,15 +39,9 @@ export class DashboardComponent implements OnInit {
 
   public barChartLabels: string[] = [ '' ];
   public barChartType: ChartType = 'bar';
- public datasets= [
-    { data: [ Number(38755.85)  ], label: 'Unapproved', backgroundColor: '#D0021B'},
-    { data: [ Number(49241059.71) ], label: 'Approved',backgroundColor: '#60C3AD' },
-    { data: [ Number(9928810.70 ) ], label: 'Sale Pending',backgroundColor: '#FF8100' },
-    { data: [ Number(83629099.52)  ], label: 'Sold',backgroundColor: '#6C4EFA' },
-  ]
 
   public barChartData: ChartData<'bar'> = {
-    labels: this.barChartLabels,
+    labels: [''],
     datasets: [
       { data: [ Number(38755.85)  ], label: 'Unapproved', backgroundColor: '#D0021B'},
       { data: [ Number(49241059.71) ], label: 'Approved',backgroundColor: '#60C3AD' },
@@ -56,9 +50,21 @@ export class DashboardComponent implements OnInit {
     ]
   };
 
-  constructor() { }
+  public barChartData2: ChartData<'bar'> = {
+    labels: [''],
+    datasets: [
+      { data: [ Number(32657.13)  ], label: 'Unapproved', backgroundColor: '#D0021B'},
+      { data: [ Number(40490876.03) ], label: 'Approved',backgroundColor: '#60C3AD' },
+      { data: [ Number(25610203.94  ) ], label: 'Sale Pending',backgroundColor: '#FF8100' },
+      { data: [ Number(91110662.39)  ], label: 'Sold',backgroundColor: '#6C4EFA' },
+    ]
+  };
+  constructor(
+
+  ) { }
 
   ngOnInit(): void {
+
   }
 
 }
