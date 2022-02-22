@@ -1,0 +1,14 @@
+.color-Unapproved {
+    color: #d0021b;
+}
+
+.color-Approved {
+    color: #60c3ad;
+}
+.color-SalePending {
+    color: #ff8100;
+}
+
+.color-Sold {
+    color: #6c4efa;
+}

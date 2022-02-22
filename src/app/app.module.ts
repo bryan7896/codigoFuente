@@ -9,6 +9,13 @@ import { PaymentNotificationComponent } from './page/payment-notification/paymen
 import {NgChartsModule} from "ng2-charts";
 import { CharLineHorizontalComponent } from './page/graphics/char-line-horizontal/char-line-horizontal.component';
 import { WeekPaymentForecastGraphicComponent } from './page/graphics/week-payment-forecast-graphic/week-payment-forecast-graphic.component';
+import { LedgerUploadsComponent } from './page/ledger-uploads/ledger-uploads.component';
+import { AlersAndMessagesComponent } from './page/alers-and-messages/alers-and-messages.component';
+import { CalendarComponent } from './page/calendar/calendar.component';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { InterestRatesComponent } from './page/interest-rates/interest-rates.component';
 
 
 
@@ -19,12 +26,18 @@ import { WeekPaymentForecastGraphicComponent } from './page/graphics/week-paymen
     DashboardComponent,
     PaymentNotificationComponent,
     CharLineHorizontalComponent,
-    WeekPaymentForecastGraphicComponent
+    WeekPaymentForecastGraphicComponent,
+    LedgerUploadsComponent,
+    AlersAndMessagesComponent,
+    CalendarComponent,
+    InterestRatesComponent
   ],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule,
     AppRoutingModule,
-    NgChartsModule
+    NgChartsModule,
+    CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory })
   ],
   providers: [],
   bootstrap: [AppComponent]

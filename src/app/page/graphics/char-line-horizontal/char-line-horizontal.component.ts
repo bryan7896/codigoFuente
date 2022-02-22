@@ -43,6 +43,7 @@ export class CharLineHorizontalComponent{
   public barChartLabels: string[] = [ '' ];
   public barChartType: ChartType = 'bar';
 
+  @Input('dataset') datasets: any = [];
 
 
 
