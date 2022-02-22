@@ -39,15 +39,5 @@ canvas{
 .color-approved-bg{background-color:#60C3AD;}
 
 .color-deferred-bg{background-color:#2F71B2;}
-th{
-  color:#6C4EFA;
-}
-/*
-th{
-  vertical-align: middle;
-  text-align: start;
-}
-tr{
-  text-align: end;
-}
-*/
+th{ color:#6C4EFA;}
+

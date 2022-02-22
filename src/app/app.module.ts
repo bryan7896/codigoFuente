@@ -16,6 +16,11 @@ import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InterestRatesComponent } from './page/interest-rates/interest-rates.component';
+import { AdvancePaymentRequestsComponent } from './page/advance-payment-requests/advance-payment-requests.component';
+import { PaymentExtensionRequestsComponent } from './page/payment-extension-requests/payment-extension-requests.component';
+import { InvoiceComponent } from './page/invoice/invoice.component';
+import { CreditNotesComponent } from './page/credit-notes/credit-notes.component';
+import { ReportComponent } from './page/report/report.component';
 
 
 
@@ -30,7 +35,12 @@ import { InterestRatesComponent } from './page/interest-rates/interest-rates.com
     LedgerUploadsComponent,
     AlersAndMessagesComponent,
     CalendarComponent,
-    InterestRatesComponent
+    InterestRatesComponent,
+    AdvancePaymentRequestsComponent,
+    PaymentExtensionRequestsComponent,
+    InvoiceComponent,
+    CreditNotesComponent,
+    ReportComponent
   ],
   imports: [
     BrowserAnimationsModule,
