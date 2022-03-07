@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="582px" height="212px" viewBox="0 0 582 212" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>Mask Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="0.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0928696784 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M580.889444,208.233975 C580.616518,209.01351 579.869434,209.573188 578.999515,209.573188 L3.00048504,209.573188 C1.89564766,209.573188 1,208.669017 1,207.581289 L1,-3.01980663e-14 L67.3638476,17.2448337 L104.043501,36.5464075 L139.537074,37.3371279 L162.738943,46.3726632 L210.475355,66.1184619 L235.60516,64.1416609 L267.842564,79.4940749 L296.130809,87.7877546 L332.810462,88.9738352 L339.824774,102.398313 L377.290706,110.643128 L400.541439,131.335126 L443.142611,132.521206 L483.09176,150.196917 L531.565586,183.713689 L569.284726,192.607072 L580.889444,208.233975 Z" id="Mask-Copy" fill="#FFFFFF" filter="url(#filter-1)" sketch:type="MSShapeGroup"></path>
+    </g>
+</svg>

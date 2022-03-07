@@ -1,0 +1,315 @@
+/* You can add global styles to this file, and also import other style files */
+// this is the order in which styles are required:
+@import "mixins";
+@import "utils";
+@import "colours";
+@import "variables";
+
+// External Style Sheets
+@import "./full-calendar";
+@import "twitter-bootstrap";
+@import "nv.d3";
+@import "visjs";
+@import "admin-lte";
+@import "bootstrap-toggle";
+@import "selectize";
+
+// Internal Style Sheets
+@import "type";
+@import "box-intro";
+@import "main";
+@import "custom";
+@import "ui-components";
+@import "tables";
+@import "forms";
+// @import "../app/common/common";
+// @import "../app/components/components";
+@import "skin-scf";
+@import "buttons";
+@import "modals";
+@import 'icons';
+
+// Import for global pages styles
+@import './pages/index.pages.scss';
+
+// For reference, these are useful for guidance:
+// Larger than mobile
+@media (min-width: 400px) {}
+
+// Larger than phablet
+@media (min-width: 550px) {}
+
+// Larger than tablet
+@media (min-width: 750px) {}
+
+// Larger than desktop
+@media (min-width: 1000px) {}
+
+// Larger than Desktop HD
+@media (min-width: 1200px) {}
+
+//ING Fonts
+//@font-face {
+//  font-family: "ing-latin-regular";
+//  src: url("../assets/fonts/ing/Latin/Regular/INGMeWeb-Regular.eot"); /* IE9 */
+//  src: url("../assets/fonts/ing/Latin/Regular/INGMeWeb-Regular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+//  url("../assets/fonts/ing/Latin/Regular/INGMeWeb-Regular.woff") format("woff"); /* Modern Browsers */
+//  font-weight: normal;
+//  font-style: normal;
+//}
+@font-face {
+  font-family: 'ing-latin-regular';
+  @if (str-index(inspect($font-face), "ing") != null) {
+  src: url(/assets/fonts/ing/Latin/Regular/INGMe-Regular.otf);
+  src: url(/assets/fonts/ing/Latin/Regular/INGMe-Regular.otf) format('opentype'),
+       url(/assets/fonts/ing/Latin/Regular/INGMe-Regular.otf) format('woff2'),
+       url(/assets/fonts/ing/Latin/Regular/INGMe-Regular.otf) format('woff'),
+       url(/assets/fonts/ing/Latin/Regular/INGMe-Regular.otf) format('truetype'),
+       url(/assets/fonts/ing/Latin/Regular/INGMe-Regular.otf) format('embedded-opentype');
+      }
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gib-latin-regular';
+  @if (str-index(inspect($font-face), "gib") != null) {
+  src: url(/assets/fonts/gib/Latin/Regular/FSEmericWeb-Regular.eot);
+  src: url(/assets/fonts/gib/Latin/Regular/FSEmericWeb-Regular.eot) format('embedded-opentype'),
+       url(/assets/fonts/gib/Latin/Regular/FSEmericWeb-Regular.woff) format('woff'),
+       url(/assets/fonts/gib/Latin/Regular/FSEmericWeb-Regular.otf) format('truetype');
+  }
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'bbva-latin-regular';
+  @if (str-index(inspect($font-face), "bbva") != null) {
+  src: url(/assets/fonts/bbva/Latin/Regular/BentonSansBBVA-Book.eot);
+  src: url(/assets/fonts/bbva/Latin/Regular/BentonSansBBVA-Book.eot) format('embedded-opentype'),
+       url(/assets/fonts/bbva/Latin/Regular/BentonSansBBVA-Book.woff2) format('woff2'),
+       url(/assets/fonts/bbva/Latin/Regular/BentonSansBBVA-Book.woff) format('woff'),
+       url(/assets/fonts/bbva/Latin/Regular/BentonSansBBVA-Book.otf) format('truetype');
+  }
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'bmo-latin-regular';
+  @if (str-index(inspect($font-face), "bmo") != null) {
+  src: url(/assets/fonts/bmo/Latin/Regular/heebo-v3-latin-regular.eot);
+  src: url(/assets/fonts/bmo/Latin/Regular/heebo-v3-latin-regular.eot) format('embedded-opentype'),
+       url(/assets/fonts/bmo/Latin/Regular/heebo-v3-latin-regular.woff2) format('woff2'),
+       url(/assets/fonts/bmo/Latin/Regular/heebo-v3-latin-regular.woff) format('woff'),
+       url(/assets/fonts/bmo/Latin/Regular/heebo-v3-latin-regular.otf) format('truetype');
+  }
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'deutsche-latin-regular';
+  @if (str-index(inspect($font-face), "deutsche") != null) {
+  src: url(/assets/fonts/deutsche/Univers-Next-Pro-Light.ttf);
+  src: url(/assets/fonts/deutsche/Univers-Next-Pro-Light.ttf) format('embedded-opentype'),
+       url(/assets/fonts/deutsche/Univers-Next-Pro-Light.ttf) format('woff2'),
+       url(/assets/fonts/deutsche/Univers-Next-Pro-Light.ttf) format('woff'),
+       url(/assets/fonts/deutsche/Univers-Next-Pro-Light.ttf) format('truetype');
+  }
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'sabb-latin-regular';
+  @if (str-index(inspect($font-face), "sabb") != null) {
+  src: url(/assets/fonts/sabb/Latin//Regular/UniversNextforHSBCW10-Rg.eot);
+  src: url(/assets/fonts/sabb/Latin//Regular/UniversNextforHSBCW10-Rg.eot) format('embedded-opentype'),
+       url(/assets/fonts/sabb/Latin//Regular/UniversNextforHSBCW10-Rg.woff2) format('woff2'),
+       url(/assets/fonts/sabb/Latin//Regular/UniversNextforHSBCW10-Rg.woff) format('woff'),
+       url(/assets/fonts/sabb/Latin//Regular/UniversNextforHSBCW10-Rg.ttf) format('truetype');
+  }
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'lloyds-regular';
+  src: url(/assets/fonts/lloyds/Regular/lloyds_bank_jack-regularWEB.ttf);
+  src: url(/assets/fonts/lloyds/Regular/lloyds_bank_jack-regularWEB.ttf) format('embedded-opentype'),
+       url(/assets/fonts/lloyds/Regular/lloyds_bank_jack-regularWEB.ttf) format('woff2'),
+       url(/assets/fonts/lloyds/Regular/lloyds_bank_jack-regularWEB.ttf) format('woff'),
+       url(/assets/fonts/lloyds/Regular/lloyds_bank_jack-regularWEB.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'pagonxt-header';
+  src: url(/assets/fonts/pagonxt/SantanderHeadline/SantanderHeadline-Regular.ttf);
+  src: url(/assets/fonts/pagonxt/SantanderHeadline/SantanderHeadline-Regular.ttf) format('embedded-opentype'),
+       url(/assets/fonts/pagonxt/SantanderHeadline/SantanderHeadline-Regular.ttf) format('woff2'),
+       url(/assets/fonts/pagonxt/SantanderHeadline/SantanderHeadline-Regular.ttf) format('woff'),
+       url(/assets/fonts/pagonxt/SantanderHeadline/SantanderHeadline-Regular.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'pagonxt-header';
+  src: url(/assets/fonts/pagonxt/SantanderHeadline/SantanderHeadline-Bold.ttf);
+  src: url(/assets/fonts/pagonxt/SantanderHeadline/SantanderHeadline-Bold.ttf) format('embedded-opentype'),
+       url(/assets/fonts/pagonxt/SantanderHeadline/SantanderHeadline-Bold.ttf) format('woff2'),
+       url(/assets/fonts/pagonxt/SantanderHeadline/SantanderHeadline-Bold.ttf) format('woff'),
+       url(/assets/fonts/pagonxt/SantanderHeadline/SantanderHeadline-Bold.ttf) format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'pagonxt-header';
+  src: url(/assets/fonts/pagonxt/SantanderHeadline/SantanderHeadline-BoldIt.ttf);
+  src: url(/assets/fonts/pagonxt/SantanderHeadline/SantanderHeadline-BoldIt.ttf) format('embedded-opentype'),
+       url(/assets/fonts/pagonxt/SantanderHeadline/SantanderHeadline-BoldIt.ttf) format('woff2'),
+       url(/assets/fonts/pagonxt/SantanderHeadline/SantanderHeadline-BoldIt.ttf) format('woff'),
+       url(/assets/fonts/pagonxt/SantanderHeadline/SantanderHeadline-BoldIt.ttf) format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'pagonxt-header';
+  src: url(/assets/fonts/pagonxt/SantanderHeadline/SantanderHeadline-It.ttf);
+  src: url(/assets/fonts/pagonxt/SantanderHeadline/SantanderHeadline-It.ttf) format('embedded-opentype'),
+       url(/assets/fonts/pagonxt/SantanderHeadline/SantanderHeadline-It.ttf) format('woff2'),
+       url(/assets/fonts/pagonxt/SantanderHeadline/SantanderHeadline-It.ttf) format('woff'),
+       url(/assets/fonts/pagonxt/SantanderHeadline/SantanderHeadline-It.ttf) format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'pagonxt-header';
+  src: url(/assets/fonts/pagonxt/SantanderHeadline/SantanderHeadline-Light.ttf);
+  src: url(/assets/fonts/pagonxt/SantanderHeadline/SantanderHeadline-Light.ttf) format('embedded-opentype'),
+       url(/assets/fonts/pagonxt/SantanderHeadline/SantanderHeadline-Light.ttf) format('woff2'),
+       url(/assets/fonts/pagonxt/SantanderHeadline/SantanderHeadline-Light.ttf) format('woff'),
+       url(/assets/fonts/pagonxt/SantanderHeadline/SantanderHeadline-Light.ttf) format('truetype');
+  font-weight: lighter;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'pagonxt-header';
+  src: url(/assets/fonts/pagonxt/SantanderHeadline/SantanderHeadline-LightIt.ttf);
+  src: url(/assets/fonts/pagonxt/SantanderHeadline/SantanderHeadline-LightIt.ttf) format('embedded-opentype'),
+       url(/assets/fonts/pagonxt/SantanderHeadline/SantanderHeadline-LightIt.ttf) format('woff2'),
+       url(/assets/fonts/pagonxt/SantanderHeadline/SantanderHeadline-LightIt.ttf) format('woff'),
+       url(/assets/fonts/pagonxt/SantanderHeadline/SantanderHeadline-LightIt.ttf) format('truetype');
+  font-weight: lighter;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'pagonxt-micro';
+  src: url(/assets/fonts/pagonxt/SantanderMicroText/SantanderMicroText.ttf);
+  src: url(/assets/fonts/pagonxt/SantanderMicroText/SantanderMicroText.ttf) format('embedded-opentype'),
+       url(/assets/fonts/pagonxt/SantanderMicroText/SantanderMicroText.ttf) format('woff2'),
+       url(/assets/fonts/pagonxt/SantanderMicroText/SantanderMicroText.ttf) format('woff'),
+       url(/assets/fonts/pagonxt/SantanderMicroText/SantanderMicroText.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(/assets/fonts/agtb/Latin/Regular/Montserrat-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(/assets/fonts/agtb/Latin/Italic/Montserrat-Italic.ttf);
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: italic;
+  font-weight: 200;
+  src: url(/assets/fonts/afrexim/TitilliumWeb-ExtraLightItalic.ttf);
+}
+
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: italic;
+  font-weight: 300;
+  src: url(/assets/fonts/afrexim/TitilliumWeb-LightItalic.ttf);
+}
+
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: italic;
+  font-weight: 400;
+  src: url(/assets/fonts/afrexim/TitilliumWeb-Italic.ttf);
+}
+
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: italic;
+  font-weight: 600;
+  src: url(/assets/fonts/afrexim/TitilliumWeb-SemiBoldItalic.ttf);
+}
+
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: italic;
+  font-weight: 700;
+  src: url(/assets/fonts/afrexim/TitilliumWeb-BoldItalic.ttf);
+}
+
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 200;
+  src: url(/assets/fonts/afrexim/TitilliumWeb-ExtraLight.ttf);
+}
+
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 300;
+  src: url(/assets/fonts/afrexim/TitilliumWeb-Light.ttf);
+}
+
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/fonts/afrexim/TitilliumWeb-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 600;
+  src: url(/assets/fonts/afrexim/TitilliumWeb-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 700;
+  src: url(/assets/fonts/afrexim/TitilliumWeb-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 900;
+  src: url(/assets/fonts/afrexim/TitilliumWeb-Black.ttf);
+}

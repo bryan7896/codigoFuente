@@ -1,0 +1,143 @@
+
+@import 'variables';
+
+.mandatory-field:after {
+  content: " \2731";
+  color: $form-mandatory-field-color;
+}
+form .form-group {
+  @extend %default-form-group;
+  @include clearfix;
+
+}
+
+label {
+  font-size: 1rem;
+  font-weight: $form-label-font-weight;
+  padding-left: .5rem;
+  text-transform: $form-label-text-transform;
+
+  &[for="initial"] {
+    text-transform: initial;
+  }
+}
+.form-control {
+  border-radius: $input-radius !important;
+  border: $default-input-border;
+  color : $input-text-color;
+}
+.form-control:focus {
+  border-color: $default-input-focus-border-color;
+}
+::placeholder {
+  text-transform: normal;
+}
+
+.form__validation,
+.form-group [ng-messages] {
+  height: fit-content;
+  padding-left: .5rem;
+  padding-right: .5rem;
+
+  //Work arround for the way how validation message is displayed in modals
+  .modal-body & {
+    display: none;
+
+    &.ng-active {
+      display: block;
+    }
+
+  }
+  
+}
+
+.form-control.ng-pristine + [ng-messages].ng-active {
+  display: none;
+}
+
+.form__validation--error,
+.form-group [ng-message] {
+  color: $form-validation-error-color;
+}
+.form-toogle-switch {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+
+  & > label {
+    display: block;
+    font-size: 1rem;
+    max-width: 70%;
+    margin-bottom: 0;
+    padding-left: 0;
+
+    flex: 1;
+    margin: auto;
+  }
+}
+.form-radio-group {
+  margin-bottom: 0;
+  & > div > label,
+  & > label {
+    font-size: 1rem;
+    // padding-left: 0;
+  }
+}
+
+.input-group {
+
+  &:before {
+    content: "";
+    background: $default-input-background;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+  }
+
+  input {
+    background: transparent;
+  }
+
+  .input-group-addon {
+    z-index: 0;
+  }
+}
+
+select {
+  cursor: pointer;
+}
+
+.invalid_code {
+  height: 100% !important;
+}
+
+.code_error_margin {
+  width: 51%;
+}
+
+.affiliate-linked-error{
+  color:$form-mandatory-field-color;
+  text-transform: none;
+  font-size: 1rem;
+}
+#no-parent-err{
+  .no-parent-error{
+    background-color: #757575;
+    text-transform: none;
+    font-size: 1rem;
+    float: right;
+    color:whitesmoke;
+  }
+}
+.parent-lim-error {
+  color:red;
+  text-transform: none;
+  font-size: 1rem;
+}
+
+.parent-date-error {
+  color:red;
+  text-transform: none;
+  font-size: 1rem;
+}

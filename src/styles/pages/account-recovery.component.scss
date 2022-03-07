@@ -1,0 +1,9 @@
+@import "../variables";
+
+app-account-recovery {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  height: 100%;
+  background: $login-bg-color;
+}

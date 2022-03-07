@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>24/chevron-up</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M20.0419125,16.6253812 C19.803568,16.6253996 19.5730544,16.5402868 19.3919125,16.3853812 L11.9319125,9.96538122 L4.70191252,16.3753812 C4.44289374,16.6540627 4.0481727,16.761618 3.68358276,16.65286 C3.31899282,16.544102 3.04770407,16.2378746 2.98369252,15.8628324 C2.91968096,15.4877902 3.07403746,15.1089144 3.38191252,14.8853812 L11.9119125,7.30538122 L20.6919125,14.8753812 C21.0023155,15.149077 21.112065,15.5856929 20.9679732,15.9736323 C20.8238814,16.3615717 20.4557208,16.6206782 20.0419125,16.6253812 Z" id="path-1"></path>
+    </defs>
+    <g id="24/chevron-up" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <g id="Shape" fill-rule="nonzero"></g>
+        <g id="🎨-Colour-/-Primary-/-AccessibleBMOBlue" mask="url(#mask-2)" fill="#0075BE">
+            <g transform="translate(-3.000000, -3.000000)" id="#0075BE">
+                <rect x="0" y="0" width="30" height="30" rx="4"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,22 @@
+{
+  "appName": "BBVA Supply Chain Finance",
+  "companyName": "BBVA",
+  "footerLogo": "assets/images/logo.svg",
+  "headerLogo" : "assets/images/header-logo.svg",
+  "STATUS": {
+    "APPROVED": "BBVA_GREEN",
+    "FUNDED": "BBVA_FUNDED",
+    "INELIGIBLE": "BBVA_RED",
+    "UNAPPROVED": "BBVA_RED",
+    "PENDING": "BBVA_YELLOW"
+  },
+  "CALENDAR": {
+    "PAYMENT_DAY": "BBVA_GREEN",
+    "NON_PAYMENT_DAY": "BBVA_RED"
+  },
+
+  "LIMITS" : {
+    "warning" : 34,
+    "danger": 67
+  }
+}

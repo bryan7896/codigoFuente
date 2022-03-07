@@ -1,0 +1,82 @@
+@import 'variables';
+
+.modal-details {
+  .modal-body {
+    background-color: $modal-default-bg;
+    border-top: 1px solid $modal-footer-border-top-color;
+    padding: $modal-body-padding;
+  }
+}
+
+.modal-body {
+  padding: $modal-body-padding;
+
+  .funding-request-detail-modal &,
+  .payment-notifications-detail-modal & {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .modal-subtitle {
+    font-size: $modal-subtitle-font-size;
+  }
+}
+
+.modal-body.ng-binding {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.modal-header{
+  padding: 11px 16px;
+
+  .modal-title {
+    color:$modal-title-color;
+    font-size: $modal-title-font-size;
+    text-transform: $modal-title-text-transform;
+  }
+}
+
+.modal-footer {
+  padding: $modal-footer-padding;
+  .btn{
+    // padding: 6px 12px;
+  }
+
+  .btn.btn-default{
+    @extend %btn-default;
+  }
+}
+.modal__fieldgroup {
+  margin: 0 15px;
+  flex: 1;
+}
+.modal__fieldgroup--single {
+  margin: 0 15px;
+  width: 100%;
+}
+
+.modal__fieldgroup--inline {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  & > .modal__field:not(:last-child) {
+    // flex: .5;
+    margin-right: 15px;
+    }
+  }
+.modal__field {
+  margin-bottom: .5rem;
+  flex: 1;
+}
+
+
+@media (min-width: 768px){
+  #new-buyer-programme-modal {
+    .modal-dialog {
+      width: 750px !important;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@import 'variables';
+
+.btn {
+  border-radius: $btn-radius;
+  padding: $btn-padding;
+  text-transform: $btn-text-transform;
+}
+.btn .fa {
+  margin-right: .6rem;
+}
+.btn-details {
+
+  border: none;
+  color: $table-actions-icon-color;
+  font-size: 20px;
+  line-height: 1em;
+  padding: 0 8px;
+}
+
+.btn a span {
+  font-weight: normal;
+}
+
+.toggle-button {
+    border: $filter-btn-toggle-border !important;
+    & > i {
+      font-size: inherit !important;
+    }
+    & > * {
+      color: $filter-btn-toggle;
+    }
+    & :first-child {
+      border-right: $filter-btn-toggle-border-right !important;
+    }
+    &:hover {
+      & > * {
+        color: $filter-btn-toggle-hover;
+      }
+    }
+    &:active {
+      box-shadow: $filter-btn-toggle-active-shadow;
+    }
+}

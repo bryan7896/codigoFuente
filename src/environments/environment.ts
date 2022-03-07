@@ -3,7 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  api_url: 'http://localhost.demica.com/api/',
+  sob_url: 'https://crimsob.demica.com/sobportal/',
+  debug: true,
+  env: 'dev',
+  demo: false,
+  theme: 'default',
+  twoFactorAuthEnabled: false,
+  viewledgerdetail_role_enabled: false,
 };
 
 /*

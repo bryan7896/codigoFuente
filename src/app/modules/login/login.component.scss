@@ -1,0 +1,189 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+#login-logo {
+  width: $login-logo-width;
+  &.recovery-logo {
+    display: $login-logo-recovery-display;
+  }
+}
+
+.login-form {
+  background-color: $login-box-bg;
+  height: 100%;
+  margin: auto;
+  @if $login-include-width-percent-fifty {
+    width: 50%;
+  }
+}
+
+.login-image {
+  @include show-expected-display-if-true("block", $login-image-display-block);
+  background-image: if(
+    variable-exists($login-image-url),
+    $login-image-url,
+    url("../../../themes/images/logos/default/demica-login-splash.jpg")
+  );
+  width: 50%;
+  background-repeat: round;
+  @media screen and (max-width: 992px) {
+    display: none;
+  }
+}
+
+.login-box-body {
+  position: relative;
+  border-top: $login-box-border-top;
+  .transitioning-overlay {
+    z-index: 100;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: $secondary-bg-color;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    .loading-animation {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-top: -15px;
+      margin-left: -15px;
+    }
+  }
+  .btn {
+    white-space: normal;
+    width: 100%;
+    margin-bottom: 10px;
+    text-transform: $login-btn-text-transform;
+    background-color: $login-btn-bg-color;
+  }
+  .btn-primary {
+    color: $login-second-button-color !important;
+    border-color: $login-second-button-border-color !important;
+    background-color: $login-second-button-backgroud-color !important;
+    &:hover {
+      border-color: $login-second-button-border-color !important;
+    }
+  }
+  .btn-secondary {
+    color: $login-first-button-color !important;
+    border-color: $login-first-button-color !important;
+    background-color: $login-first-button-backgroud-color !important;
+    &:hover {
+      border-color: $login-first-button-color !important;
+    }
+  }
+
+  @if $theme == "pagonxt" {
+    .btn {
+      border-radius: $btn-border-radius;
+    }
+  }
+
+  label {
+    color: $login-label-color;
+    font-weight: normal;
+    font-size: 15px;
+    padding-left: 5px;
+  }
+
+  .g-recaptcha > div {
+    margin: auto;
+  }
+
+  .login-box-msg {
+    display: $login-title-display;
+    text-align: $login-title-text-align;
+    padding-bottom: 20px;
+  }
+}
+
+.nav .dropdown:hover a:hover {
+  background-color: $login-page-language-hover-bg !important;
+}
+
+.nav a,
+.account-recovery a {
+  color: $login-second-button-color !important;
+  border-color: $login-second-button-color !important;
+  &:hover {
+    border-color: $login-second-button-color !important;
+  }
+}
+
+.demica-login-input {
+  display: inline-block;
+  width: 100%;
+  font-size: 10px;
+  padding: 6px 10px;
+  border: 1px solid $login-input-border-color;
+  border-radius: $input-radius !important;
+  background-color: $login-input-background-color !important;
+  // -webkit-box-shadow: 0 0 0 30px white inset;
+
+  &:focus {
+    outline: none;
+    border: 1px solid $primary-color;
+  }
+}
+
+.radio-buttons {
+  color: $login-label-color;
+  display: flex;
+  flex-flow: $account-recovery-options-flex-flow;
+  margin-bottom: 1rem;
+  & > radio-button {
+    font-size: 1rem;
+    width: $login-radio-width;
+  }
+}
+
+/* For landscape tablets */
+// exclude low-res tablets/phones with min-width: 500;
+@media only screen and (min-width: 500px) and (max-width: 800px) {
+  .demica-login-page {
+    .login-box {
+      // width: 60%;
+      // max-width: 25em;
+    }
+  }
+}
+
+#access-denied {
+  position: absolute;
+  top: 50%;
+  margin-top: -25%;
+  left: 50%;
+  margin-left: -50%;
+  width: 100%;
+  min-height: 400px;
+}
+
+#access-denied .actions-panel {
+  max-width: 400px;
+}
+
+#access-denied .logout-button {
+  display: block;
+  margin: 1em auto;
+  color: white;
+}
+
+.access-denied-message {
+  margin: auto;
+  margin-top: 10px;
+  font-size: 40px;
+  color: #aaa;
+  text-align: center;
+}
+
+.access-denied-logo {
+  padding-top: 20%;
+  display: block;
+  width: 200px;
+  text-align: center;
+  margin: auto;
+}

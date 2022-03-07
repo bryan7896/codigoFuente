@@ -1,0 +1,56 @@
+<footer class="main-footer">
+  <div class="default-footer">
+    <div *ngIf="false" class="legal-security-footer hidden-xs">
+      <b>Version</b> 1.0
+      <a
+        id="terms-and-conditions"
+        href="https://{{ termsAndConditions }}"
+        translate="TERMS_AND_CONDITIONS"
+        target="_blank"
+      >
+      </a>
+      <a
+        id="legal-notice"
+        href="https://{{ legalNotice }}"
+        translate="LEGAL_NOTICE"
+        target="_blank"
+      >
+      </a>
+      <a
+        id="data-protection"
+        href="https://{{ dataProtection }}"
+        translate="DATA_PROTECTION"
+        target="_blank"
+      >
+      </a>
+      <a
+        id="customer-service"
+        href="https://{{ customerService }}"
+        translate="CUSTOMER_SERVICE"
+        target="_blank"
+      >
+      </a>
+    </div>
+    <div *ngIf="true" class="pull-right hidden-xs"><b>Version </b> 1.0</div>
+    <div class="footer-package-name"><strong>DEMICA</strong></div>
+    <div class="footer-logo">
+      <a href="#/" class="logo">
+        <span class="logo-mini logo-footer">
+          <img src="'../../../../../assets/images/logo-small.png" />
+        </span>
+      </a>
+    </div>
+  </div>
+  <div class="advanced-footer">
+    <div>
+      <span>Demica</span>
+      <span translate="ALL_RIGHTS_RESERVED"></span>
+      <a
+        href="https://{{ termsAndConditions }}"
+        translate="TERMS_AND_CONDITIONS"
+      ></a>
+      <a href="https://{{ cookieStatement }}" translate="COOKIE_STATMENT"> </a>
+      <a href="https://{{ privacyStatement }}" translate="PRIVACY_STATMENT"></a>
+    </div>
+  </div>
+</footer>

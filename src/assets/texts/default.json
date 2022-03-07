@@ -1,0 +1,10 @@
+{
+  "appName": "Demica SCF Platform",
+  "companyName": "Demica",
+
+  "CALENDAR": {
+    "PAYMENT_DAY": "PURPLE_PRIMARY",
+    "NON_PAYMENT_DAY": "PASTEL_RED",
+    "NON_BUSINESS_DAY": "GREY"
+  }
+}

@@ -1,0 +1,470 @@
+@import 'variables';
+
+.sidebar-menu > li {
+  padding: 0 0 4px 0;
+}
+
+.sidebar-toggle:hover {
+  text-decoration: none;
+}
+
+
+.logo-mini img {
+  max-height:$logo-mini-img-height;
+}
+.logo-footer img {
+  max-height:$logo-footer-img-height;
+}
+.logo-lg img {
+  align: left;
+  padding-top: $logo-lg-image-padding;
+  max-height:$logo-lg-img-height;
+  max-width: $logo-lg-img-width;
+  margin-left: $logo-lg-img-margin-left;
+
+}
+
+.loading-logo img {
+  max-height: 100px;
+  max-width: $login-logo-width;
+  margin-left: $login-logo-margin;
+}
+
+.sidebar .btn-primary {
+  overflow:hidden;
+
+  span {
+    padding-left:5px;
+
+    .sidebar-collapse & {
+      display:none
+    }
+  }
+}
+
+.btn-inverse {
+  background-color: #FFF926;
+  color: $primary-color;
+  border-color: #646221;
+}
+
+:not(.btn-group) > .btn.btn-default {
+  border-color: $filter-btn-default-border;
+  background-color: $filter-btn-default-background ;
+  color: $filter-btn-default;
+  &:hover {
+    border-color: $filter-btn-default-border-over ;
+    background-color: $filter-btn-default-background-over ;
+    color: $filter-btn-default-over ;
+  }
+}
+
+.bg-purple {
+  // background:$primary-color !important;
+  background: $primary-color-timeline !important;
+}
+
+.ng-table th {
+  text-align:left;
+  font-weight: normal;
+}
+.ng-table > tbody > tr > td {
+  vertical-align: middle;
+
+  a {
+    text-decoration: underline;
+    cursor:pointer;
+  }
+}
+
+.text-transform {
+  text-transform: $default-text-transform;
+}
+table {
+  text-transform: none;
+}
+
+.dropdown-content {
+  min-width:260px;
+  padding:0;
+
+  h3 {
+    background: $primary-color;
+    font-size: 18px;
+    color:#fff;
+    padding:8px;
+    margin:0;
+  }
+
+  p {
+    display: table;
+    width:100%;
+    border-bottom:1px solid #f9f9f9;
+    margin:0;
+
+    &:last-of-type {
+      border-bottom:0px none;
+    }
+    span {
+      display: table-cell;
+      padding:4px;
+    }
+    span:first-of-type {
+      width:65%;
+      text-align: right;
+    }
+  }
+
+}
+
+tr.order-closed {
+  background:#E6EEF2;
+}
+
+td .ion {
+  font-size:22px;
+}
+
+.table > thead > tr > td.active, .table > thead > tr > th.active, .table > thead > tr.active > td, .table > thead > tr.active > th, .table > tbody > tr > td.active, .table > tbody > tr > th.active, .table > tbody > tr.active > td, .table > tbody > tr.active > th, .table > tfoot > tr > td.active, .table > tfoot > tr > th.active, .table > tfoot > tr.active > td, .table > tfoot > tr.active > th {
+  background-color: rgba($primary-color, 0.4);
+}
+
+.clickableRow {
+  &:hover td {
+    background-color: rgba($primary-color, 0.4);
+    color:#000;
+    cursor:pointer;
+  }
+}
+
+.nav-faketabs {
+  li {
+    display: inline;
+    padding:10px 6px;
+  }
+}
+
+
+.label-group {
+  span:first-of-type {
+    border-radius:2px 0 0 2px;
+  }
+  span:last-of-type {
+    border-radius:0 2px 2px 0;
+  }
+}
+
+.label-title {
+  background:#aaa;
+}
+
+.label-inline {
+  position: relative;
+  top:-2px;
+  margin-left: 5px;
+}
+
+.width-0 {width:0%}
+.width-10 {width:10%}
+.width-20 {width:20%}
+.width-30 {width:30%}
+.width-40 {width:40%}
+.width-50 {width:50%}
+.width-60 {width:60%}
+.width-70 {width:70%}
+.width-80 {width:80%}
+.width-90 {width:90%}
+.width-100 {width:100%}
+
+
+.filterBox {
+	@include clearfix;
+
+	display:block;
+	background: $list-bg-color2;
+
+	.col-xs-12 > & {
+		margin-bottom: 6px;
+	}
+
+	&__rm {
+		margin-right: -12px;
+	}
+	&__lm {
+		margin-left: -12px;
+	}
+
+	&--sub {
+		display: inline-block;
+		border-right:1px solid #fff;
+		padding:6px 12px;
+		min-height: 80px;
+
+		&:last-of-type {
+			border-right:0 none;
+		}
+	}
+
+	&__block {
+		display: block;
+	}
+
+	h4, h5 {
+		margin:4px 0 8px;
+	}
+
+	h4 {
+		font-size: 14px;
+		font-weight: bold;
+	}
+
+	h5 {
+	}
+}
+
+.inline-block {
+  vertical-align:top;
+  display:inline-block;
+}
+
+
+/* main component (dashboard) */
+
+.widget-placeholder-image {
+  width: 100%;
+  height: auto;
+}
+
+hr.line {
+  border-color: #888;
+  border-width: 2px;
+}
+
+
+.text-red {
+  color: $pastel-red;
+}
+
+.text-total {
+  color: $funding-steps-amount-color;
+}
+
+.text-sub {
+  display: block;
+  font-size: 0.8em;
+}
+
+section .ng-table th {
+  text-align: left;
+}
+
+li.fundingSteps--point.active {
+  border-color: yellow;
+}
+// quick-funding
+.quick-funding .modal-dialog  h3.modal-title {
+  font-size: 18px !important;
+}
+.quick-funding .modal-body h3 {
+  margin: 0 !important;
+  font-size: 18px !important;
+}
+
+i.icon {
+  &.left {
+    margin-right: 5px;
+  }
+  &.right {
+    margin-left: 5px;
+  }
+  &:before {
+    vertical-align: middle;
+  }
+}
+
+// forms
+/* AngularJS Form validation styling */
+.validation.help-block {
+  color: #E07676;
+  font-style: italic;
+}
+
+/* invalid & (dirty or touched) => red -- CSS3 only */
+.ng-invalid.ng-dirty:not(:focus),
+.ng-invalid.ng-touched:not(:focus) {
+  border-color: $pastel-red;
+}
+
+/* valid & dirty => green */
+.ng-valid.ng-dirty.ng-touched {
+  border: $input-valid-border;
+}
+
+/* error display font italic, text-danger is red in BS */
+.validation.text-danger {
+  font-style: italic;
+}
+
+[ng-message] {
+  color: $pastel-red;
+  font-family: Verdana, sans-serif;
+  font-size: 11px;
+}
+
+
+// toggle switch
+.toggle-switch {
+  border: 1px solid $light-bg-color;
+  border-radius: 3px;
+  cursor: pointer;
+  display: inline-block;
+  text-align: left;
+  overflow: hidden;
+  line-height: 8px;
+  min-width: 100px;
+}
+
+.toggle-switch.disabled > div > span.knob {
+  background: #AAA;
+  cursor: not-allowed;
+}
+
+.toggle-switch.disabled > div > span.switch-right, .toggle-switch.disabled > div > span.switch-left {
+  cursor: not-allowed;
+}
+
+.toggle-switch span {
+  cursor: pointer;
+  display: inline-block;
+  float: left;
+  height: 100%;
+  line-height: 20px;
+  padding: 4px;
+  text-align: center;
+  width: 33%;
+  white-space: nowrap;
+
+  box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.toggle-switch > div {
+  position: relative;
+  width: 150%;
+}
+
+.toggle-switch .knob {
+  background-color: $light-bg-color;
+  width: 34%;
+  z-index: 100;
+}
+
+.toggle-switch .switch-on {
+  left: 0;
+}
+
+.toggle-switch .switch-off {
+  left: -50%
+}
+
+.toggle-switch .switch-left,
+.toggle-switch .switch-right {
+  z-index: 1;
+}
+
+.toggle-switch .switch-left {
+  color: #fff;
+  background: $toggle-switch-left-bg;
+}
+
+.toggle-switch .switch-right {
+  color: #333;
+  background: #f0f0f0;
+}
+
+.toggle-switch-animate {
+  transition: left 0.5s;
+  -o-transition: left 0.5s;
+  -moz-transition: left 0.5s;
+  -webkit-transition: left 0.5s;
+}
+.nav-tabs > li > a {
+  cursor: pointer;
+  color: $widget-header-color;
+}
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 5px;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  color: #fff;
+  border-radius: 2px;
+}
+
+.inline-form {
+  display: inline;
+}
+
+.modal.invoice-detail-modal,
+.modal.detail-view {
+  .modal-dialog {
+    min-width: 700px;
+    max-width: 1000px;
+    width: 80%;
+  }
+}
+
+legend {
+  font-size: 1.25em;
+}
+
+.no-padding-or-margin {
+	margin: 0px;
+	padding: 0px;
+}
+.font-lh {
+    line-height: 1.39em;
+}
+.p-font {
+  font-size: inherit;
+  font-weight :800;
+}
+.login-errorMsg {
+  color: if(variable-exists(login-error-alert-color), $login-error-alert-color, #a94442);
+}
+.date-input-field {
+  width: 95px;
+  display: inline-block;
+}
+
+.disabled .radio_button .hard_disable {
+  color: lightgray;
+}
+
+.disabled .radio_button .check.hard_disable {
+  border-color: lightgray;
+}
+
+label.disabled {
+  color: lightgray;
+}
+
+radio-button.disabled .radio_button.checked .check:after {
+  background: lightgray;
+}
+
+radio-button.disabled .radio_button, .checkbox label.disabled {
+  cursor: default;
+}
+
+.login-errorAlert {
+  color: if(variable-exists(login-error-alert-color), $login-error-alert-color, #a94442);
+}
+
+.visible {
+  visibility: visible !important;
+}

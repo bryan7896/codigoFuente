@@ -1,0 +1,63 @@
+@import 'variables';
+
+// Page title
+%h1 {
+  font-size: 24px;
+  margin:0;
+}
+
+// box title
+%h2, .t-h2 {
+  @extend %widget-h;
+  display: inline-block;
+
+  span {
+    font-weight: 100;
+  }
+}
+
+// Box Subtitles
+%h3, .t-h3 {
+  font-size: $h3-subtitle;
+  font-weight: 100;
+  text-transform: $widget-header-text-transform;
+  margin: $widget-h3-margin;
+
+  strong {
+    font-weight: 600;
+  }
+}
+
+%h4, .t-h4 {
+  font-size: 14px;
+  font-weight: 100;
+  text-transform: $widget-header-text-transform;
+  margin: $widget-h4-margin;
+  padding-bottom: $cashflow-total-padding; //0 default
+}
+
+%t-xl, .t-xl {
+  font-size: $widget-font-size-t-xl;
+  font-weight: $widget-font-weight-t-xl;
+  text-transform: $widget-header-text-transform;
+  line-height: 0.8em;
+}
+
+%t-lg, .t-lg {
+  font-size: $consolidated-total-size;
+  font-weight: 400;
+  text-transform: $widget-header-text-transform;
+  line-height: 0.8em;
+}
+
+%t-md, .t-md {
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: $widget-header-text-transform;
+  line-height: 0.8em;
+}
+
+%t-sm, .t-sm {
+  font-size: 14px;
+  font-weight: 400;
+}

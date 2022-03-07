@@ -1,0 +1,389 @@
+@import 'variables';
+
+/*
+ * Skin: DEMICA SCF PLATFORM
+ * -----------
+ */
+
+
+  .release-notes{
+
+    color: purple;
+
+  }
+  @if ($theme == 'sabbv2') {
+  .slimScrollDiv .sidebar-menu li ul {
+    padding-left: 0px !important;
+ }
+}
+ .skin-scf .sidebar-menu > li > .treeview-menu {
+  margin: 0 1px;
+  background: $sidebar-menu-bg-color;
+}
+.skin-scf .sidebar a:not(.btn-invert-sell) {
+  color: $sidebar-text !important;
+  @if $theme == 'pagonxt' {
+    font-weight: $nav-link-reg;
+  }
+  @else {
+    font-weight: $nav-link-bold;
+  }
+}
+.skin-scf .main-header .navbar {
+  background-color: $main-header-navbar-background !important;
+  border-left: $main-header-navbar-border-left !important;
+}
+.skin-scf .main-header .navbar > .page-title{
+  color: $main-header-nav-link-color !important;
+}
+.skin-scf .sidebar-toggle {
+  color: $main-header-sidebar-toggle !important;
+}
+.skin-scf .main-header .navbar .nav > li > a {
+  color: $main-header-nav-link-color !important;
+  border-color: $nav-link-border;
+}
+
+.skin-scf .main-header .navbar .nav .dropdown{
+  margin: $main-header-dropdown-navbar-margin;
+}
+
+.skin-scf .main-header .navbar .nav .dropdown.user-menu{
+  background: $main-header-user-dropdown-background;
+  margin: $main-header-dropdown-navbar-margin;
+  border-radius : $main-header-border-radius;
+}
+
+.skin-scf .main-header .navbar .nav > li > a:hover,
+.skin-scf .main-header .navbar .nav > li > a:active,
+.skin-scf .main-header .navbar .nav > li > a:focus,
+.skin-scf .main-header .navbar .nav .open > a,
+.skin-scf .main-header .navbar .nav .open > a:hover,
+.skin-scf .main-header .navbar .nav .open > a:focus,
+.skin-scf .main-header .navbar .nav > .active > a,
+.skin-scf .main-header .navbar .sidebar-toggle:hover {
+  color: $main-header-navbar-hover  !important;
+  border-radius: $main-header-border-radius;
+}
+
+.login-box-body .show ul a{
+  background: $main-header-navbar-open-background !important;
+  color: #777 !important;
+  &:hover{
+    color: $dropdown-language-selector-hover !important;
+  }
+}
+
+.skin-scf .main-header .navbar .sidebar-toggle:hover {
+  color: $main-header-navbar-hover !important;
+}
+
+.skin-scf .nav-tabs-custom > .nav-tabs > li.active {
+  border-top-color: $skin-scf-nav-tabs-border-top-color !important;
+}
+
+.skin-scf .btn-primary, .sidebar .btn-primary {
+  color: $sidebar-btn-primary !important;
+  background-color: $btn-primary-bg !important;
+  border-color: $btn-primary-bg-border !important;
+  // font-weight: $btn-font-weight;
+
+  &:hover {
+    color: #fff !important;
+    background-color: $btn-primary-bg-hover !important;
+    border-color: $btn-primary-bg-hover !important;
+  }
+  @if $theme == 'pagonxt' {
+  &:focus {
+    outline: none !important;
+  }
+}
+  &:active {
+    color: #fff !important;
+    background-color: $btn-primary-bg-active !important;
+  }
+}
+
+.skin-scf a.ng-binding{
+  color: $release-notes-color;
+}
+
+@media (max-width: 767px) {
+  .skin-scf .main-header .navbar .dropdown-menu li.divider {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+  }
+  .skin-scf .main-header .navbar .dropdown-menu li a {
+    color: #fff !important;
+  }
+  .skin-scf .main-header .navbar .dropdown-menu li a:hover {
+    background: #008d4c !important;
+  }
+}
+.skin-scf .main-header .logo {
+  background-color: $main-header-logo-background !important;
+  color: $main-header-logo !important;
+  border-bottom: 0 solid transparent !important;
+}
+.skin-scf .main-header .logo:hover {
+  background-color: $main-header-logo-background-hover !important;
+}
+// .skin-scf .main-header li.user-header {
+//   background-color: $primary-color !important;
+// }
+.skin-scf .content-header {
+  background: transparent !important;
+}
+.skin-scf .wrapper,
+.skin-scf .main-sidebar,
+.skin-scf .left-side {
+  background-color: $sidebar-bg-color !important;
+}
+.skin-scf .user-panel > .info,
+.skin-scf .user-panel > .info > a {
+  color: #fff !important;
+}
+.skin-scf .sidebar-menu > li.header {
+  color: $sidebar-sh-txt-color !important;
+  background: $sidebar-sh-bg-color !important;
+
+  &:last-child {
+    display: none;
+  }
+}
+.skin-scf .sidebar-menu > li.header > span {
+  color: $sidebar-sh-txt-color !important;
+  background: transparent !important;
+  text-transform: $sidebar-sh-text-transform;
+  font-size: $sidebar-sh-txt-size;
+  font-weight: $sidebar-sh-txt-bold;
+}
+.skin-scf .sidebar-menu > li > a {
+  color: $sidebar-text !important;
+  border-left: 3px solid transparent !important;
+  width: $skin-scf-sidebar-menu-li-a-width;
+}
+.skin-scf .sidebar-menu i:not(.btn-invert-sell) {
+  // color: $sidebar-menu-icon;
+}
+.skin-scf .sidebar-menu > li:hover > a,
+.skin-scf .sidebar-menu > li.active > a {
+  color: $nav-link-hover-color !important;
+  background: $sidebar-treeview-menu-highlight !important;
+  border-right-style: $sidebar-border-highlight !important;
+  border-right-width: 4px !important;
+  border-right-color: $sidebar-menu-active-border-right !important;
+  font-weight: $nav-link-hover-font-weight;
+
+  i {
+    color: $sidebar-menu-icon-active;
+  @if $theme == 'lloyds' {
+  &.fa-chart-bar:before{
+    content: url('../assets/images/icons/lloyds/graph-green.svg');
+    }
+  &.fa-home:before{
+    content: url('../assets/images/icons/lloyds/home-2.svg');
+    }
+  &.fa-flag-checkered:before{
+    content: url('../assets/images/icons/lloyds/00085235-green.svg');
+    }
+  &.fa-angle-down-left:before{
+    content: url('../assets/images/icons/lloyds/chevron-down-green.svg');
+  }
+  &.fa-th:before{
+    content: url('../assets/images/icons/lloyds/window-green.svg');
+    }
+  &.fa-upload:before{
+    content: url('../assets/images/icons/lloyds/00001599-green.svg');
+    }
+  &.fa-envelope:before{
+    content: url('../assets/images/icons/lloyds/email-green.svg');
+  }
+  &.fa-chevron-circle-right:before{
+    content: url('../assets/images/icons/lloyds/00004858-green.svg');
+  }
+  &.fa-calendar-alt:before{
+    content: url('../assets/images/icons/lloyds/calendar-green.svg');
+  }
+  &.fa-chart-line:before{
+    content: url('../assets/images/icons/lloyds/line-graph-green.svg');
+  }
+  &.fa-tasks:before{
+    content: url('../assets/images/icons/lloyds/00004853-green.svg');
+  } 
+  &.fa-balance-scale:before{
+    content: url('../assets/images/icons/lloyds/00001084-green.svg');
+  }
+  &.fa-sitemap:before{
+    content: url('../assets/images/icons/lloyds/00001997-green.svg');
+  }
+  &.fa-users:before{
+    content: url('../assets/images/icons/lloyds/2-people-green.svg');
+  }
+  &.fa-info-circle:before{
+    content: url('../assets/images/icons/lloyds/list-exclamation-mark-green.svg');
+  }
+  }
+  }
+}
+
+.skin-scf .sidebar-menu > li:hover > a {
+  border-left-color: $sidebar-menu-hover-border !important;
+}
+.skin-scf .sidebar-menu > li.active > a {
+  border-left-color: $sidebar-menu-active-border !important;
+
+}
+.skin-scf .sidebar-menu > li > .treeview-menu {
+  margin: 0 1px !important;
+  background: $sidebar-treeview-menu-background !important;
+}
+.skin-scf .sidebar-menu > li > .treeview-menu a {
+  font-weight: normal;
+  background:$sidebar-menu-dropdown-bg-color;
+}
+
+.skin-scf .sidebar a:hover {
+  text-decoration: none !important;
+}
+.skin-scf .treeview-menu > li > a {
+  color: $sidebar-text !important;
+}
+
+//.skin-scf .treeview-menu > li > a > i{
+//  color: $secondary-color !important;
+//}
+
+.skin-scf .treeview-menu > li.active > a,
+.skin-scf .treeview-menu > li > a:hover {
+  // color: $secondary-color !important;
+  color: $sidebar-text-hover-color !important;
+}
+.skin-scf .sidebar-form {
+  border-radius: 3px !important;
+  border: 1px solid #374850 !important;
+  margin: 10px 10px !important;
+}
+.skin-scf .sidebar-form input[type="text"],
+.skin-scf .sidebar-form .btn {
+  box-shadow: none;
+  background-color: #374850;
+  border: 1px solid transparent;
+  height: 35px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.skin-scf .sidebar-form input[type="text"] {
+  color: #666;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 2px;
+}
+.skin-scf .sidebar-form input[type="text"]:focus,
+.skin-scf .sidebar-form input[type="text"]:focus + .input-group-btn .btn {
+  background-color: #fff;
+  color: #666;
+}
+.skin-scf .sidebar-form input[type="text"]:focus + .input-group-btn .btn {
+  border-left-color: #fff;
+}
+.skin-scf .sidebar-form .btn {
+  color: #999;
+  border-top-left-radius: 0;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 0;
+}
+.skin-scf .calendar  {
+  th,
+  td {
+    position: relative;
+  }
+  .fc-bg .fc-today {
+    background: $fc-today-bg;
+  }
+  .fc-month-view,
+  .fc-basicWeek-view {
+    .fc-bg .fc-today {
+      &:before {
+        content: "";
+        border: 2px double $fc-today-border-color;
+        display: block;
+        height: calc(100% - 2px);
+        position: absolute;
+        width: calc(100% - 2px);
+      }
+    }
+  }
+  .fc-basicWeek-view {
+    .fc-bg .fc-today {
+      &:before {
+        height: 99%;
+        margin-top: 1px;
+      }
+    }
+  }
+}
+.skin-scf .calendar .holiday {
+  background-color: $light-bg-color;
+}
+.skin-scf .sidebar-menu > li.active > help-tour-link > a {
+  color: $nav-link-color;
+  background: $sidebar-treeview-menu-highlight;
+  border-left-color: #4c4cb1;
+}
+.skin-scf {
+  background: $skin-scf-bg;
+  a {
+    color: $main-link-color;
+    &:hover {
+      color: $main-link-color-hover;
+    }
+  }
+}
+
+.skin-scf .content-wrapper, .right-side {
+	background-color:$context-wrapper-bg !important;
+}
+
+.mdl-progress > .progressbar, .mdl-progress.mdl-progress__indeterminate > .bar1, .mdl-progress.mdl-progress__indeterminate > .bar3 {
+	background-color: $progress-bar !important;
+}
+
+.mdl-progress > .bufferbar {
+	background-image: linear-gradient(to right,rgba(255, 255, 255,.7),rgba(255, 255, 255, .7)),linear-gradient(to right, $primary-color, $primary-color) !important;
+}
+
+.label {
+  display: inline-block;
+  width: 100%;
+  padding: .5em .6em;
+  border-radius: .15em;
+  font-size: .85rem;
+}
+
+%box-tab-header {
+  .box {
+    background-color: unset;
+    padding-left: 0px;
+    padding-right: 0px;
+    .box-header{
+        padding: 0px;
+        border-bottom: 1px solid $box-border-color;
+        h3 {
+            padding: 5px 15px;
+            background-color: #fff;
+            border: 1px solid $box-border-color;
+            border-bottom: 0px;
+            margin-bottom: -1px;
+        }
+    }
+    .box-body {
+        background-color: #fff;
+    }
+    .box-footer {
+        background-color: #fff;
+    }
+  }
+}

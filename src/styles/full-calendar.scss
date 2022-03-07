@@ -1,0 +1,214 @@
+@import 'variables';
+/*
+ * Plugin: Full Calendar
+ * ---------------------
+ */
+ #calendar {
+  .fc-button {
+    background: $fc-button-bg;
+    color: $fc-button-color;
+    border-color: $fc-button-border-color;
+    text-transform: $fc-button-text-transform;
+
+    &:hover,
+    &:active,
+    &.hover {
+      background-color: $fc-button-hover-bg;
+    }
+  }
+  .fc-prev-button {
+    border-radius: $fc-button-prev-border-radius !important;
+    margin-right: $fc-button-prev-margin-right;
+  }
+  .fc-next-button {
+    border-radius: $fc-button-next-border-radius !important;
+  }
+  .fc-today-button {
+    margin: $fc-button-today-margin;
+  }
+  .fc-month-button {
+    border-radius: $fc-button-month-border-radius;
+  }
+  .fc-basicWeek-button {
+    border-radius: $fc-button-basicWeek-border-radius;
+  }
+  .fc-basicDay-button {
+    border-radius: $fc-button-basicDay-border-radius;
+  }
+
+
+  &.fc .fc-button-group>* {
+    margin: $fc-button-margin;
+  }
+  .fc-state-default.fc-corner-right {
+    border-top-right-radius: $fc-button-border-radius;
+    border-bottom-right-radius: $fc-button-border-radius;
+  }
+  .fc-state-default.fc-corner-left {
+    border-top-left-radius: $fc-button-border-radius;
+    border-bottom-left-radius: $fc-button-border-radius;
+  }
+
+  .fc-state-active,
+  .fc-state-down {
+    background-color: $fc-state-active-bg;
+    background-image: none;
+    box-shadow: $fc-state-active-shadow;
+    color: $fc-state-active-color;
+
+    &:hover {
+      background: $fc-state-active-hover-bg;
+    }
+  }
+  .fc-state-disabled {
+    background: $fc-state-disabled-bg;
+    border-color: $fc-state-disabled-border-color;
+    color: $fc-state-disabled-color;
+
+    &:hover {
+      background: $fc-state-disabled-bg;
+    }
+  }
+  .fc-title {
+    cursor: default;
+  }
+
+  .fc-content-skeleton {
+    cursor: pointer;
+  }
+
+  .fc-content-skeleton td,
+  .fc-day {
+    cursor: pointer;
+  }
+
+  .fc-basicDay-view {
+    .fc-content-skeleton {
+      cursor: initial;
+
+      .fc-event-container {
+        cursor: initial;
+      }
+    }
+
+    .fc-day {
+      cursor: initial;
+    }
+  }
+
+  .fc-day-grid-event {
+    cursor: initial;
+  }
+  .fc-day-header {
+    font-size: $fc-header-font-size;
+
+    &.fc-sat,
+    &.fc-sun {
+      color: $fc-header-color-secondary;
+    }
+  }
+  .fc-header-title h2 {
+    font-size: 15px;
+    line-height: 1.6em;
+    color: #666;
+    margin-left: 10px;
+  }
+  .fc-header-right {
+    padding-right: 10px;
+  }
+  .fc-header-left {
+    padding-left: 10px;
+  }
+  .fc-widget-header {
+    background: $fc-header-bg;
+    font-weight: $fc-header-font-weight;
+    text-transform: capitalize;
+  }
+  .fc-grid {
+    width: 100%;
+    border: 0;
+  }
+  .fc-widget-header:first-of-type,
+  .fc-widget-content:first-of-type {
+    border-left: 0;
+    border-right: 0;
+  }
+  .fc-widget-header:last-of-type,
+  .fc-widget-content:last-of-type {
+    border-right: 0;
+  }
+
+  .fc-widget-content .fc-row:only-child {
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .fc-event {
+      border-radius: $default-input-border-radius;
+      height: 3.5rem;
+      margin-bottom: .3rem;
+    }
+  }
+  .fc-event {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  .fc-toolbar {
+    padding: 10px;
+    margin: 0;
+    text-transform: capitalize;
+  }
+  .fc-day-number {
+    display: block;
+    font-size: $fc-day-number-font-size;
+    font-weight: 300;
+    padding-right: 10px;
+    text-align: $fc-day-number-text-align;
+  }
+  .fc-color-picker {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .fc-color-picker > li {
+    float: left;
+    font-size: 30px;
+    margin-right: 5px;
+    line-height: 30px;
+  }
+  .fc-color-picker > li .fa {
+    -webkit-transition: -webkit-transform linear 0.3s;
+    -moz-transition: -moz-transform linear 0.3s;
+    -o-transition: -o-transform linear 0.3s;
+    transition: transform linear 0.3s;
+  }
+  .fc-color-picker > li .fa:hover {
+    -webkit-transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+    -o-transform: rotate(30deg);
+    transform: rotate(30deg);
+  }
+  #add-new-event {
+    -webkit-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
+    transition: all linear 0.3s;
+  }
+  .external-event {
+    padding: 5px 10px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    box-shadow: 0 1px 1px $primary-bg-color;
+    text-shadow: 0 1px 1px $primary-bg-color;
+    border-radius: 3px;
+    cursor: move;
+  }
+  .external-event:hover {
+    box-shadow: inset 0 0 90px rgba(0, 0, 0, 0.2);
+  }
+
+  .fc-bg .fc-other-month {
+    background: $fc-other-month-bg;
+  }
+}

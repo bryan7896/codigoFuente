@@ -1,0 +1,16 @@
+{
+  "appName": "Anglo Gulf Trade Bank Platform",
+  "companyName": "AGTB",
+  "STATUS": {
+    "APPROVED": "AGTB_GREEN",
+    "FUNDED": "AGTB_SKYBLUE",
+    "UNAPPROVED": "AGTB_RED",
+    "PENDING": "AGTB_ORANGE",
+    "DEFERRED": "AGTB_ROYALBLUE"
+  },
+  "CALENDAR": {
+    "PAYMENT_DAY": "AGTB_SKYBLUE",
+    "NON_PAYMENT_DAY": "AGTB_ORANGE",
+    "NON_BUSINESS_DAY": "AGTB_GREY"
+  }
+}

@@ -1,0 +1,105 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.login-form {
+  background-color: $login-box-bg;
+  height: 100%;
+  margin: auto;
+  @if $login-include-width-percent-fifty {
+    width: 50%;
+  }
+}
+
+.login-box-body {
+  position: relative;
+  border-top: $login-box-border-top;
+  .transitioning-overlay {
+    z-index: 100;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: $secondary-bg-color;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    .loading-animation {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-top: -15px;
+      margin-left: -15px;
+    }
+  }
+  .btn {
+    white-space: normal;
+    width: 100%;
+    margin-bottom: 10px;
+    text-transform: $login-btn-text-transform;
+    background-color: $login-btn-bg-color;
+  }
+  .btn-primary {
+    color: $login-second-button-color !important;
+    border-color: $login-second-button-border-color !important;
+    background-color: $login-second-button-backgroud-color !important;
+    &:hover {
+      border-color: $login-second-button-border-color !important;
+    }
+  }
+  .btn-secondary {
+    color: $login-first-button-color !important;
+    border-color: $login-first-button-color !important;
+    background-color: $login-first-button-backgroud-color !important;
+    &:hover {
+      border-color: $login-first-button-color !important;
+    }
+  }
+
+  @if $theme == "pagonxt" {
+    .btn {
+      border-radius: $btn-border-radius;
+    }
+  }
+
+  label {
+    color: $login-label-color;
+    font-weight: normal;
+    font-size: 15px;
+    padding-left: 5px;
+  }
+
+  .g-recaptcha > div {
+    margin: auto;
+  }
+
+  .login-box-msg {
+    display: $login-title-display;
+    text-align: $login-title-text-align;
+    padding-bottom: 20px;
+  }
+}
+
+.recovery {
+  .login-box-msg {
+    display: $login-recovery-title-display;
+  }
+}
+
+.login-box-msg {
+  color: $login-box-text !important;
+}
+
+.login-image {
+  @include show-expected-display-if-true("block", $login-image-display-block);
+  background-image: if(
+    variable-exists($login-image-url),
+    $login-image-url,
+    url("../../../themes/images/logos/default/demica-login-splash.jpg")
+  );
+  width: 50%;
+  background-repeat: round;
+  @media screen and (max-width: 992px) {
+    display: none;
+  }
+}

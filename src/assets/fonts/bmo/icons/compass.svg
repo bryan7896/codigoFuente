@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="15px" viewBox="0 0 24 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>24/compass</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M12.0937,13.4941 L9.4467,14.5541 L10.5057,11.9061 C10.6437,11.5601 10.8637,11.2581 11.1317,11.0071 L12.9927,12.8681 C12.7417,13.1371 12.4397,13.3561 12.0937,13.4941 M16.5767,7.4231 C16.1697,7.0141 15.5597,6.8901 15.0257,7.1031 L11.1637,8.6481 C10.0227,9.1051 9.1057,10.0221 8.6487,11.1641 L7.1037,15.0241 C6.8897,15.5591 7.0147,16.1701 7.4227,16.5771 C7.6977,16.8531 8.0657,17.0001 8.4407,17.0001 C8.6197,17.0001 8.8017,16.9661 8.9747,16.8961 L12.8357,15.3511 C13.9777,14.8941 14.8947,13.9771 15.3517,12.8361 L16.8967,8.9751 C17.1107,8.4401 16.9857,7.8301 16.5767,7.4231 M12,4 C7.589,4 4,7.589 4,12 C4,16.411 7.589,20 12,20 C16.411,20 20,16.411 20,12 C20,7.589 16.411,4 12,4 M12,22 C6.486,22 2,17.514 2,12 C2,6.486 6.486,2 12,2 C17.514,2 22,6.486 22,12 C22,17.514 17.514,22 12,22" id="path-1"></path>
+    </defs>
+    <g id="24/compass" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Fill-1" fill="#0075BE" xlink:href="#path-1"></use>
+        <g id="🎨-Colour-/-Primary-/-AccessibleBMOBlue" mask="url(#mask-2)" fill="#0075BE">
+            <g transform="translate(-3.000000, -3.000000)" id="#0075BE">
+                <rect x="0" y="0" width="30" height="30" rx="4"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

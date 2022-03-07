@@ -1,0 +1,13 @@
+{
+  "appName": " FCI SCF Platform",
+  "companyName": "FCI",
+  
+  "STATUS": {
+    "FUNDED": "FCI_FUNDED"
+  },
+
+  "LIMITS" : {
+    "warning" : 34,
+    "danger": 67
+  }
+}

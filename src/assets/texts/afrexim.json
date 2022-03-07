@@ -1,0 +1,16 @@
+{
+  "appName": "Afreximbank Tradelink",
+  "companyName": "Afreximbank",
+  "STATUS": {
+    "APPROVED": "AFREXIM_GREEN",
+    "FUNDED": "AFREXIM_YELLOW",
+    "UNAPPROVED": "AFREXIM_PURPLE",
+    "PENDING": "AFREXIM_ORANGE",
+    "DEFERRED": "AFREXIM_TEAL"
+  },
+  "CALENDAR": {
+    "PAYMENT_DAY": "AFREXIM_GREEN",
+    "NON_PAYMENT_DAY": "AFREXIM_RED",
+    "NON_BUSINESS_DAY": "AFREXIM_GREY"
+  }
+}

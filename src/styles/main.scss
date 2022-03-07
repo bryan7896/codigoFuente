@@ -1,0 +1,235 @@
+@import '_colours';
+@import 'variables';
+
+.main-header {
+  box-shadow:0 2px 2px -2px $header-box-shadow;
+}
+
+.box.box-primary {
+  border-top-color: $primary-color;
+}
+
+.box-thinPad {
+  padding: 3px 3px 1px 2px
+}
+
+html, body {
+height: 100%;
+padding: 0;
+margin: 0;
+color: $default-body-text-color;
+}
+
+#app-container, #main-content {
+  height: 100%;
+}
+
+.navbar-custom-menu  {
+  margin-right: 1em;
+  .dropdown .dropdown-toggle {
+    font-weight: bold;
+    position: relative;
+    top: $dropdown-text-position;
+    .icon {
+      margin-left: 5px;
+    }
+    .icon-l{ //Language
+      display: none;
+    }
+    & > i {
+      color: $main-header-icon-color !important;
+    }
+  }
+  .dropdown-surround {
+    display: inline;
+    padding-top: 13px;
+    color: black;
+  }
+
+  .user-menu .dropdown-toggle {
+    padding-top: $user-menu-dropdown-toggle-padding-top;
+    padding-bottom: $user-menu-dropdown-toggle-padding-bottom;
+
+    .custom-user-symbol {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    span {
+      display: inline-block;
+      margin-bottom: 4px;
+    }
+
+    .icon.arrow {
+      display: inline-block;
+    }
+  }
+  //only display either left or right
+  .settings-left{
+    display: $display-left-settings-icon;
+    margin-top: $display-left-settings-margin-top;
+  }
+  .settings-right{
+    display:$display-right-settings-icon;
+  }
+}
+
+.datepicker.dropdown-menu {
+  width: 250px;
+  height: 270px;
+  button {
+    outline: none;
+    border: 0px;
+  }
+  .btn {
+    border-radius: 0;
+  }
+  .btn:hover {
+    color: $typography-bg-light;
+  }
+  .btn:active{
+    box-shadow: none;
+    background: $elm-active-bg-color !important;
+  }
+  .btn-default {
+    background: none;
+  }
+
+  .btn-primary {
+    background: $primary-color !important;
+    color: #f1f1f1 !important;
+  }
+
+  .btn-today {
+    color: $primary-color;
+    font-weight: bold;
+  }
+  tbody {
+    height: 180px;
+  }
+  tbody button {
+    padding: 6px;
+  }
+  &.datepicker-mode-1, &.datepicker-mode-2 {
+    tbody button {
+      height: 65px;
+    }
+  }
+}
+.clickable {
+  cursor: pointer;
+}
+
+body.loading {
+  background: $login-bg-color;
+
+  .splash {
+    height: 360px;
+    width: 360px;
+    margin: 7% auto;
+
+    .logo {
+      font-size: 35px;
+      text-align: center;
+      margin-bottom: 55px;
+      font-weight: 300;
+
+      img {
+        width: 55%;
+      }
+    }
+  }
+  .app-loading-animation {
+    display: block;
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    border-right: 3px solid $app-loading-animation;
+    border-bottom: 3px solid $app-loading-animation;
+    border-radius: 100%;
+
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 2s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+     -ms-animation-name: spin;
+    -ms-animation-duration: 2s;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+    -o-animation-name: spin;
+    -o-animation-duration: 2s;
+    -o-animation-iteration-count: infinite;
+    -o-animation-timing-function: linear;
+    animation-name: spin;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+}
+
+@-webkit-keyframes spin {
+  to {
+  	transform: rotate(360deg);
+	}
+}
+@-moz-keyframes spin {
+  to {
+  	transform: rotate(360deg);
+	}
+}
+@-ms-keyframes spin {
+  to  {
+  	transform: rotate(360deg);
+	}
+}
+@keyframes spin {
+  to {
+  	transform: rotate(360deg);
+	}
+}
+
+#pending-state-overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  background: $pending-overlay-bg;
+  .loading-animation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -15px;
+    margin-top: -15px;
+  }
+}
+
+.tl { text-align: left }
+.tr { text-align: right }
+
+.row {
+  &--nr {margin-right:0}
+  &--nl {margin-left:0}
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.col-clear {
+  &::before, &:after {
+    display: table;
+    content: " ";
+  }
+  margin-left: -15px;
+  margin-right: -15px;
+}

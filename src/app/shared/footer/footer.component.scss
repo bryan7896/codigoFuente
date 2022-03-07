@@ -1,0 +1,19 @@
+@import '../../../styles/variables';
+
+:host {
+    width: 100%;
+    justify-self: flex-end;
+  
+    .main-footer{
+      margin-left: 0px;
+      border-top: 2px solid $secondary-color;
+      font-size: 10px;
+    }
+    .main-footer  a {
+      color: if(variable-exists(login-main-footer), $login-main-footer, black);
+    }
+  }
+  
+  #terms-and-conditions, #legal-notice, #data-protection, #customer-service {
+    color: if(variable-exists(login-main-footer), $login-main-footer, black);
+  }

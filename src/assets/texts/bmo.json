@@ -1,0 +1,19 @@
+{
+  "appName": "BMO Capital Markets",
+  "companyName": "BMO",
+  "footerLogo": "assets/images/logo.svg",
+  "STATUS": {
+    "APPROVED": "BMO_APPROVED",
+    "FUNDED": "BMO_FUNDED",
+    "UNAPPROVED": "BMO_UNAPPROVED",
+    "PENDING": "BMO_PENDING"
+  },
+  "CALENDAR": {
+    "PAYMENT_DAY": "BMO_APPROVED",
+    "NON_PAYMENT_DAY": "BBVA_RED"
+  },
+  "LIMITS" : {
+    "warning" : 34,
+    "danger": 67
+  }
+}

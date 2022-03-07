@@ -1,0 +1,75 @@
+
+@import 'variables';
+
+// Flag icons
+// Taken from http://lipis.github.io/flag-icon-css/
+$flag-icon-css-path: '/assets/flags';
+$flag-icon-rect-path: '/4x3';
+$flag-icon-square-path: '/1x1';
+
+// Base
+
+@mixin flag-icon($country) {
+  .flag-icon-#{$country} {
+    background-image: url(#{$flag-icon-css-path}#{$flag-icon-rect-path}/#{$country}.svg);
+    &.flag-icon-squared {
+      background-image: url(#{$flag-icon-css-path}#{$flag-icon-square-path}/#{$country}.svg);
+      width: 2rem;
+    }
+  }
+}
+
+
+.flag-icon-background {
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+.flag-icon {
+  @extend .flag-icon-background;
+  border: $flag-icon-border;
+  position: relative;
+  display: $flag-icon-dsp;
+  line-height: 0.8em;
+  width: $flag-icon-width;
+
+  &:before {
+    content: "\00a0";
+  }
+
+}
+
+@include flag-icon(gb);
+@include flag-icon(es);
+@include flag-icon(ru);
+@include flag-icon(ro);
+@include flag-icon(fr);
+@include flag-icon(it);
+@include flag-icon(de);
+@include flag-icon(pl);
+@include flag-icon(gr);
+@include flag-icon(pt);
+@include flag-icon(sk);
+@include flag-icon(cz);
+@include flag-icon(bh);
+@include flag-icon(sa);
+@include flag-icon(nl);
+@include flag-icon(zh);
+@include flag-icon(pt_br);
+
+//Override FontAwesome icons
+.fa-search {
+  @if $sidebar-toggle-menu == "\f0c9" {
+  border-radius: $input-radius;
+  color: $icon-search-color;
+  background: $icon-search-bg;
+  font-size: 13px;
+  padding: .33em;
+  }
+}
+
+// .fa-calendar-alt {
+//   cursor: pointer;
+//   pointer-events: auto;
+// }

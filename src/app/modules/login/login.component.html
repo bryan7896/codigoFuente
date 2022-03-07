@@ -1,0 +1,107 @@
+<div class="login-box">
+  <div class="login-form">
+    <div class="login-logo">
+      <img id="login-logo" alt="" src="assets/images/logo.svg" />
+    </div>
+    <div class="login-box-body">
+      <div class="transitioning-overlay" *ngIf="false">
+        <span class="loading-animation"></span>
+      </div>
+      <p
+        class="login-box-msg"
+        translate="views.login.sign_in_to_start_your_session"
+      ></p>
+      <form>
+        <p class="text-center text-danger login-errorAlert" *ngIf="false">
+          Error de inicio de sesión. Las credenciales que ingresó no son válidas
+          o su cuenta está bloqueada debido a demasiados intentos fallidos de
+          inicio de sesión.
+        </p>
+        <fieldset>
+          <legend style="display: none">Login Details</legend>
+          <div class="form-group has-feedback" *ngIf="false">
+            <input
+              type="text"
+              class="demica-input demica-login-input"
+              placeholder="Corporate Id"
+              name="corpoid"
+            />
+          </div>
+          <div class="form-group has-feedback" *ngIf="true">
+            <label for="username">Login</label>
+            <input
+              type="text"
+              class="demica-input demica-login-input"
+              placeholder="Username"
+              name="username"
+              remove-white-spaces
+            />
+          </div>
+          <div class="form-group has-feedback" *ngIf="true">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              class="demica-input demica-login-input"
+              name="password"
+              placeholder="Password"
+            />
+          </div>
+          <div class="form-group has-feedback" *ngIf="false">
+            <input
+              type="text"
+              class="demica-input demica-login-input"
+              placeholder="Authorisation token"
+              name="token"
+            />
+          </div>
+          <!-- Remember me and Languages -->
+          <div class="row">
+            <div class="col-xs-6">
+              <div class="checkbox">
+                <input
+                  class="demica-checkbox"
+                  type="checkbox"
+                  id="rememberMe"
+                />
+                <label for="rememberMe">
+                  <span class="cr"><i class="cr-icon fa fa-check"></i></span>
+                  <span>Remember me</span>
+                </label>
+              </div>
+            </div>
+            <div class="col-xs-6">
+                <app-language-selector></app-language-selector>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <button type="button" class="btn btn-primary btn-block btn-flat">
+                <span>Sign In</span>
+              </button>
+            </div>
+          </div>
+          <div class="row account-recovery">
+            <div class="col-xs-12">
+              <button type="button" class="btn btn-secondary">
+                I can't access my account
+              </button>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  <div class="login-image"></div>
+</div>
+<div class="login-footer">
+  <app-footer></app-footer>
+</div>
+
+<i *ngIf="false">
+  <iframe 
+    id="sobLogoutFrame" 
+    title="sobLogoutFrame" 
+    width="1px" height="1px" 
+    style="width:0;height:0;border:0; border:none;">
+  </iframe>
+</i>

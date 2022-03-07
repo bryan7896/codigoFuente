@@ -1,0 +1,17 @@
+{
+  "appName": "SABB SCF Platform",
+  "companyName": "SABB",
+  "headerLogo" : "assets/images/header-logo.png",
+  "STATUS": {
+    "APPROVED": "SABB_GREEN",
+    "FUNDED": "SABB_SKYBLUE",
+    "SOLD": "SABB_SKYBLUE",
+    "UNAPPROVED": "SABB_ORANGE",
+    "PENDING": "SABB_GOLDEN"
+  },
+  "CALENDAR": {
+    "PAYMENT_DAY": "SABB_RED",
+    "NON_PAYMENT_DAY": "SABB_BLUE",
+    "NON_BUSINESS_DAY": "SABB_GREY"
+  }
+}

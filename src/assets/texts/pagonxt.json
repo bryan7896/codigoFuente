@@ -1,0 +1,18 @@
+{
+  "appName": "Demica SCF Platform",
+  "companyName": "Demica",
+  "headerLogo" : "assets/images/header-logo.png",
+    "STATUS": {
+      "APPROVED": "PAGONXT_LIGHTGREEN",
+      "PENDING": "PAGONXT_LIGHTORANGE",
+      "SOLD": "PAGONXT_LIGHTGREEN",
+      "UNAPPROVED": "PAGONXT_LIGHTPINK",
+      "FUNDED": "PAGONXT_DARKGREEN",
+      "DEFERRED": "PAGONXT_LIGHTPINK"
+  },
+  "CALENDAR": {
+    "PAYMENT_DAY": "PURPLE_PRIMARY",
+    "NON_PAYMENT_DAY": "PASTEL_RED",
+    "NON_BUSINESS_DAY": "GREY"
+  }
+}

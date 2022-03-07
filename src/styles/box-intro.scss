@@ -1,0 +1,32 @@
+@import 'variables';
+
+.box-intro {
+	cursor:pointer;
+	position: relative;
+	min-height:158px;
+
+	&:hover {
+		border-top-color: $primary-color;
+		box-shadow:0 1px 1px 1px rgba(0, 0, 0, 0.3);
+	}
+
+	.box-intro__info {
+		padding-right:0;
+	}
+
+	.box-body {
+	}
+
+	h3 {
+		margin:0 0 0.5em 0;
+		padding:0 10px;
+		font-weight: bold;
+		font-size:18px;
+		color: $primary-color;
+	}
+
+	p {
+		padding:0 10px;
+	}
+
+}

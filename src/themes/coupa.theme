@@ -1,0 +1,1517 @@
+/* ==========================================================================
+Default theme would apply Demica theme.
+========================================================================== */
+
+/* ==========================================================================
+   Variable declaration - Inspired by Google Materialize
+
+   Steps to create a new theme:
+   1. Colours (section 2): pick the right primary and secondary colours,
+      if the palette is not available then ensure that the corresponding
+      colour palette is defined in _colours.scss before creating the new
+      theme.
+========================================================================== */
+/* ==========================================================================
+ * Table of Contents:
+ *
+ * 1.  Global (Borrowed shamelessly from Google Materialize)
+ * 2.  Typography (Borrowed shamelessly from Google Materialize)
+ * 3.  Flow Text (Borrowed shamelessly from Google Materialize)
+ * 4.  Padding and Margin
+ * 5.  Colours
+ * 6.  Detail View Box
+ * 7.  Buttons
+ * 8.  Labels
+ * 9.  Statuses
+ * 10. Horizontal Bar Slice
+ * 11. Radio Buttons
+ * 12. Dashboard statuses
+ * 13. D3 tips
+ * 14. Alerts
+ * 15. Slider
+ * 16. Logo Size
+ * 17. Widget
+ * 18. case
+========================================================================== */
+
+/*
+ * 1. Global
+ * ==========================================================================
+ */
+$theme: "coupa";
+// Media Query Ranges and Theme Name
+$small-screen-up: 601px !default;
+$medium-screen-up: 993px !default;
+$large-screen-up: 1201px !default;
+$small-screen: 600px !default;
+$medium-screen: 992px !default;
+$large-screen: 1200px !default;
+
+$medium-and-up: "only screen and (min-width : #{$small-screen-up})" !default;
+$large-and-up: "only screen and (min-width : #{$medium-screen-up})" !default;
+$small-and-down: "only screen and (max-width : #{$small-screen})" !default;
+$medium-and-down: "only screen and (max-width : #{$medium-screen})" !default;
+$medium-only: "only screen and (min-width : #{$small-screen-up}) and (max-width : #{$medium-screen})" !default;
+
+/*
+ * 2. Typography
+ * ==========================================================================
+ */
+$off-black: rgba(0, 0, 0, 0.87) !default;
+// Header Styles
+$h1-fontsize: 4.2rem !default;
+$h2-fontsize: 3.56rem !default;
+$h2-bold: 400;
+$h3-fontsize: 2.92rem !default;
+$h3-bold: 400;
+$h4-fontsize: 2.28rem !default;
+$h5-fontsize: 1.64rem !default;
+$h6-fontsize: 1rem !default;
+$normal-fontsize: 1rem !default;
+//Font families
+$primary-fontfamily: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$text-transform: inherit;
+$default-text-transform: normal;
+$form-label-text-transform: capitalize;
+$font-face: 'coupa';
+
+/*
+ * 3. Flow Text
+ * ==========================================================================
+ */
+$range : $large-screen - $small-screen !default;
+$intervals: 20 !default;
+$interval-size: $range / $intervals !default;
+
+/*
+ * 4. Padding and Margin
+ * ==========================================================================
+ */
+$element-margin: 5px !default;
+$element-top-margin: 5px !default;
+$element-bottom-margin: 5px !default;
+$element-left-margin: 5px !default;
+$element-right-margin: 5px !default;
+$element-padding: 5px !default;
+$widget-bottom-margin: $element-bottom-margin !default;
+$funding-request-detail-modal-min-width: 85%;
+$flexible-settlement-detail-modal-min-width: 85%;
+$credit-note-detail-modal-min-width: 70%;
+$invoice-detail-modal-min-width: 65%;
+
+/*
+ * 5. Colours
+ * TODO: Needed to be trimmed down (lots of colours phewww...)
+ * ==========================================================================
+ */
+// Primary colour across the site
+$primary-color: color("coupa-primary", "base") !default;
+$primary-color-light: lighten($primary-color, 15%) !default;
+// Used as the background
+$primary-color-dark: color("coupa-primary", "darken-3") !default; // #1E1E46;
+$primary-bg-color: color("coupa-primary", "darken-2") !default;
+
+$secondary-color: color("coupa-tertiary", "orange") !default;
+$secondary-bg-color: color("backgrounds", "shade-21") !default;
+
+$context-wrapper-bg: $secondary-bg-color !default;
+
+$elm-active-bg-color: color("coupa-primary", "darken-5") !default;
+
+// Typography colours
+$typography-bg-dark: #f4f4f4;
+$typography-normal: #7f7f80;
+$typography-bg-light: #1e1e1e;
+
+//Loading spinner color
+$spinner-color: "orange";
+$spinner-color-secondary: #fff;
+$pending-overlay-bg: rgba(0, 0, 0, 0.5);
+
+$skin-scf-bg: $primary-color-dark;
+
+// Custom checkbox color
+$checkbox-icon-color: $secondary-color;
+$checkbox-custom-color : #FF6200;
+
+// Default input color
+$default-input-background: white;
+$default-input-border: 1px solid #D2D6DE;
+$default-input-focus-border-color: $default-input-border;
+$default-input-border-radius: 0px ;
+
+%default-thead-font{
+  font-style: normal;
+}
+%default-tbody-font{
+  font-style: normal;
+}
+
+// Gradient colours
+%multistep-progress{
+  @include vertical-gradient(lighten($primary-color-dark, 20%), lighten($primary-color-dark, 10%));
+}
+
+%bg-gradient {
+  color:#fff;
+}
+
+.btn-invert {
+  @include vertical-gradient($secondary-color, darken($secondary-color, 10%));
+  border-color: darken($secondary-color, 5%);
+  color: white !important;
+  font-weight: 400;
+  &:hover {
+    @include vertical-gradient(darken($secondary-color, 10%), $secondary-color);
+    color: $primary-color;
+  }
+
+  &:active {
+    border-color: darken($secondary-color, 50%)
+  }
+}
+$availability-widget-padding: 12px;
+.btn.btn-invert-sell {
+  @include vertical-gradient($secondary-color, darken($secondary-color, 10%));
+  border: 1px solid darken($secondary-color, 5%);
+  color: white !important;
+  display: inline-block;
+  font-weight: 400;
+  margin: 10px 0 0 10px;
+  text-align: left;
+  width: 100%;
+  &:hover {
+    @include vertical-gradient(darken($secondary-color, 10%), $secondary-color);
+    color: $primary-color;
+  }
+
+  &:active {
+    border-color: darken($secondary-color, 50%)
+  }
+}
+
+$quick-funding-btn-padding:  5px 16px 5px 7px;
+$quick-funding-btn-background: #F3BD1F;
+$quick-funding-row-border: 1px solid #F1F1F1;
+$flexible-settlement-btn-background: #F3BD1F;
+$flexible-settlement-row-border: 1px solid #F1F1F1;
+
+$btn-primary-bg: $secondary-color !default;
+$btn-primary-bg-border: lighten($primary-color, 4%) !default;
+$btn-primary-bg-hover: darken($primary-color, 10%) !default;
+$btn-primary-bg-active: lighten($primary-color, 20%) !default;
+
+$icon-search-color: white;
+$icon-search-bg: #444;
+
+// pastels - need to be revised - as doesn't work in themed environment
+// in a themed application colour with name will be confusing (may be red
+// green, or common status colours could work)
+$pastel-blue: color("demica-blue", "lighten-2") !default;
+$pastel-blue-dark: color("demica-blue", "base") !default;
+$pastel-green: color("demica-green", "darken-3") !default;
+$pastel-yellow: color("coupa-tertiary", "orange") !default;
+$pastel-gold: color("shades", "gold") !default;
+$pastel-red: color("red", "base") !default;
+
+// Gradient Dropdown
+%bg-dropdown{
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  background-color: #f9f9f9;
+  background-image: -moz-linear-gradient(top, #fefefe, #f2f2f2);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fefefe), to(#f2f2f2));
+  background-image: -webkit-linear-gradient(top, #fefefe, #f2f2f2);
+  background-image: -o-linear-gradient(top, #fefefe, #f2f2f2);
+  background-image: linear-gradient(to bottom, #fefefe, #f2f2f2);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffefefe', endColorstr='#fff2f2f2', GradientType=0);
+}
+$selectize-border: #b8b8b8 !default;
+$selectize-border-active: #b8b8b8!default;
+$selectize-dropdown-bg: rgba(125, 168, 208, 0.2);
+$selectize-dropdown-active-bg: lighten($pastel-blue, 25%);
+$selectize-dropdown-active-text: #495c68;
+$selectize-arrow-color: #808080;
+$selectize-input-min-height: 34px;
+
+%selectize-multi-input-value {
+  text-shadow: 0 1px 0 rgba(0, 51, 83, 0.3);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+
+  background-color: $elm-active-bg-color;
+  background-image: -moz-linear-gradient(top, lighten($elm-active-bg-color, 10%), lighten($elm-active-bg-color, 5%));
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(lighten($elm-active-bg-color, 10%)), to(lighten($elm-active-bg-color, 5%)));
+  background-image: -webkit-linear-gradient(top, lighten($elm-active-bg-color, 10%), lighten($elm-active-bg-color, 5%));
+  background-image: -o-linear-gradient(top, lighten($elm-active-bg-color, 10%), lighten($elm-active-bg-color, 5%));
+  background-image: linear-gradient(to bottom, lighten($elm-active-bg-color, 10%), lighten($elm-active-bg-color, 5%));
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff1da7ee', endColorstr='#ff178ee9', GradientType=0);
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), inset 0 1px rgba(255, 255, 255, 0.03);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), inset 0 1px rgba(255, 255, 255, 0.03);
+}
+//main header colors
+$header-box-shadow : #000;
+$main-header-navbar-background: white !default;
+$main-header-navbar-border-left: 0 !default;
+$main-header-navbar-hover: color("coupa-primary", "base") !default;
+$main-header-navbar-hover-background: white !default;
+$main-header-navbar-open-background: white !default;
+$main-header-navbar-open-hover: black !default;
+
+$main-header-navbar-nav-link-color: color("coupa-primary", "darken-1") !default;
+$main-header-nav-link-color: black !default;
+$header-logo-height: 50px !important;
+$header-logo-width:230px;
+$main-header-user-dropdown-background: $main-header-navbar-background;
+$main-header-dropdown-navbar-margin: 0;
+$main-header-border-radius: 0;
+$main-header-margin: 0px;
+$display-left-settings-icon: none;
+$display-right-settings-icon: block;
+
+$main-header-icon-color: $primary-color !default;
+$dropdown-item-hover: $primary-color !default;
+
+$main-header-sidebar-toggle: color("coupa-primary", "base") !default;
+$main-header-logo-background: white !default;
+$main-header-logo-background-hover:white !default;
+$main-header-logo: color("coupa-primary", "base") !default;
+$main-link-color: black !default;
+$main-link-color-hover: white;
+$nav-link-hover-font-weight: normal;
+$nav-link-color: white !default;
+$nav-link-bold: normal !default;
+$nav-link-hover-color: white !default;
+$dropdown-text-position: auto !important;
+$nav-link-color-active:white !default;
+$nav-link-border: color("coupa-primary", "base") !default;
+$nav-tab-border-radius: 0;
+$nav-tab-height: 45px;
+$nav-tab-small-height: $nav-tab-height;
+$nav-tab-top-user-font-size: 1.2em !default;
+$nav-tab-text : white !default;
+$nav-tab-text-over: color("coupa-primary", "base") !default;
+$nav-tab-font-size: 1.7em !default;
+$nav-tab-font-weight: normal !default;
+$nav-tab-padding: 10px 15px;
+$nav-tab-single-text: $secondary-color !default;
+$widget-header-navtab-border: grey !default;
+$widget-header-navtab-padding: 8px 15px;
+$widget-header-navtab-active-border: $secondary-color !default;
+$widget-header-navtab-border-bottom: 0px solid $widget-header-navtab-active-border;
+$widget-header-navtab-active-border-bottom: 1px solid white;
+$widget-navtab-li-inactive-color: #fff;
+$widget-navtab-li-inactive-text-color: $nav-tab-text;
+$widget-navtab-li-active-color: #fff;
+$widget-navtab-li-active-text-color: $nav-tab-text-over;
+$password-reset-color: black !default;
+$widget-header-navtab-btm-border: none;
+$sidebar-border-highlight: none;
+$sidebar-btn-primary: #fff;
+$summary-box-text-align: right;
+$summary-box-text-align-fix: 0px;
+$summary-box-button-font-size: 1.1em;
+
+
+//widget colors on homepage
+// $widget-header-color: black !default;
+$release-notes-color: black;
+$widget-header-background: color("coupa-primary", "base") ;
+$widget-header-text:  white;
+$widget-context-background: vertical-gradient(lighten(grey, 25%), lighten(grey, 10%)) !default;
+$widget-context-text:  color("coupa-primary", "darken-3")   !default;
+$widget-summary-border: color("backgrounds","shade-15") !default;
+$widget-context-background-secondary: #eeeeee !default;
+$widget-buyer-onboarding-text-primary:  color("coupa-primary", "darken-3") !default;
+$widget-header-background-secondary:$widget-context-background-secondary;
+$widget-buyer-onboarding-text-secondary:  black !default;
+$widget-buyer-onboarding-seperator: grey !default;
+$widget-autotrade-background: #eeeeee !default;
+$widget-autotrade-text: black;
+$widget-br-bg: #fff !default;
+$widget-br-opacity: .5 !default;
+$widget-context-background-secondary-sidebar: transparent !default;
+$widget-context-background-tertiary: #eeeeee !default;
+$widget-summary-text : black !default;
+$widget-br-height: 1px;
+$horizontal-bar-text: black !default;
+$horizontal-bar-height: 70px !default;
+$horizontal-text-position: 15px;
+$horizontal-line-height: 40px;
+$horizontal-bar-border-radius: 35px!default;
+$widget-header-text-transform: none !default;
+$quick-switch-bg: rgba(0,0,0,0.2)!default;
+$administration-content-headers: 0px !default;
+$widget-font-family: Arial;
+$widget-cashflow-opacity: .75;
+$see-cashflow-button-padding-bottom: 25px;
+$see-cashflow-button-padding-right: 25px;
+$form-control-font-size: 0.875em;
+$dashboard-filter-label: 5px !important;
+$dashboard-filter-label-color: #97a0b3 !important;
+$cashflow-total-padding: 0;
+$cashflow-wiget-font-style: none;
+$cashflow-widget-font-weight: normal;
+$cashflow-table-line: rgba(255,255,255,0.2);
+$cashflow-tables-container-bg: #fff;
+$consolidated-total-size: 24px;
+$widget-header-text-weight: normal;
+$widget-header-height: 55px;
+
+//Timeline
+$timeline-text-transform: uppercase;
+$timeline-line-color: #F1F1F1;
+
+//vis timeline
+$timeline-background: white;
+$timeline-background-bottom: white;
+$vis-timeline-grid-minor: grey;
+$vis-timeline-grid-major: grey;
+$vis-timeline-text: black !default;
+$vis-timeline-major-text: black !default;
+$vis-timeline-major-text-border: black;
+$vis-timeline-item-background: black;
+$vis-timeline-item-font-size: inherit !default;
+$vis-timeline-item-padding: 5px;
+$vis-timeline-current-time-background: #9e9e9e;
+$vis-timeline-current-time-border:  #9e9ee9;
+$vis-timeline-current-time-height: 100%;
+$vis-timeline-current-time-width: 7px;
+$vis-timeline-current-time-margin-left: -4px;
+$vis-timeline-border-width: 1px !default;
+$vis-timeline-border: solid $primary-color !default;
+
+//cashflow timeline box colours
+$cashflow-filter-labels: black;
+$cashflow-filter-addon-color: black;
+
+//due date payment unpaid
+$vis-timeline-approved-text: white;
+$vis-timeline-approved-bg: orange; //unpaid
+$vis-legend-timeline-approved-text : #fff;
+$vis-timeline-approved-border: orange;
+$vis-timeline-approved-unpaid-bg: orange; //unpaid
+$vis-timeline-approved-unpaid-text: white;
+$vis-timeline-approved-paid-bg: transparent;
+$vis-timeline-approved-paid-border: $vis-timeline-approved-border;
+
+//advance payment unpaid
+$vis-timeline-funded-text: white;
+$vis-timeline-funded-bg: green;
+//same border
+$vis-timeline-approved-paid-text: black;
+$vis-timeline-funded-border: green;
+$vis-timeline-funded-unpaid-bg: green;
+$vis-timeline-funded-unpaid-text: white;
+$vis-timeline-funded-paid-bg: transparent;
+$vis-timeline-funded-paid-border: $vis-timeline-funded-border;
+
+$vis-timeline-funded-paid-text: black;
+$vis-timeline-deferred-border: black !default;
+$vis-timeline-deferred-unpaid-bg:#f8970f !default;
+$vis-timeline-deferred-unpaid-text: black !default;
+$vis-timeline-deferred-paid-bg:#f7c99e !default;
+$vis-timeline-deferred-paid-text: black !default;
+$vis-timeline-buyercost-border: black !default;
+$vis-timeline-buyercost-unpaid-bg:#f8970f !default;
+$vis-timeline-buyercost-unpaid-text: black !default;
+$vis-timeline-buyercost-paid-bg:#f7c99e !default;
+$vis-timeline-buyercost-paid-border:$vis-timeline-buyercost-paid-bg;
+$vis-timeline-buyercost-paid-text: black !default;
+
+$vis-timeline-earlypayment-unpaid-bg:#f8970f !default;
+$vis-timeline-earlypayment-border: black !default;
+$vis-timeline-earlypayment-unpaid-text: black !default;
+$vis-timeline-earlypayment-paid-bg:#f7c99e !default;
+$vis-timeline-earlypayment-paid-text: black !default;
+
+
+//funder?
+$vis-timeline-transferred-text: colour("coupa-secondary", "darken-5")  !default;
+$vis-timeline-transferred-bg: rgba(255, 255, 255, 0.1);
+$vis-timeline-transferred-border: blue;
+$vis-timeline-transferred-paid-text: colour("coupa-secondary", "darken-5") ;
+$vis-timeline-transferred-paid-bg: rgba(255,243,83,.1);
+$vis-timeline-transferred-paid-border: $vis-timeline-approved-paid-border;
+
+//detail invoice timeline icons
+$detail-timeline-item-color: #666;
+$detail-timeline-item-bg: #d2d6de;
+
+$demica-table-bg: #E6EEF2 !default;
+
+$toggle-switch-left-bg: $primary-color !default;
+
+$progress-bar: $primary-color !default;
+
+//filter
+$filter-background: linear-gradient(
+    to bottom,
+    #e6eef2,
+    #e6eef2 70px,
+    #fff 70px,
+    #fff
+);
+$filter-element-background: #e6eef2 !default;
+$filter-element-border-left: 1px solid #F1F1F1;
+$filter-element-border-bottom: 2px solid #F1F1F1;
+$filter-btn-primary-border: $primary-color !default;
+$filter-btn-primary-background: $primary-color !default;
+$filter-btn-primary: black !default;
+$filter-btn-primary-border-over: $primary-color !default;
+$filter-btn-primary-background-over: color("coupa-primary", "darken-1") !default;
+$filter-btn-primary-over: white !default;
+$filter-btn-default-border: #ccc !default;
+$filter-btn-default-background: white !default;
+$filter-btn-default: #333 !default;
+$filter-btn-default-border-over: #adadad !default;
+$filter-btn-default-background-over: #e6e6e6 !default;
+$filter-btn-default-over: $primary-color !default;
+$filter-btn-toggle: $primary-color !default;
+$filter-btn-toggle-border: none !default;
+$filter-btn-toggle-hover: $primary-color-dark !default;
+$filter-btn-toggle-active-shadow: default;
+$filter-text-transform: none;
+$filter-text-font-size: 0.8em;
+
+//Upload buttons (Same as filter btn-default)
+$upload-btn-border: $filter-btn-default-border;
+$upload-btn-bg: $filter-btn-default-background;
+$upload-btn-color: $filter-btn-default;
+$upload-btn-border-over: $filter-btn-default-border-over;
+$upload-btn-bg-over: $filter-btn-default-background-over;
+$upload-btn-color-over: $filter-btn-default-over;
+
+$upload-files-modal-drop-zone-bg: #f1f1f1 !default;
+$upload-files-modal-drop-zone-border: 2px dashed $primary-color;
+$upload-files-modal-drop-zone-label-color: $primary-color;
+
+$upload-file-display: block !default;
+$create-bank-acc-display: block !default;
+$show-funder-type-info: none !default;
+//invoices
+$currency-summary-font-weight: 700;
+$currency-summary-margin: 0;
+$ledger-file-summary-text-color: white;
+
+// Used for calendar and border of toggle switch
+$light-bg-color: color("grey", "lighten-2") !default;
+
+$login-bg-color: white !default;
+$login-box-bg: $primary-color !default;
+$login-box-text: white !default;
+$login-box-text-input: black;
+$login-box-width: 360px !default;
+$login-input-border-color: black !default;
+$login-input-background-color: white;
+$login-page-language-hover-bg: $secondary-color !default;
+$login-box-top-margin: 7%;
+$login-box-border-top: 0.8em solid $primary-color;
+$login-label-color: $primary-color;
+$login-logo-recovery-display: inline !default;
+$login-logo-align: center !default;
+$login-logo-background: transparent !default;
+$login-title-display: block !default;
+$login-recovery-title-display: block !default;
+$login-title-text-align: center !default;
+$login-radio-width: 100%;
+$login-btn-text-transform: $btn-text-transform;
+$login-first-button-color: $secondary-color !default;
+$login-first-button-backgroud-color: $primary-color !default;
+$login-second-button-color: $secondary-color !default;
+$login-second-button-border-color: $secondary-color !default;
+$login-second-button-backgroud-color: $primary-color !default;
+
+
+// Used for programme management and user admin lists
+$list-bg-color: color("demica-blue", "lighten-5") !default; // #c3d5e6;
+$list-bg-color2: color("demica-blue", "lighten-6") !default; // #E6EEF2;
+
+$row-even-bg-color: color("backgrounds", "shade-18") !default;
+$row-odd-bg-color: color("grey", "lighten-5") !default;
+$row-bg-hover-color: color("grey", "darken-1") !default;
+
+$cashflow-timeline-filter-background: white !default;
+$cashflow-table-bg: $list-bg-color2 !default;
+$cashflow-table-tab-hover: black !default;
+$cashflow-table-tab-header-hover: black !default;
+$cashflow-table-header : black !default;
+$cashflow-table-header-active : $primary-color !default;
+$cashflow-table-header-active-border:$cashflow-table-header-active;
+$cashflow-table-header-active-background: #fff !default;
+$cashflow-table-header-border-wight: 1px;
+$cashflow-filter-separator-color: grey !default;
+$cashflow-detail-tab-hover: #999;
+$cashflow-detail-selected-date-font-size: 18px;
+$cashflow-nav-tabs-background-color: $primary-color;
+$cashflow-nav-tabs-text-transform: none;
+
+//Advance funding request
+$funding-steps-amount-color: $pastel-red;
+$funding-steps-bg: inherit;
+$funding-steps-point-color: #fff;
+$funding-steps-point-active-color: lighten($primary-color-dark, 20%);
+$funding-steps-point-border: 2px solid $funding-steps-point-color;
+$funding-steps-content-color: inherit;
+$funding-steps-result-color: lighten($primary-color-dark, 20%);
+$funding-steps-result-bg: rgba(255,255,255,0.1);
+$funding-steps-result-active-bg: #fff;
+$funding-steps-result-complete-bg: $secondary-color;
+$funding-steps-divider-color: #fff;
+$funding-steps-cal-active-color: $primary-color-dark;
+$funding-steps-amount-value-margin-right: 5rem;
+
+// #222d33 compare this with new colour
+// Sidebar menu background colour
+$sidebar-bg-color: color ("coupa-primary", "darken-4");//Sidebar sections
+$sidebar-text: #0078b3 !default;
+$sidebar-text-hover-color: $secondary-color;
+$sidebar-sh-bg-color: color ("coupa-primary", "darken-5")!default; // Section Header
+$sidebar-sh-txt-color:white !default; // Section Header Text
+$sidebar-sh-txt-size: inherit;
+$sidebar-sh-txt-bold: normal;
+$sidebar-sh-text-transform: uppercase;
+$sidebar-sh-padding: 10px 25px 10px 15px;
+$sidebar-sh-border-top: 1px solid #F1F1F1;
+$sidebar-menu-bg-color: color("coupa-primary", "darken-4") !default;
+$tab-active-bg-color: white !default;
+$tab-active-hover-color:  white !default;
+$sidebar-treeview-menu-background: color ("coupa-primary", "darken-2")!default;
+$sidebar-treeview-menu-highlight: color("coupa-primary", "darken-2")!default;
+$sidebar-treeview-menu-border-active:white !default;
+$sidebar-treeview-menu-padding: 5px 5px 5px 15px;
+$sidebar-treeview-submenu-color: $sidebar-treeview-menu-border-active !default;
+$sidebar-treeview-submenu-bg-color: $elm-active-bg-color !default;
+$sidebar-treeview-submenu-icon-visibility: visible;
+$sidebar-menu-icon:  white !default;
+$sidebar-menu-icon-active:white !default;
+$sidebar-menu-active-tab: color("coupa-primary", "darken-4") !default;
+$sidebar-menu-active-border:color("coupa-primary", "darken-4") !default;
+$sidebar-menu-active-border-right: none !default;
+$sidebar-menu-hover-border: $sidebar-menu-active-border;
+
+// $best-practice-color: color("blue", "base") !default;
+$best-practice-color: $primary-color !default;
+$above-average-color: $pastel-green !default;
+$average-color: $pastel-gold !default;
+$below-average-color: $pastel-red !default;
+$well-below-average-color: color("grey", "darken-1") !default;
+
+// Alert Colours
+$alert-success: $pastel-green !default;
+$alert-danger: $pastel-red !default;
+$alert-warning: $pastel-gold !default;
+$alert-info: lighten($pastel-blue, 15%);
+$alert-filter: rgba($primary-color-dark, 0.34) !default;
+
+//Table colours
+$table-border-color: #f0f0f0;
+$table-row-shade: lighten($primary-color-dark, 78%);
+$overview-table-row-shade: $table-row-shade;
+$table-row-shade-hover: lighten($primary-color-dark, 70%);
+$table-pager-border-color: #adadad;
+$table-pager-bg-color: #e6e6e6;
+$table-pager-color: #333;
+
+$table-sort-indication-color: black;
+$table-actions-icon-color: black;
+$table-actions-icon-hover-color: lighten($table-actions-icon-color, 10%);
+$table-row-border-bottom: 0;
+$table-code-font-weight: bold;
+
+$widget-table-top-border-style: none;
+$widget-table-border-style: none;
+$widget-table-border-padding: 0;
+$widget-table-font-size: 1.2em;
+$widget-table-th-color: $typography-bg-light;
+$widget-table-th-font-weight: 700;
+$h3-subtitle: 1.8em;
+
+//user administration
+$admin-tab-background: $primary-color !default;
+$admin-tab-border: color("ing", "light-grey") !default;
+$admin-tab-bg: color("demica-blue", "lighten-5") !default;
+$admin-tab-bg-hover: color("grey","lighten-5") !default;
+$admin-active-tab-bg: linear-gradient(white, #f7f7f7 30px) !default;
+$admin-tabs-padding: 5px 0 0 5px;
+$admin-tab-margin: 0 0 0 5px;
+$admin-tab-text: black !default; // was black
+$admin-active-tab-text: black !default; // was black
+
+$admin-tab-icon-color: #222;
+$admin-tab-icon-hover-color: $primary-color;
+$admin-tab-icon-hover-bg: white;
+
+$funder-modal-width: 600px;
+$funder-modal-multistep-progress-display: block;
+$modal-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.125);
+$modal-body-padding: 15px;
+$modal-footer-bg: #f0f0f0;
+$modal-footer-padding: 15px;
+$modal-title-color: black;
+$modal-title-font-size: 18px;
+$modal-title-text-transform: none;
+$modal-subtitle-font-size: 18px;
+$modal-backdrop-background: #000;
+$modal-backdrop-filter: none;
+$modal-backdrop-opacity: .75;
+$modal-backdrop-opacity-ie11: .75;
+
+$multistep-text-align: left;
+$multistep-progress-step-color: white;
+$multistep-progress-step-text-transform: $default-text-transform;
+$multistep-progress-separator-color: white;
+
+//footer
+$footer-background: white;
+$footer-text: black;
+$footer-display: block !default;
+$default-footer-display: block !default;
+$advanced-footer-display:none !default;
+$footer-package-name-display:block !default;
+$footer-logo-display:none !default;
+
+$sidebar-width: 230px;
+$footer-margin: 230px;
+$footer-right: 0px;
+
+//calendar
+$calender-key-bg: lighten($primary-color-dark, 10%) !default;
+$calender-key-item-color: #fff;
+$calender-key-item-text-transform: none;
+$calendar-box-margin: 0 0 20px 0;
+$calendar-non-business-day: #7F7F7F !default;
+$calendar-payment-day: #03a65a !default;
+$calendar-payment-day-border: white !default;
+$calendar-non-payment-day: #d01d1b !default;
+
+//help-tour
+$help-tour-bg: white !default;
+$help-tour-opacity: 0 !default;
+$help-tour-title-text: $primary-color-dark !default;
+$help-tour-title-bg: white !default;
+$help-tour-title-text-align: center !default;
+$help-tour-content-bg: $light-bg-color;
+$help-tour-content-text: $primary-color-dark !default;
+$help-tour-bullet-bg: linear-gradient(to bottom, $primary-color 0%, $primary-color-dark 100%) !default;
+$help-tour-bullet-size: 20px !default;
+$help-tour-bullet-border: white !default;
+$help-tour-bullet-active-border: 2px solid $help-tour-bullet-border;
+$help-tour-bullet-hover: white !default;
+$help-tour-bullet-background: #ccc !default;
+$help-tour-bullet-bg-align: center !default;
+$help-turn-buttons-bg: transparent !default;
+$help-turn-buttons-text-align: center !default;
+$help-turn-button-bg: white !default;
+$help-turn-button-color: $main-link-color !default;
+$help-tour-exit-bg: white !default;
+$help-tour-arrow: black !default;
+
+//contactus modal
+$contactus-primary-bg: $primary-color;
+$contactus-secondary-bg: white;
+$contactus-primary-text: $primary-color;
+$contactus-secondary-text: white;
+$contactus-primary-button: white;
+
+// dashboard warning modal
+$dashboard-warning-primary-bg: $primary-color;
+$dashboard-warning-secondary-bg: white;
+$dashboard-warning-primary-text: $primary-color;
+$dashboard-warning-secondary-text: white;
+$dashboard-warning-primary-button: white;
+
+/*
+ * 6. Detail View Box
+ * ==========================================================================
+ * TODO: Needed to be trimmed down (lots of variables phewww...)
+ */
+$box-border-color: $primary-color !default;
+$box-border: 1px solid $box-border-color !default;
+$box-border-top-width: 3px !default;
+$box-shadow-color: rgba(110, 80, 255, 0.34) !default;
+$box-shadow: 0px 2px 5px 1px $box-shadow-color !default;
+$box-title-font-size: 1em !default;
+$box-title-font-color: white !default;
+$box-title-text-transform: none;
+$box-header-padding: 5px !default;
+$box-header-background: $primary-color !default;
+$box-footer-flex-direction: row;
+$box-footer-justify-content: flex-start;
+
+// Navigation tabs
+$box-nav-tabs-background: $light-bg-color !default; // replaced $grey-bg with $light-bg-color
+$box-nav-tabs-color: #000 !default;
+$box-nav-tabs-margin: 0 -9px;
+$box-nav-tabs-padding: 0 10px !default;
+$box-nav-tab-pane-padding: 20px !default;
+$nav-tabs-border-color: white;
+$nav-tabs-close-padding: default;
+
+%nav-tab-close-icon {
+  color: #222;
+  display: inline-block;
+  padding:3px;
+  margin-right: 2px;
+  font-size: 12px;
+  position:absolute;
+  z-index: 10;
+  top: 9px;
+  right: 0px;
+  border-radius: 50%;
+
+  &:hover {
+    background: $primary-color;
+    color: white;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.25);
+    text-shadow: 0 1px 1px rgba(0,0,0,.25);
+  }
+}
+
+// Navigation tabs custom
+$custom-nav-tabs-border-bottom-color: #f4f4f4; // was #f4f4f4
+$cashflow-nav-tabs-border-bottom-color: $custom-nav-tabs-border-bottom-color;
+$custom-nav-tabs-tab-color: #444 !default; // was #444
+$custom-nav-tabs-tab-active-color: #444 !default; // was #444
+$custom-nav-tabs-tab-border-color: transparent; //was transparent
+$custom-nav-tabs-tab-border-active-color: #3c8dbc transparent transparent transparent; //was #3c8dbc transparent transparent transparent
+$cashflow-nav-tabs-tab-border-active-color: $custom-nav-tabs-tab-border-active-color;
+$custom-nav-tabs-tab-margin: 1px 1px -1px 1px;
+
+$custom-nav-tabs-funding-button-display: none;
+$custom-nav-tabs-text-transform: none !default;
+
+$nav-tabs-summary-li-active-text-color:$custom-nav-tabs-tab-active-color;
+$nav-tabs-summary-li-inactive-text-color:$custom-nav-tabs-tab-color;
+$nav-tabs-summary-li-inactive-color:#fff;
+// Info section
+$detail-info-top-border: 1px solid $light-bg-color !default; // replaced $grey-bg with $light-bg-color
+// Paid - positive section
+$detail-paid-colour: $above-average-color !default;
+$detail-paid-border: 1px solid $detail-paid-colour !default;
+$detail-paid-background: rgba($detail-paid-colour, 0.1) !default;
+$details-paid-text-transform: uppercase;
+// Paid - negative section
+$detail-paid-neg-colour: $below-average-color !default;
+$detail-paid-neg-border: 1px solid $detail-paid-neg-colour !default;
+$detail-paid-neg-background: rgba($detail-paid-neg-colour, 0.1) !default;
+
+$detail-part-paid-colour: #0D47A1 !default;
+$detail-part-paid-border: 2px solid $detail-part-paid-colour !default;
+$detail-part-paid-background: rgba($detail-part-paid-colour, 0.1) !default;
+
+//detail view
+$detail-view-bg: $box-nav-tabs-background !default;
+$detail-view-hover: $box-nav-tabs-color !default;
+
+$modal-header-bg: white !default;
+$modal-default-bg: color("demica-blue", "lighten-6") !default;
+$modal-footer-border-top-color: #F1F1F1;
+
+$tooltip-bg: white !default;
+$tooltip-text: black !default;
+$tooltip-opacity: inherit;
+$tooltip-border-color: black;
+$tooltip-border: 1px solid;
+
+$pagination-active-text: $secondary-color !default;
+
+$app-loading-animation: lighten($primary-color, 10%) !default;
+
+$export-text-color: $primary-color !default;
+$export-text-transform: uppercase;
+$export-text-button-transform: $export-text-transform;
+$export-as-bg: #eee !default;
+$export-as-border: #aaa !default;
+$export-as-hover-bg: #efefef !default;
+$export-as-hover-text: #555 !default;
+$export-as-text: #333 !default;
+$export-as-font-family: monospace !default;
+$export-as-margin-bottom: 0;
+
+$programme-management-check-box: #555 !default;
+
+$account-recovery-options-flex-flow: row wrap;
+$account-recovery-check-box: #555 !default;
+$account-recovery-check-box-color: #fff !default;
+
+$limit-utilisation-progress-bar: #337ab7 !default;
+$limit-utilisation-progress-bar-warning: #f39c12;
+$limit-utilisation-progress-bar-danger: #dd4b39;
+
+$form-control-focus-border: #3c8dbc !default;
+$form-mandatory-field-color: $primary-color !default;
+
+$inbox-type-icone: black !default;
+
+$alert-icone: $typography-normal !default;
+
+$help-tool-color: black !default;
+%help-tool {
+  color: $help-tool-color !important;
+  font-size: 28px;
+  margin: 4px;
+  opacity:0.5;
+}
+
+$dropdown-menu-user-header-p: #fff!default;
+
+$alert-info-bg: lighten($pastel-blue, 20%) !default;
+$alert-info-text: darken($pastel-blue-dark, 10%) !default;
+
+$bg-purple: #fff !default;
+$control-sidebar-dark: color("coupa-primary","darken-3") !default;
+$sidebar-bg-text-color: #fff !default;
+
+$widget-font-size-t-xl: 2.2em !default;
+$widget-font-weight-t-xl: 600 !default;
+$horizontal-bar-amount-marker-font-size: 1em !default;
+
+$input-radius: 0px !default;
+$default-input-radius: $input-radius !default;
+
+// Dropdown
+$dropdown-menu-box-shadow: 0 3px 10px rgba(0, 0, 0, .4) !default;
+
+/*
+ * 7. Buttons TODO: all colour attributes should be replaced by variables
+ * declared in colour section (4)
+ * ==========================================================================
+ */
+// Shared styles
+$btn-border: 1px solid transparent !default;
+$btn-border-radius: 3px !default;
+$btn-box-shadow: none !default;
+$btn-background-focus: lighten($secondary-color, 4%) !default;
+$btn-font-size: 1.3rem !default;
+$btn-height: 36px !default;
+$btn-padding: 6px 12px !default;
+$btn-radius: 2px !default;
+$btn-text-transform: none !default;
+
+// Disabled styles
+$btn-disabled-background: #DFDFDF !default;
+$btn-disabled-color: #9F9F9F !default;
+
+// Raised buttons
+$btn-raised-background: $secondary-color !default;
+$btn-raised-background-hover: lighten($btn-raised-background, 5%) !default;
+$btn-raised-color: #fff !default;
+
+// Large buttons
+$btn-large-icon-font-size: 1.6rem !default;
+$btn-large-height: $btn-height * 1.5 !default;
+
+// Flat buttons
+$btn-flat-border-radius: 0 !default;
+$btn-flat-border-width: 1px !default;
+$btn-flat-color: #343434 !default;
+$btn-flat-disabled-color: lighten(#999, 10%) !default;
+
+// Button active
+$btn-active-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) !default;
+
+// Tool button
+$btn-tool-box-padding: 5px 1px !default;
+$btn-tool-box-margin: 0px !default;
+$btn-tool-box-shadow: none !default;
+$btn-tool-box-background: white !default;
+$btn-tool-box-color: #97a0b3 !default;
+$btn-tool-box-hover-color: #606c84 !default;
+
+// Default button
+%btn-default {
+  display: block;
+}
+%btn-view-default {
+  text-decoration: none;
+}
+/*
+ * 8. Labels
+ * ==========================================================================
+ */
+$labels: (
+  "accepted": $best-practice-color,
+  "approved": $above-average-color,
+  "awaiting-acceptance": $average-color,
+  "awaiting-approval": $average-color,
+  "awaiting-validation": $average-color,
+  "bank-active": $above-average-color,
+  "bank-pending": $average-color,
+  "bank-inactive": $below-average-color,
+  "due": $below-average-color,
+  "fileformat-error": $below-average-color,
+  "file-error": $below-average-color,
+  "funded": $best-practice-color,
+  "in-progress": $above-average-color,
+  "not-processed": $average-color,
+  "paid": $above-average-color,
+  "pending": $average-color,
+  "preprocess": $average-color,
+  "processed": $best-practice-color,
+  "ineligible": $well-below-average-color,
+  "rejected": $well-below-average-color,
+  "settled": $best-practice-color,
+  "skipped": $below-average-color,
+  "transferred": $best-practice-color,
+  "unapproved": $below-average-color,
+  "unpaid": $below-average-color,
+  "uploaded": $average-color,
+  "upload-failed": $below-average-color
+);
+
+// Status classes
+@each $label_name, $label_color in $labels {
+  .label-#{$label_name} {
+    background-color: $label_color !important;
+  }
+}
+
+/*
+ * 9. Statuses
+ * ==========================================================================
+ */
+$statuses: (
+  "accepted": $best-practice-color,
+  "approved": $above-average-color,
+  "awaiting-acceptance": $average-color,
+  "awaiting-approval": $below-average-color,
+  "bank-active": $above-average-color,
+  "bank-pending": $average-color,
+  "bank-inactive": $below-average-color,
+  "funded": $best-practice-color,
+  "pending": $average-color,
+  "ineligible": $well-below-average-color,
+  "rejected": $well-below-average-color,
+  "unapproved": $below-average-color
+);
+
+// Status classes
+@each $status_name, $status_color in $statuses {
+  .colour-#{$status_name} {
+    color: $status_color !important;
+  }
+  /*****************************************************************************
+   * .colour-#{convert-to-camelcase($status_name)} { color: $status_color
+   * !important; }
+   *
+   * .colour-#{to-upper-case(str-replace($status_name, "-", "_"))} { color:
+   * $status_color !important; }
+   *
+   * .label-#{convert-to-camelcase($status_name)} { background-color:
+   * $status_color !important; border-color: darken($status_color, 15%)
+   * !important; border: 1px !important; }
+   *
+   * .label-#{to-upper-case(str-replace($status_name, "-", "_"))} {
+   * background-color: $status_color !important; border-color:
+   * darken($status_color, 15%) !important; border: 1px !important; }
+   ****************************************************************************/
+}
+
+/*
+ * 10. Horizontal Bar Slice
+ * ==========================================================================
+ */
+$hor-bar-slices: (
+  "unapproved": $below-average-color,
+  "pending": $average-color,
+  "approved": $above-average-color,
+  "funded": $best-practice-color
+);
+
+// Horizontal Bar Slice
+@each $status_name, $status_color in $hor-bar-slices {
+  .slice.#{$status_name} {
+    background-color: $status_color !important;
+  }
+}
+
+/*
+ * 11. Radio Buttons
+ * ==========================================================================
+ */
+$radio-buttons: (
+  "accepted": $best-practice-color,
+  "approved": $above-average-color,
+  "awaiting-acceptance": $average-color,
+  "awaiting-approval": $average-color,
+  "awaiting-validation": $average-color,
+  "due": $below-average-color,
+  "file-error": $below-average-color,
+  "fileformat-error": $below-average-color,
+  "funded": $best-practice-color,
+  "ineligible": $well-below-average-color,
+  "paid": $above-average-color,
+  "pending": $average-color,
+  "preprocess": $average-color,
+  "rejected": $well-below-average-color,
+  "settled": $best-practice-color,
+  "transferred": $best-practice-color,
+  "unapproved": $below-average-color,
+  "unpaid": $below-average-color,
+  "uploaded": $average-color,
+  "upload-failed": $below-average-color
+);
+
+// Radio Buttons
+@each $status_name, $status_color in $radio-buttons {
+  .radio_button.#{to-upper-case(str-replace($status_name, "-", "_"))} .check {
+    border-color: $status_color !important;
+    &:after {
+      background: $status_color !important;
+    }
+  }
+}
+
+/*
+ * 12. Dashboard
+ * ==========================================================================
+ */
+$dashboard-statuses: (
+  "approved": $above-average-color,
+  "funded": $best-practice-color,
+  "pending": $average-color,
+  "unapproved": $below-average-color
+);
+
+// Dashboard statuses with name
+@each $status_name, $status_color in $dashboard-statuses {
+  .status-name.#{$status_name}:before {
+    background-color: $status_color !important;
+  }
+}
+
+/*
+ * 13. D3 tips
+ * ==========================================================================
+ */
+$d3-tips: (
+  "approved": $above-average-color,
+  "funded": $best-practice-color,
+  "pending": $average-color
+);
+
+// Dashboard statuses with name
+@each $status_name, $status_color in $d3-tips {
+  .d3-tip.#{to-upper-case($status_name)} {
+    color: $status_color !important;
+  }
+}
+
+/*
+ * 14. Alerts
+ * ==========================================================================
+ */
+$alert-types: (
+  "success": $alert-success,
+  "danger": $alert-danger,
+  "error": $alert-danger,
+  "warning": $alert-warning,
+  "info": $alert-info,
+  "filter": $alert-filter
+);
+
+// Dashboard statuses with name
+@each $type_name, $type_color in $alert-types {
+  .alert-#{$type_name} {
+    border-color: $type_color !important;
+  }
+}
+
+$dashboard-key-border-width: 30px;
+$dashboard-key-border-radius: 5px;
+
+/*
+ * 15. Slider
+ * ==========================================================================
+ */
+$qf-slider-bg: $secondary-bg-color !default;
+$qf-slider-border: 2px solid lighten($primary-color-dark, 10%) !default;
+$qf-slider-border-radius: 18px !default;
+$qf-slider-cursor-top-position: 3px !default;
+$qf-slider-cursor-left-position: 6px !default;
+$slider-value-color: white !default;
+$slider-limit-value-color: $primary-color-dark;
+$slider-limit-value-font-size: 2rem;
+/*
+ * 16. Logo size
+ * ==========================================================================
+ */
+$logo-mini-img-height: 2em;
+$logo-footer-img-height: $logo-mini-img-height;
+$logo-lg-img-margin-left: -75px;
+$logo-lg-img-height: 2em;
+$logo-lg-img-width:90%;
+$login-logo-width: 90%;
+$login-logo-margin: 100px;
+$logo-mini-margin-left: -15px;
+$logo-lg-image-padding: 0px;
+
+/*
+ * 17. Widget
+ * ==========================================================================
+ */
+$widget-border-radius: 3px;
+$widget-header-line-height: 35px;
+$widget-min-height: 354px;
+$widget-padding: 10px;
+$widget-header-color: color("gib", "yellow") !default;
+$widget-h3-margin: 0 !default;
+$widget-h4-margin: 0 !default;
+$widget-br-margin: 0 !default;
+$wiget-btn-font-size: 1.1em;
+$wiget-btn-padding: .4rem .8rem;
+$widget-tool-margin: 5px 5px 5px 0px;
+$widget-body-padding-top: 5px;
+$widget-body-padding-left: 0;
+$widget-summaryBox-padding-top: calc(#{$widget-body-padding-top} * 2);
+
+$cashflow-widget-text:  color("gib", "yellow") !default;
+$cashflow-widget-border-bottom: 1px solid $sidebar-text;
+$cashflow-widget-header-align: right;
+$cashflow-widget-header-color: $sidebar-text !default;
+
+$cashflow-sidebar-padding: 0 15 60px 15px;
+$cashflow-currency-margin: 10px 0 0 0 !default;
+$cashflow-currency-row-margin: 0 !default;
+$cashflow-currency-ul-padding: 5px 0 10px;
+
+$cashflow-t-md-font-size: 1.3rem !default;
+$cashflow-t-sm-font-size: 1rem !default;
+$cashflow-cross-icon-left: 94%;
+$cashflow-cross-icon-top: 0%;
+$summary-breakdown-font-size: 1.25em !default;
+$summary-breakdown-font-weight: 400;
+$summary-breakdown-header-font-size: 1rem;
+$summary-breakdown-status-font-size: 1.15em;
+$summary-breakdown-consolidated-align: right;
+$summary-breakdown-consolidated-width: auto;
+$summary-breakdown-consolidated-header-color: $typography-normal;
+
+%widget-header {
+  position: relative;
+  display: block;
+  height: $widget-header-height;
+  line-height: $widget-header-line-height;
+  border-radius:3px 3px 0 0;
+  @extend %bg-gradient;
+  color: $widget-header-text !important;
+  background: $widget-header-background !important;
+}
+%widget-h {
+  margin: 0;
+  line-height: 1.7em;
+  font-size: 1.5em;
+  font-weight: $h2-bold;
+  text-transform: $widget-header-text-transform;
+}
+
+$widget-buyer-onboarding-body-height: 350px;
+$widget-buyer-onboarding-invoices-text-align: right;
+$widget-buyer-onboarding-seperator-margin: 20px 0;
+%widget-buyer-onboarding-br {
+  display: none;
+}
+%widget-buyer-onboarding-header {
+  display: block;
+  // @extend %widget-header;
+}
+%widget-buyer-onboarding-h {
+  margin: 6px 0 0 0;
+  vertical-align: top;
+  display: inline-block;
+  text-transform: $widget-header-text-transform;
+  font-weight: 300;
+  color: $widget-buyer-onboarding-text-primary !important;
+}
+%widget-buyer-onboarding-stats--main {
+  font-weight: 800;
+  font-size: 5em;
+  line-height: .8em;
+  display: block;
+}
+%widget-buyer-onboarding-stats--secondary {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: rgba(255, 255, 255, 0.7);
+}
+%widget-buyer-onboarding-hr {
+  border: none;
+  border-top: 1px solid $widget-buyer-onboarding-seperator !important;
+}
+
+/*
+ * 18. Case
+ * ==========================================================================
+ */
+$support-help-text-transform: uppercase;
+$support-img-display: block;
+$support-widget-color: white;
+$support-widget-footer-bg: rgba(0, 0, 0, 0.2);
+$support-widget-footer-color: $support-widget-color;
+$support-widget-footer-font-size: inherit;
+$support-widget-footer-position: absolute;
+$support-widget-img-circle-fill: $primary-color;
+
+$flag-icon-dsp: inline-block;
+$remove-cashflow-header-colour: false;
+
+/*
+ *
+ * 20. Quick Switch
+ * ========================================
+ */
+$quick-switch-widget-margin: 0;
+$quick-switch-widget-position: absolute;
+$quick-switch-indicator-color: #fff;
+$quick-switch-off-bg-color: color("demica-grey", "normal");
+$quick-switch-on-bg-color: $primary-color;
+$quick-switch-disabled-bg-color: color("demica-grey", "light");
+ $quick-switch-height: 90px;
+ $quick-switch-width: 160px;
+
+ // Form group
+ %default-form-group {
+  margin-bottom: 15px;
+ }
+ %input-group-addon {
+  // border-radius: 0px;
+  // border-color: #d2d6de;
+  // background-color: #fff;
+  display: none;
+ }
+ $input-disabled-opacity: .3;
+ $input-group-border-border: 0;
+ $input-group-border-input-border: $default-input-border;
+ $range-group-date-input-margin: 0;
+ $input-valid-border: 1px solid $pastel-green;
+ $radio-bg: transparent;
+ $radio-checked-bg: $primary-color;
+ $radio-border: 2px solid $programme-management-check-box;
+//  $radio-checked-border: 2px solid $programme-management-check-box;
+$radio-disabled-color: $typography-normal;
+$radio-disabled-border: 3px solid $typography-normal;
+/*
+ * 22. Charts
+ * ========================================
+ */
+ $nvd3-fill-opacity: .75;
+
+/*
+ * 23. Control Sidebar
+ * ========================================
+ */
+ $control-sidebar-dark: white !default;
+ $sidebar-bg-text-color: $primary-color !default;
+ $control-sidebar-box-shadow: 0;
+ $control-sidebar-color: $sidebar-bg-text-color;
+ $control-sidebar-padding-left: 15px;
+
+ $control-sidebar-heading-color: $sidebar-bg-text-color;
+ $control-sidebar-heading-border-bottom: 0;
+ $control-sidebar-heading-font-size: 1.2rem;
+ $control-sidebar-heading-margin: 0 0 10px 0;
+ $control-sidebar-heading-text-transform: none;
+
+ $control-sidebar-subheading-color: $control-sidebar-color;
+
+ $control-sidebar-input-border: 0;
+
+ /*
+ * 24. Full Calendar
+ * ========================================
+ */
+ $fc-button-bg: #f4f4f4;
+ $fc-button-color: #444;
+ $fc-button-margin: 0 0 0 -1px;
+ $fc-button-text-transform: capitalize;
+ $fc-button-border-color:#ddd;
+ $fc-button-border-radius: 4px;
+
+ $fc-button-hover-bg: #e9e9e9;
+ $fc-state-active-bg: #ccc;
+ $fc-state-active-hover-bg: $fc-button-hover-bg;
+$fc-state-active-color: $fc-button-color;
+ $fc-state-active-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
+
+ $fc-state-disabled-bg: white;
+ $fc-state-disabled-border-color: $fc-button-border-color;
+ $fc-state-disabled-color: $fc-button-color;
+
+ $fc-button-prev-margin-right: 0;
+ $fc-button-prev-border-radius: 4px 0 0 4px;
+ $fc-button-next-border-radius: 0 4px 4px 0;
+
+ $fc-button-today-margin: 0 0 0 .75em;
+ $fc-button-month-border-radius: 4px 0 0 4px;
+ $fc-button-basicWeek-border-radius: 0;
+ $fc-button-basicDay-border-radius: 0 4px 4px 0;
+
+ $fc-header-color-secondary: inherit;
+ $fc-header-font-size: 1em;
+ $fc-header-font-weight: 700;
+ $fc-header-bg: #fafafa;
+ $fc-day-number-font-size: 20px;
+ $fc-day-number-text-align: left;
+
+ $fc-today-border-color: #ddd;
+ $fc-today-bg: $pastel-yellow;
+
+ $fc-other-month-bg: color("grey", "lighten-4");
+
+/*
+ * 25. Table
+ * ========================================
+ */
+ $box-footer-border-top: 1px solid #f4f4f4;
+ $box-footer-margin: 0;
+ $export-table-button-border: 1px solid $export-as-border;
+$export-table-button-border-radius: 2px;
+ $pagination-btn-border: 1px solid #ddd;
+ $pagination-btn-border-radius: 0;
+ $pagination-button-font-size: 1rem;
+ $pagination-btn-padding: 2px 10px;
+ $pagination-btn-active-bg: inherit;
+ $pagination-arrow-color: 777;
+ $pagination-arrow-margin: 0;
+ $total-records-direction: row;
+ $total-records-margin: 0;
+ $total-records-number-color: inherit;
+ $total-records-text-transform: uppercase;
+
+  /*
+ * 26. Modal
+ * ========================================
+ */
+%modal-header {
+  border-bottom: 1px solid #e5e5e5;
+  color: #444;
+  display: block;
+  padding: 10px 15px;
+}
+%modal-title {
+  color: $box-title-font-color;
+  display: inline-block;
+  font-size: $cashflow-detail-selected-date-font-size;
+  line-height: 1.7em;
+  margin: 0;
+  text-transform: $box-title-text-transform;
+}
+%modal-footer {
+  padding: 10px 15px;
+  text-align: right;
+  border-top: 1px solid #e5e5e5;
+}
+
+ /*
+ * 27. Supplier Onboarding Widget
+ * ========================================
+ */
+ $supplier-onboarding-height: 270px;
+ $supplier-onboarding-step-title-font-size: 1.1em;
+ $supplier-onboarding-step-title-font-weight: 600;
+ $supplier-onboarding-step-name-font-size: 1.5em;
+ $supplier-onboarding-step-name-font-weight: 200;
+ $supplier-onboarding-step-status-font-size: $h2-fontsize;
+ $supplier-onboarding-step-status-font-weight: 400;
+ $supplier-onboarding-step-status-sub-font-size: 60%;
+ $supplier-onboarding-step-status-sub-bottom: -0.25em;
+ $supplier-onboarding-step-progress-lg-text-font-size: $h1-fontsize;
+ $supplier-onboarding-step-progress-lg-text-font-weight: 100;
+ $supplier-onboarding-step-progress-sm-text-font-size: $h5-fontsize;
+ $supplier-onboarding-step-progress-sm-text-font-weight: 100;
+
+  /*
+ * 28. Quick Funding Dialog
+ * ========================================
+ */
+ $quick-funding-dialog-footer-date-color: inherit;
+ $flexible-settlement-dialog-footer-date-color: inherit;
+ $quick-funding-dialog-footer-date-font-weight: 600;
+ $flexible-settlement-dialog-footer-date-font-weight: 600;
+
+ $funding-step-result-bg: color("demica-grey", "normal");
+ $funding-step-result-active-bg: $primary-color;
+
+ $quick-funding-calendar-font-weight: 600;
+ $quick-funding-calendar-daynames-color: $typography-normal;
+ $flexible-settlement-calendar-font-weight: 600;
+ $flexible-settlement-calendar-daynames-color: $typography-normal;
+
+ $quick-funding-tab-content-text-transform: unset;
+ $quick-funding-tab-content-heading-font-size: 24px;
+ $quick-funding-tab-content-heading-font-weight: 500;
+ $flexible-settlement-tab-content-text-transform: unset;
+ $flexible-settlement-tab-content-heading-font-size: 24px;
+ $flexible-settlement-tab-content-heading-font-weight: 500;
+ $flexible-settlement-summary-color: inherit;
+
+ $quick-funding-summary-color: inherit;
+
+ $quick-funding-footer-funding-border: $default-input-border;
+ $flexible-settlement-footer-funding-border: $default-input-border;
+
+ %irs-handle {
+  background: $primary-color-dark;
+  border: 2px solid white;
+  height: 30px;
+  position: absolute;
+  top: 1rem;
+  width: 30px;
+ }
+ $irs-bar-bg: lighten($primary-color-dark, 10%);
+ $irs-single-bg: lighten($primary-color-dark, 10%);
+
+  /*
+ * 29. Timepicker Popup
+ * ========================================
+ */
+ $timepicker-confirm-bg: white;
+ $timepicker-confirm-border: 1px solid $primary-color-dark;
+ $timepicker-confirm-color: $primary-color-dark;
+ $timepicker-time-bg: white;
+ $timepicker-time-color: $typography-normal;
+ $timepicker-time-border: $default-input-border;
+
+//TODO -- to be put into respective sections
+$innertab-bg-color: white !important;
+$innertab-text-color: $widget-navtab-li-inactive-text-color;
+$funder-management-ul-navtabs-text-color: $admin-tab-text
+$funder-management-ul-navtabs-bg-color: white;
+$innertab-nav-innertab-bg-color: white !important;
+$innertab-nav-innertab-text-color: $nav-tab-text-over;
+$programme-management-ul-navtabs-li-hover-color: $admin-tab-bg-hover !important;
+$user-admin-ul-navtabs-bg-color: $admin-tab-bg;
+$user-admin-ul-navtabs-text-color: $admin-tab-text;
+
+$help-tour-link-padding: 4px 8px;
+$fa-angle-down-width: auto;
+$sidebar-menu-li-a-pull-right:10px;
+$sidebar-toggle-menu: "\f0c9";
+$sidebar-menu-li-a-pull-right:10px;
+$skin-scf-sidebar-menu-li-a-width:''; //to be kept as blank
+$selectize-input-down-arrow: ' ';
+$selectize-input-up-arrow: ' ';
+
+$widget-tool-text-transform: none;
+$sidebar-quick-funding-create-btn-text-transform: none;
+$summary-box--quick-funding-create-btn-text-transform: none;
+$primary-color-user-profile: $primary-color;
+
+//added for PSABB-328
+$background-color: $primary-color ;
+$form-label-font-weight:normal;
+$title-font-weight: normal;
+$pagination-active-bg: black !default;
+$pagination-btn-bg:#f1f1f1;
+$pagination-active-text-clr:black !default;
+$detail-timeline-item-color-text:#444;
+$primary-color-timeline:$primary-color;
+$detail-view-font-weight:600;
+$bg-success-timeline:$bg-success;
+$sidebar-text-cashflow: $sidebar-text;
+$sidebar-treeview-menu-padding-bg: none;
+$sidebar-menu-dropdown-bg-color: none;

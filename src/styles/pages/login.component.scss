@@ -1,0 +1,29 @@
+@import "../variables";
+
+app-login {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  height: 100%;
+  background: $login-bg-color;
+}
+
+app-language-selector {
+  position: relative;
+  top: -3px;
+  .nav > li > a {
+    color: $login-label-color !important;
+    font-size: 15px;
+    padding: $login-page-language-selector-padding;
+    font-weight: bold;
+    span {
+        &:nth-child(2){
+            margin: 0px 6px;
+        }
+    }
+  }
+  .dropdown-menu {
+    overflow-y: auto;
+    max-height: 43vh;
+  }
+}

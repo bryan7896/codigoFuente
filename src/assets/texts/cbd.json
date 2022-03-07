@@ -1,0 +1,16 @@
+{
+    "appName": "CBD Supply Chain Finance",
+    "companyName": "CBD",
+    
+    "STATUS": {
+      "APPROVED": "CBD_LIMEGREEN",
+      "FUNDED": "CBD_CYAN",
+      "SOLD": "CBD_CYAN",
+      "DEFERRED": "CBD_PRIVATE"
+    },
+    "CALENDAR": {
+      "PAYMENT_DAY": "CBD_LIMEGREEN",
+      "NON_PAYMENT_DAY": "CBD_CYAN",
+      "NON_BUSINESS_DAY": "CBD_TEAL"
+    }
+  }

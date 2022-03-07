@@ -1,0 +1,18 @@
+{
+  "appName": "Lloyds Banking Group",
+  "companyName": "Lloyds",
+  "headerLogo" : "assets/images/header-logo.png",
+  "STATUS": {
+    "APPROVED": "LLOYDS_COREGREEN",
+    "FUNDED": "LLOYDS_APPLEGREEN",
+    "SOLD": "LLOYDS_APPLEGREEN",
+    "UNAPPROVED": "LLOYDS_RED",
+    "PENDING": "LLOYDS_ORANGE",
+    "DEFERRED": "LLOYDS_BLUE"
+  },
+  "CALENDAR": {
+    "PAYMENT_DAY": "LLOYDS_COREGREEN",
+    "NON_PAYMENT_DAY": "LLOYDS_RED",
+    "NON_BUSINESS_DAY": "LLOYDS_PURPLE"
+  }
+}

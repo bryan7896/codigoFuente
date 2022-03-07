@@ -1,0 +1,21 @@
+{
+  "appName": "GIB SCF Platform",
+  "companyName": "GIB",
+  
+  "STATUS": {
+    "APPROVED": "GIB_GREEN",
+    "FUNDED": "GIB_FUNDED",
+    "INELIGIBLE": "PASTEL_RED",
+    "UNAPPROVED": "PASTEL_RED",
+    "PENDING": "PASTEL_GOLD"
+  },
+  "CALENDAR": {
+    "PAYMENT_DAY": "GIB_GREEN",
+    "NON_PAYMENT_DAY": "GIB_RED"
+  },
+  
+  "LIMITS" : {
+    "warning" : 34,
+    "danger": 67
+  }
+}

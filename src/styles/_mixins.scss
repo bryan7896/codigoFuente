@@ -1,0 +1,60 @@
+@import 'variables';
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin vertical-gradient($start: #000, $stop: #FFF) {
+	background: ($start + $stop) / 2 !important;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$start), color-stop(100%,$stop)) !important; /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, $start 0%,$stop 100%) !important; /* Chrome10+,Safari5.1+ */
+	background: -ms-linear-gradient(top, $start 0%,$stop 100%) !important; /* IE10+ */
+	background: -moz-linear-gradient(center top, $start 0%, $stop 100%) !important;
+	background: -moz-gradient(center top, $start 0%, $stop 100%) !important;
+	background: linear-gradient(to bottom, $start 0%, $stop 100%) !important; /* W3C */
+}
+
+@mixin show-in-themes($expected-display, $themes...) {
+  $display: none;
+  @each $t in $themes {
+    @if $t == $theme {
+      $display: $expected-display;
+    }
+  }
+  display: $display;
+}
+
+@mixin hide-in-themes($themes...) {
+  @each $t in $themes {
+    @if $t == $theme {
+      display: none;
+    }
+  }
+}
+
+@mixin hide-if-true($value-for-theme) {
+  @if $value-for-theme {
+    display: none;
+  }
+}
+
+@mixin show-expected-display-if-true($expected-display, $value-for-theme) {
+  $display: none;
+  @if $value-for-theme {
+    $display: $expected-display;
+  }
+  display: $display;
+}
+
+@mixin alignTableColumnContent($align: left) {
+  text-align: $align !important;
+
+  $flex-align: if($align == left, flex-start, if($align == right, flex-end, center));
+  .sort-indicator--custom {
+    justify-content: $flex-align !important;
+  }
+}

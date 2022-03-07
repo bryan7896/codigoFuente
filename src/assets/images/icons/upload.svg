@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="15px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>24/upload</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M20,21.5 L4,21.5 C3.44771525,21.5 3,21.0522847 3,20.5 C3,19.9477153 3.44771525,19.5 4,19.5 L20,19.5 C20.5522847,19.5 21,19.9477153 21,20.5 C21,21.0522847 20.5522847,21.5 20,21.5 Z M16.71,6.79 L12.71,2.79 C12.5212812,2.60281349 12.265803,2.49846324 12,2.5 C11.7228349,2.50089162 11.4584718,2.61677684 11.27,2.82 L7.27,6.82 C6.8861621,7.21764502 6.89735498,7.8511621 7.295,8.235 C7.69264502,8.6188379 8.3261621,8.60764502 8.71,8.21 L11,5.92 L11,16.5 C11,17.0522847 11.4477153,17.5 12,17.5 C12.5522847,17.5 13,17.0522847 13,16.5 L13,5.91 L15.29,8.21 C15.4777666,8.39931265 15.7333625,8.50579832 16,8.50579832 C16.2666375,8.50579832 16.5222334,8.39931265 16.71,8.21 C16.8993127,8.0222334 17.0057983,7.76663754 17.0057983,7.5 C17.0057983,7.23336246 16.8993127,6.9777666 16.71,6.79 Z" id="path-1"></path>
+    </defs>
+    <g id="24/upload" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <g id="Shape" fill-rule="nonzero"></g>
+        <g id="🎨-Colour-/-Primary-/-AccessibleBMOBlue" mask="url(#mask-2)" fill="#0075BE">
+            <g transform="translate(-3.000000, -3.000000)" id="#0075BE">
+                <rect x="0" y="0" width="30" height="30" rx="4"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,20 @@
+{
+  "appName": "ING SCF Platform",
+  "companyName": "ING",
+  "STATUS": {
+    "APPROVED": "ING_PASTEL_GREEN",
+    "FUNDED": "ING_ORANGE",
+    "INELIGIBLE": "ING_MINUS",
+    "UNAPPROVED": "ING_SKY",
+    "PENDING": "ING_LIGHT_GREY"
+  },
+  "CALENDAR": {
+    "PAYMENT_DAY": "ING_ORANGE",
+    "NON_PAYMENT_DAY": "ING_SKY",
+    "NON_BUSINESS_DAY": "ING_LIGHT_GREY"
+  },
+  "LIMITS" : {
+    "warning" : 34,
+    "danger": 67
+  }
+}

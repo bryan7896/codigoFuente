@@ -1,0 +1,32 @@
+<div class="login-box recovery">
+    <div class="login-form">
+      <div class="login-box-body">
+        <h2 class="login-box-msg">Account Recovery</h2>
+          <div class="alert alert-info" role="alert">
+            Please fill in this form and an email will be sent to you with the details to access your account again. It may take 5-10 minutes before you receive this email.
+          </div>
+  
+        <div class="radio-buttons">
+            <!-- radio-button is a directive -->
+          <!-- <radio-button
+            tabindex="1"
+            value="'FORGOT_USERNAME'">
+            I forgot my username
+          </radio-button>
+          <radio-button
+            tabindex="2"
+            value="'FORGOT_PASSWORD'">
+            I forgot my password
+          </radio-button> -->
+        </div>
+  
+        <div ng-include="'app/components/account-recovery/partials/_forgot-password.html'"></div>
+        <div ng-include="'app/components/account-recovery/partials/_forgot-username.html'"></div>
+  
+      </div>
+    </div>
+    <div class="login-image"></div>
+  </div>
+  <div class="login-footer">
+    <app-footer></app-footer>
+  </div>

@@ -1,0 +1,999 @@
+// Google Color Palette defined: http://www.google.com/design/spec/style/color.html
+$materialize-red: (
+  "base":       #e51c23,
+  "lighten-5":  #fdeaeb,
+  "lighten-4":  #f8c1c3,
+  "lighten-3":  #f3989b,
+  "lighten-2":  #ee6e73,
+  "lighten-1":  #ea454b,
+  "darken-1":   #d0181e,
+  "darken-2":   #b9151b,
+  "darken-3":   #a21318,
+  "darken-4":   #8b1014,
+);
+
+$red: (
+  "base":       #D0021B,
+  "lighten-5":  #FFEBEE,
+  "lighten-4":  #FFCDD2,
+  "lighten-3":  #EF9A9A,
+  "lighten-2":  #E57373,
+  "lighten-1":  #EF5350,
+  "darken-1":   #E53935,
+  "darken-2":   #D32F2F,
+  "darken-3":   #C62828,
+  "darken-4":   #B71C1C,
+  "accent-1":   #FF8A80,
+  "accent-2":   #FF5252,
+  "accent-3":   #FF1744,
+  "accent-4":   #D50000
+);
+
+$pink: (
+  "base":       #e91e63,
+  "lighten-5":  #fce4ec,
+  "lighten-4":  #f8bbd0,
+  "lighten-3":  #f48fb1,
+  "lighten-2":  #f06292,
+  "lighten-1":  #ec407a,
+  "darken-1":   #d81b60,
+  "darken-2":   #c2185b,
+  "darken-3":   #ad1457,
+  "darken-4":   #880e4f,
+  "accent-1":   #ff80ab,
+  "accent-2":   #ff4081,
+  "accent-3":   #f50057,
+  "accent-4":   #c51162
+);
+
+$purple: (
+  "base":       #9c27b0,
+  "lighten-5":  #f3e5f5,
+  "lighten-4":  #e1bee7,
+  "lighten-3":  #ce93d8,
+  "lighten-2":  #ba68c8,
+  "lighten-1":  #ab47bc,
+  "darken-1":   #8e24aa,
+  "darken-2":   #7b1fa2,
+  "darken-3":   #6a1b9a,
+  "darken-4":   #4a148c,
+  "accent-1":   #ea80fc,
+  "accent-2":   #e040fb,
+  "accent-3":   #d500f9,
+  "accent-4":   #aa00ff
+);
+
+$demica-purple: (
+  "base":       #6E50FF,
+  "lighten-5":  #dbdbf0,
+  "lighten-4":  #b8b8e0,
+  "lighten-3":  #a6a6d9,
+  "lighten-2":  #9494d1,
+  "lighten-1":  #7070c2,
+  "darken-1":   #483494,
+  "darken-2":   #140D48,
+  "darken-3":   #262659,
+  "darken-4":   #1f1f47,
+  "accent-1":   #6e50ff,
+  "accent-2":   #2200cc
+);
+
+$deep-purple: (
+  "base":       #673ab7,
+  "lighten-5":  #ede7f6,
+  "lighten-4":  #d1c4e9,
+  "lighten-3":  #b39ddb,
+  "lighten-2":  #9575cd,
+  "lighten-1":  #7e57c2,
+  "darken-1":   #5e35b1,
+  "darken-2":   #512da8,
+  "darken-3":   #4527a0,
+  "darken-4":   #311b92,
+  "accent-1":   #b388ff,
+  "accent-2":   #7c4dff,
+  "accent-3":   #651fff,
+  "accent-4":   #6200ea
+);
+
+$indigo: (
+  "base":       #3f51b5,
+  "lighten-5":  #e8eaf6,
+  "lighten-4":  #c5cae9,
+  "lighten-3":  #9fa8da,
+  "lighten-2":  #7986cb,
+  "lighten-1":  #5c6bc0,
+  "darken-1":   #3949ab,
+  "darken-2":   #303f9f,
+  "darken-3":   #283593,
+  "darken-4":   #1a237e,
+  "accent-1":   #8c9eff,
+  "accent-2":   #536dfe,
+  "accent-3":   #3d5afe,
+  "accent-4":   #304ffe
+);
+
+$basware-blue: (
+  "base":       #0293B3,
+  "lighten-3":  #E5F8FF,
+  "lighten-2":  #B1EDFB,
+  "lighten-1":  #00A9CE,
+  "darken-1":   #297795,
+  "darken-2":   #005F83
+);
+
+
+$basware-grey: (
+  "base":       #999999,
+  "lighten-3":  #F8F8F8,
+  "lighten-2":  #EBEBEB,
+  "lighten-1":  #D9D9D6,
+  "darken-1":   #707372,
+  "darken-2":   #444444,
+  "darken-3":   #333333
+);
+
+$blue: (
+  "base":       #2196F3,
+  "lighten-5":  #E3F2FD,
+  "lighten-4":  #BBDEFB,
+  "lighten-3":  #90CAF9,
+  "lighten-2":  #64B5F6,
+  "lighten-1":  #42A5F5,
+  "darken-1":   #1E88E5,
+  "darken-2":   #1976D2,
+  "darken-3":   #1565C0,
+  "darken-4":   #0D47A1,
+  "accent-1":   #82B1FF,
+  "accent-2":   #448AFF,
+  "accent-3":   #2979FF,
+  "accent-4":   #2962FF,
+  "accent-5":   #82B2EB
+);
+
+$light-blue: (
+  "base":       #03a9f4,
+  "lighten-5":  #e1f5fe,
+  "lighten-4":  #b3e5fc,
+  "lighten-3":  #81d4fa,
+  "lighten-2":  #4fc3f7,
+  "lighten-1":  #29b6f6,
+  "darken-1":   #039be5,
+  "darken-2":   #0288d1,
+  "darken-3":   #0277bd,
+  "darken-4":   #01579b,
+  "accent-1":   #80d8ff,
+  "accent-2":   #40c4ff,
+  "accent-3":   #00b0ff,
+  "accent-4":   #0091ea
+);
+
+$demica-blue: (
+  "base":       #327ab7,
+  "lighten-6":  #E6EEF2,
+  "lighten-5":  #d7e6f4,
+  "lighten-4":  #afcee9,
+  "lighten-3":  #9bc2e4,
+  "lighten-2":  #87b5de,
+  "lighten-1":  #5f9dd3,
+  "darken-1":   #3177b4,
+  "darken-2":   #2c6aa0,
+  "darken-3":   #265d8c,
+  "darken-4":   #214f78,
+  "darken-5":   #1b4264
+);
+
+$cyan: (
+  "base":       #00bcd4,
+  "lighten-5":  #e0f7fa,
+  "lighten-4":  #b2ebf2,
+  "lighten-3":  #80deea,
+  "lighten-2":  #4dd0e1,
+  "lighten-1":  #26c6da,
+  "darken-1":   #00acc1,
+  "darken-2":   #0097a7,
+  "darken-3":   #00838f,
+  "darken-4":   #006064,
+  "accent-1":   #84ffff,
+  "accent-2":   #18ffff,
+  "accent-3":   #00e5ff,
+  "accent-4":   #00b8d4
+);
+
+$teal: (
+  "base":       #009688,
+  "lighten-5":  #e0f2f1,
+  "lighten-4":  #b2dfdb,
+  "lighten-3":  #80cbc4,
+  "lighten-2":  #4db6ac,
+  "lighten-1":  #26a69a,
+  "darken-1":   #00897b,
+  "darken-2":   #00796b,
+  "darken-3":   #00695c,
+  "darken-4":   #004d40,
+  "accent-1":   #a7ffeb,
+  "accent-2":   #64ffda,
+  "accent-3":   #1de9b6,
+  "accent-4":   #00bfa5
+);
+
+$green: (
+  "base":       #4CAF50,
+  "lighten-5":  #E8F5E9,
+  "lighten-4":  #C8E6C9,
+  "lighten-3":  #A5D6A7,
+  "lighten-2":  #81C784,
+  "lighten-1":  #66BB6A,
+  "darken-1":   #43A047,
+  "darken-2":   #388E3C,
+  "darken-3":   #2E7D32,
+  "darken-4":   #1B5E20,
+  "accent-1":   #B9F6CA,
+  "accent-2":   #69F0AE,
+  "accent-3":   #00E676,
+  "accent-4":   #00C853,
+  "accent-5":   #06B085
+);
+
+$bnp-paribas-green: (
+  "base":       #01fea1,
+  "lighten-5":  #e6fff6,
+  "lighten-4":  #ccffec,
+  "lighten-3":  #9afed9,
+  "lighten-2":  #67fec7,
+  "lighten-1":  #34feb4,
+  "darken-1":   #01cb81,
+  "darken-2":   #01945d,
+  "darken-3":   #017f51,
+  "darken-4":   #016540,
+  "darken-5":   #004c30,
+  "accent-1":   #007942,
+  "accent-2":   #00ac7b
+);
+
+
+$light-green: (
+  "base":       #8bc34a,
+  "lighten-5":  #f1f8e9,
+  "lighten-4":  #dcedc8,
+  "lighten-3":  #c5e1a5,
+  "lighten-2":  #aed581,
+  "lighten-1":  #9ccc65,
+  "darken-1":   #7cb342,
+  "darken-2":   #689f38,
+  "darken-3":   #558b2f,
+  "darken-4":   #33691e,
+  "accent-1":   #ccff90,
+  "accent-2":   #b2ff59,
+  "accent-3":   #76ff03,
+  "accent-4":   #64dd17
+);
+
+$demica-green: (
+  "base":       #60C3AD,
+  "lighten-5":  #e6fef3,
+  "lighten-4":  #b4fddb,
+  "lighten-3":  #9bfdcf,
+  "lighten-2":  #69fcb7,
+  "lighten-1":  #37fba0,
+  "darken-1":   #05e17a,
+  "darken-2":   #04c86d,
+  "darken-3":   #03a65a,
+  "darken-4":   #037d44,
+  "darken-5":   #024b29
+);
+
+$lime: (
+  "base":       #cddc39,
+  "lighten-5":  #f9fbe7,
+  "lighten-4":  #f0f4c3,
+  "lighten-3":  #e6ee9c,
+  "lighten-2":  #dce775,
+  "lighten-1":  #d4e157,
+  "darken-1":   #c0ca33,
+  "darken-2":   #afb42b,
+  "darken-3":   #9e9d24,
+  "darken-4":   #827717,
+  "accent-1":   #f4ff81,
+  "accent-2":   #eeff41,
+  "accent-3":   #c6ff00,
+  "accent-4":   #aeea00
+);
+
+$yellow: (
+  "base":       #ffeb3b,
+  "lighten-5":  #fffde7,
+  "lighten-4":  #fff9c4,
+  "lighten-3":  #fff59d,
+  "lighten-2":  #fff176,
+  "lighten-1":  #ffee58,
+  "darken-1":   #fdd835,
+  "darken-2":   #fbc02d,
+  "darken-3":   #f9a825,
+  "darken-4":   #f57f17,
+  "accent-1":   #ffff8d,
+  "accent-2":   #ffff00,
+  "accent-3":   #ffea00,
+  "accent-4":   #ffd600
+);
+
+$demica-yellow: (
+  "base":       #F8E71C,
+  "lighten-5":  #fdfbe8,
+  "lighten-4":  #f8f4b9,
+  "lighten-3":  #f6f0a2,
+  "lighten-2":  #f1e873,
+  "lighten-1":  #ede145,
+  "darken-1":   #d1c415,
+  "darken-2":   #baae12,
+  "darken-3":   #8b830e,
+  "darken-4":   #746d0b,
+  "darken-5":   #464107
+);
+
+$amber: (
+  "base":       #ffc107,
+  "lighten-5":  #fff8e1,
+  "lighten-4":  #ffecb3,
+  "lighten-3":  #ffe082,
+  "lighten-2":  #ffd54f,
+  "lighten-1":  #ffca28,
+  "darken-1":   #ffb300,
+  "darken-2":   #ffa000,
+  "darken-3":   #ff8f00,
+  "darken-4":   #ff6f00,
+  "accent-1":   #ffe57f,
+  "accent-2":   #ffd740,
+  "accent-3":   #ffc400,
+  "accent-4":   #ffab00
+);
+
+$orange: (
+  "base":       #ff9800,
+  "lighten-5":  #fff3e0,
+  "lighten-4":  #ffe0b2,
+  "lighten-3":  #ffcc80,
+  "lighten-2":  #ffb74d,
+  "lighten-1":  #ffa726,
+  "darken-1":   #fb8c00,
+  "darken-2":   #f57c00,
+  "darken-3":   #ef6c00,
+  "darken-4":   #e65100,
+  "accent-1":   #ffd180,
+  "accent-2":   #ffab40,
+  "accent-3":   #ff9100,
+  "accent-4":   #ff6d00
+);
+
+$ing: (
+  "orange":            #FF6200,
+  "white":             #FFFFFF,
+  "light-grey":        #A8A8A8,
+  "mid-grey":          #767676,
+  "background":        #F0F0F0,
+  "indigo":            #525199,
+  "indigo-lighten-1":  #9898C3,
+  "indigo-lighten-2":  #CBCCE1,
+  "indigo-lighten-3":  #E6E5F0,
+  "grey-lighten-1":    #767676,
+  "grey-lighten-2":    #A8A8A8,
+  "grey-lighten-3":    #E0E0E0,
+  "grey-lighten-4":    #EFEFEF,
+  "sky":               #60A6DA,
+  "sky-lighten-1":     #9FCAEA,
+  "sky-lighten-2":     #CEE5F5,
+  "sky-lighten-3":     #E8F3FA,
+  "fuchsia":           #AB0066,
+  "fuchsia-lighten-1": #CD66A4,
+  "fuchsia-lighten-2": #E5B8D2,
+  "fuchsia-lighten-3": #F3DCE9,
+  "lime":              #D0D93C,
+  "lime-lighten-1":    #E3EA8F,
+  "lime-lighten-2":    #F1F5C8,
+  "lime-lighten-3":    #F8FAE4,
+  "leaf":              #349651,
+  "leaf-lighten-1":    #83C197,
+  "leaf-lighten-2":    #C1E0CB,
+  "leaf-lighten-3":    #E1F0E6,
+  "minus":             #FF0000,
+  "plus":              #349651
+);
+
+$cbd: (
+  "cbd-teal":          #006583,
+  "cbd-cyan":          #00BDF3,
+  "cbd-limegreen":     #B7D333,
+  "cbd-matte-black":   #212121,
+  "cbd-pitch-black":   #000000,
+  "cbd-elite":         #968f76,
+	"cbd-aqua":          #3BB6C7,
+  "cbd-private":       #7C6F4B,
+  "cbd-white":         #FFFFFF,
+);
+
+$gib: (
+  "grey":              #53565a,
+  "yellow":            #ffc72c,
+  "white":             #FFFFFF,
+  "background":        #F0F0F0,
+  "light-grey":        #D9D9D6,
+  "mid-grey":          #A2AAAD,
+  "grey-lighten-1":    #767676,
+  "grey-lighten-2":    #A8A8A8,
+  "grey-lighten-3":    #E0E0E0,
+  "grey-lighten-4":    #EFEFEF,
+  "red":               #A50034,
+  "purple":            #A7A2c3,
+  "blue":              #0085CA,
+  "green":             #00A499,
+  "dark-red":          #6F263D,
+  "dark-purple":       #403A60,
+  "dark-blue":         #00587C,
+  "dark-green":        #00685E
+);
+
+$bbva-primary: (
+  "navy":              #072146,
+  "core-blue":         #004481,
+  "core-dark-blue":    #043263,
+  "core-light-blue":   #1464A5,
+  "medium-blue":       #1973B8,
+  "medium-light-blue": #49A5E6,
+  "sky-blue":          #5BBEFF,
+  "sky-light-blue":    #D4EDFC,
+  "aqua":              #2DCCCD,
+  "aqua-dark":         #028484,
+  "aqua-medium":       #02A5A5,
+  "aqua-light":        #5AC4C4,
+  "aqua-white":        #EAF9FA,
+  "white":             #FFFFFF
+);
+
+$bbva-secondary: (
+  // "600":               #121212,
+  // "500":               #666666,
+  // "400":               #BDBDBD,
+  // "300":               #D3D3D3,
+  // "200":               #E9E9E9,
+  // "100":               #F4F4F4
+);
+
+$bbva-tertiary: (
+  "green":             #48AE64,
+  "green-dark":        #277A3E,
+  "green-medium":      #388D4F,
+  "green-light":       #88CA9A,
+  "green-white":       #D9EFE0,
+  "pink":              #F78BE8,
+  "pink-dark":         #AD53A1,
+  "pink-medium":       #C569B9,
+  "pink-light":        #FAB3F0,
+  "pink-white":        #FDDCF8,
+  "red":               #DA3851,
+  "red-dark":          #B92A45,
+  "red-medium":        #C0475E,
+  "red-light":         #E77D8E,
+  "red-white":         #F4C3CA,
+  "coral":             #F35E61,
+  "coral-dark":        #CB353A,
+  "coral-medium":      #D44B50,
+  "coral-light":       #F59799,
+  "coral-white":       #FCDFDF,
+  "yellow":            #F8CD51,
+  "yellow-dark":       #9C6C01,
+  "yellow-medium":     #C49735,
+  "yellow-light":      #FADE8E,
+  "yellow-white":      #FEF5DC,
+  "sand":              #D8BE75,
+  "sand-dark":         #8E7022,
+  "sand-medium":       #B79E5E,
+  "sand-light":        #E6D5A5,
+  "sand-white":        #F3EBD5,
+  "purple":            #8F7AE5,
+  "purple-dark":       #6754B8,
+  "purple-medium":     #7C6AC7,
+  "purple-light":      #B6A8EE,
+  "purple-white":      #DDD7F7,
+  "orange":            #F7893B,
+  "orange-dark":       #C65302,
+  "orange-medium":     #D8732C,
+  "orange-light":      #FAB27F,
+  "orange-white":      #FDE7D8,
+  "barley-corn":       #B79E5E
+);
+
+$bmo-primary: (
+  "base":rgb(0,121,193),
+  "bmo-blue-tint":rgb(5, 133, 207),
+  "bmo-red":#ed1c24,
+  "bmo-white":#FFFFFF,
+  "bmo-unapproved":#ffc20e,
+  "bmo-approved":#8dc63f,
+  "bmo-pending": #00b48d,
+  "bmo-processed": #587abc,
+  "bmo-settled": #587abc
+);
+
+$bmo-blues:(
+  "blue":rgb(0,121,193),
+  // "80-tint":rgb(51,148,205),
+  // "60-tint":rgb(102,175,218),
+  // "40-tint":rgb(153,201,230),
+  // "20-tint":rgb(204,228,243),
+  "dark":rgb(0,74,124),
+);
+
+$bmo-greys:(
+  "dark":#4e4e4e,
+  // "80-tint":#6e6e6e,
+  // "60-tint":#8c8c8c,
+  // "40-tint":#aaaaaa,
+  // "20-tint":#c8c8c8
+);
+
+$sabb-primary: (
+  "base":#DB0011,
+  "sabb-unapproved":#60A6DA,
+  "sabb-approved":#349651 ,
+  "sabb-pending": #F0AC4E,
+  "sabb-funded": #ff1040,
+  "sabb-processed": #DB0011,
+  "darken-1":   #00008f,
+  "light-grey":   #A8A8A8,
+  "mid-grey":    #767676,
+  "sky":         #60A6DA,
+  "grey":      #F0EFF0,
+  "navy-2": #26323c,
+  "purple": #481468,
+  "sabb-settled": #FF6200
+);
+
+$deutsche-primary: (
+  "base":               #0018a8, //db
+  "lighten-1":          #1a32c2,
+  "lighten-2" :         #334bcb,
+  "lighten-3":          #4d65f5,
+  "lighten-4":          #667eff,
+  "lighten-5":          #7f97ff,
+  "darken-1":           #00008f,
+  "darken-2":           #000075,
+  "darken-3":           #00005c,
+  "darken-4":           #000042,
+  "darken-5":           #000029
+);
+$deutsche-secondary: (
+  "base" :              #0098db, //light blue
+  "lighten-1":          #33cbff,
+  "lighten-2" :         #1ab2f5,
+  "lighten-3":          #66feff,
+  "lighten-4":          #98ffff,
+  "lighten-5":          #ccffff,
+  "darken-1":           #0065a8,
+  "darken-2":           #003275,
+  "darken-3":           #000042,
+  "darken-4":           #00000f,
+  "darken-5":           #000001
+);
+$deutsche-tertiary: (
+    "base":               #001347,
+    "lighten-1":          #33467a,
+    "lighten-2" :         #6679ab,
+    "lighten-3":          #99Ace0,
+    "lighten-4":          #ccdfff,
+    "lighten-5":          #eeeeee,
+    "darken-1":           #00063a,
+    "darken-2":           #00002e,
+    "darken-3":           #000021,
+    "darken-4":           #0063a7,
+    "darken-5":           #00569a
+);
+
+
+$deep-orange: (
+  "base":       #ff5722,
+  "lighten-5":  #fbe9e7,
+  "lighten-4":  #ffccbc,
+  "lighten-3":  #ffab91,
+  "lighten-2":  #ff8a65,
+  "lighten-1":  #ff7043,
+  "darken-1":   #f4511e,
+  "darken-2":   #e64a19,
+  "darken-3":   #d84315,
+  "darken-4":   #bf360c,
+  "accent-1":   #ff9e80,
+  "accent-2":   #ff6e40,
+  "accent-3":   #ff3d00,
+  "accent-4":   #dd2c00
+);
+
+$brown: (
+  "base":       #795548,
+  "lighten-5":  #efebe9,
+  "lighten-4":  #d7ccc8,
+  "lighten-3":  #bcaaa4,
+  "lighten-2":  #a1887f,
+  "lighten-1":  #8d6e63,
+  "darken-1":   #6d4c41,
+  "darken-2":   #5d4037,
+  "darken-3":   #4e342e,
+  "darken-4":   #3e2723
+);
+
+$blue-grey: (
+  "base":       #607d8b,
+  "lighten-5":  #e5ebf1,
+  "lighten-4":  #cfd8dc,
+  "lighten-3":  #b0bec5,
+  "lighten-2":  #90a4ae,
+  "lighten-1":  #78909c,
+  "darken-1":   #546e7a,
+  "darken-2":   #455a64,
+  "darken-3":   #37474f,
+  "darken-4":   #263238,
+  "darken-5":   #1f292d,
+  "darken-6":   #1e282c,
+  "accent-1":   #b7c7cf
+);
+
+$grey: (
+  "base":       #9e9e9e,
+  "lighten-5":  #fafafa,
+  "lighten-4":  #f5f5f5,
+  "lighten-3":  #eeeeee,
+  "lighten-2":  #e0e0e0, // $grey-light: #E0E0E0;
+  "lighten-1":  #bdbdbd,
+  "darken-1":   #757575, // $grey-dark: #7F7F7F;
+  "darken-2":   #616161,
+  "darken-3":   #424242,
+  "darken-4":   #212121
+);
+
+$demica-grey: (
+  "base": #4A4A4A,
+  "light": #f1f1f1,
+  "normal": #9b9b9b
+);
+
+$shades: (
+  "black":        #000000,
+  "white":        #FFFFFF,
+  "gold": 				#F0AC4E,
+  "transparent":  transparent
+);
+
+$backgrounds: (
+  "shade-00": rgba(#000000, 0.0),
+  "shade-01": rgba(#000000, 0.1),
+  "shade-02": rgba(#000000, 0.2),
+  "shade-03": rgba(#000000, 0.3),
+  "shade-04": rgba(#000000, 0.4),
+  "shade-05": rgba(#000000, 0.5),
+  "shade-06": rgba(#000000, 0.6),
+  "shade-07": rgba(#009688, 0.1), // using green pastel
+  "shade-08": rgba(#2196F3, 0.4),
+  "shade-09": rgba(#2196F3, 0.9),
+  "shade-10": rgba(#F44336, 0.1), // using red pastel
+  "shade-11": rgba(#F44336, 0.3), // using red pastel
+  "shade-12": rgba(#FFF353, 0.1),
+  "shade-13": rgba(#FFFFFF, 0.1),
+  "shade-14": rgba(#FFFFFF, 0.2),
+  "shade-15": rgba(#FFFFFF, 0.3),
+  "shade-16": rgba(#FFFFFF, 0.4),
+  "shade-17": rgba(#FFFFFF, 0.5),
+  "shade-18": rgba(#FFFFFF, 0.6),
+  "shade-19": rgba(#FFFFFF, 0.7),
+  "shade-20": rgba(#FFFFFF, 0.8),
+  "shade-21": rgba(#FFFFFF, 0.9)
+);
+
+$fci-ocean-blue: (
+  "base":         #316195,
+  "lighten-5":  #376da8,
+  "lighten-4":   #2c5786,
+  "lighten-3":   #274e77,
+  "lighten-2":   #224469,
+  "lighten-1":   #1e3b5a,
+  "darken-1":   #3277c3,
+  "darken-2":   #2e6eb4,
+  "darken-3":   #2a64a4,
+  "darken-4":   #265b95,
+  "darken-5":   #225185,
+  "accent-1":   #316195,
+  "accent-2":   #225185
+);
+$fci-capetown-green: (
+  "base":       #84BD00,
+  "lighten-5":  #97bf0d,
+  "lighten-4":  #97bf0d,
+  "lighten-3":  #97bf0d,
+  "lighten-2":  #97bf0d,
+  "lighten-1":  #97bf0d,
+  "darken-1":   #84BD00,
+  "darken-2":   #84BD00,
+  "darken-3":   #84BD00,
+  "darken-4":   #84BD00,
+  "darken-5":   #84BD00
+);
+$fci-dark-blue: (
+  "dark":      #181f4a
+);
+
+$fci:(
+  "osaka-plum":     #93117E,
+  "purple":   #13235B
+);
+
+$coupa-primary: ( //sky-blue
+  "base":              #1AB4FF,
+  "lighten-1":         #1ab4ff,
+  "lighten-2":         #33bcff,
+  "lighten-3":         #4dc5ff,
+  "lighten-4":         #66cdff,
+  "lighten-5":         #80d5ff,
+  "darken-1":          #00acff,
+  "darken-2":          #009be6,
+  "darken-3":          #0089cc,
+  "darken-4":          #0078b3,
+  "darken-5":          #006799
+
+);
+
+$coupa-secondary: ( //dark-blue
+  "base":              #2A4788,
+  "lighten-1":         #375aa6,
+  "lighten-2":         #3e65b9,
+  "lighten-3":         #4d72c4,
+  "lighten-4":         #6082ca,
+  "lighten-5":         #7391d0,
+  "darken-1":          #2b4680,
+  "darken-2":          #243b6d,
+  "darken-3":          #1e315a,
+  "darken-4":          #172646,
+  "darken-5":          #111c33
+
+);
+
+$coupa-tertiary:(
+
+  "navy-blue":         #315093,
+  "orange":            #F76825,
+  "blue":              #268ECD,
+  "dark-blue":         #304C7A,
+  "grey" :             #eeeeee
+);
+
+$sabb : (
+  "red": #DB0011,
+  "light-grey" : #B3B1B3,
+  "grey": #F0EFF0,
+  "grey-2": #ccc,
+  "dark-grey": #626469,
+  "dark-grey-2": #26323C,
+  "navy": #3e505d,
+  "navy-2": #26323c
+);
+
+
+$lloyds : (
+  "racing-green" : #024731,
+  "core-green" : #006A4D,
+  "apple-green" : #649C00,
+  "apple-green-2" : #77BA00,
+  "black": #323233,
+  "white" : #FFFFFF,
+  "blue": #2178B0,
+  "dark-blue": #0D5595,
+  "purple": #481468,
+  "red": #DC2A4D,
+  "orange": #D24702,
+  "teal": #025C69
+);
+
+$pagonxt : (
+  "core-red" : #EC0000,
+  "core-sky" : #CEDEE7,
+  "core-grey": #444444,
+  "core-black": #000000,
+  "core-white" : #FFFFFF,
+  "core-green" : #E0F2E1,
+  "core-pink": #FCCCCC,
+  "core-yellow": #FFF0C2,
+  "core-blue": #D2F0F2,
+  "core-white-two": #ECECEC,
+  "core-grey-two": #E8F3F6,
+
+  "secondary-grey": #767676,
+  "secondary-green": #63BA68,
+  "secondary-turqoise": #1BB3BC,
+  "secondary-yellow": #FFCC33, 
+  "secondary-blue": #1BB3BC,
+  "secondary-purple": #9E3667,
+  "secondary-pink": #CC0000,
+  "secondary-white": #767676,
+
+  "tertiary-white": #F5F9FB,
+);
+
+$agtb : (
+  "royal-blue" : #1F3454,
+  "royal-blue-80" : rgba(#1F3454, 0.8),
+  "royal-blue-50" : rgba(#1F3454, 0.5),
+  "royal-blue-30" : rgba(#1F3454, 0.3),
+  "royal-blue-10" : rgba(#1F3454, 0.1),
+  "sky-blue" : #1B73F2,
+  "sky-blue-80" : rgba(#1B73F2, 0.8),
+  "sky-blue-50" : rgba(#1B73F2, 0.5),
+  "sky-blue-30" : rgba(#1B73F2, 0.3),
+  "sky-blue-10" : rgba(#1B73F2, 0.1),
+  "onyx-black" : #323232,
+  "onyx-black-80" : rgba(#323232, 0.8),
+  "onyx-black-50" : rgba(#323232, 0.5),
+  "onyx-black-30" : rgba(#323232, 0.3),
+  "onyx-black-10" : rgba(#323232, 0.1),
+  "dark-grey" : #8B95A6,
+  "dark-grey-80" : rgba(#8B95A6, 0.8),
+  "dark-grey-50" : rgba(#8B95A6, 0.5),
+  "dark-grey-30" : rgba(#8B95A6, 0.3),
+  "dark-grey-10" : rgba(#8B95A6, 0.1),
+  "light-grey" : #EDF0F4,
+  "light-grey-80" : rgba(#EDF0F4, 0.8),
+  "light-grey-50" : rgba(#EDF0F4, 0.5),
+  "light-grey-30" : rgba(#EDF0F4, 0.3),
+  "light-grey-10" : rgba(#EDF0F4, 0.1),
+  "white" : #FFFFFF,
+  "success" : #41DB9C,
+  "warning" : #F2BF1B,
+  "error" : #EC6551,
+  "green" : #4FC97D,
+  "orange" : #F7B500,
+  "red" : #EB3E3E,
+  "login-grey": #262626
+);
+
+$ingv2: (
+  "orange":            #FF6200,
+  "white":             #FFFFFF,
+  "light-grey":        #A8A8A8,
+  "mid-grey":          #767676,
+  "background":        #F0F0F0,
+  "indigo":            #525199,
+  "indigo-lighten-1":  #9898C3,
+  "indigo-lighten-2":  #CBCCE1,
+  "indigo-lighten-3":  #E6E5F0,
+  "grey-lighten-1":    #767676,
+  "grey-lighten-2":    #A8A8A8,
+  "grey-lighten-3":    #E0E0E0,
+  "grey-lighten-4":    #EFEFEF,
+  "sky":               #60A6DA,
+  "sky-lighten-1":     #9FCAEA,
+  "sky-lighten-2":     #CEE5F5,
+  "sky-lighten-3":     #E8F3FA,
+  "fuchsia":           #AB0066,
+  "fuchsia-lighten-1": #CD66A4,
+  "fuchsia-lighten-2": #E5B8D2,
+  "fuchsia-lighten-3": #F3DCE9,
+  "lime":              #D0D93C,
+  "lime-lighten-1":    #E3EA8F,
+  "lime-lighten-2":    #F1F5C8,
+  "lime-lighten-3":    #F8FAE4,
+  "leaf":              #349651,
+  "leaf-lighten-1":    #83C197,
+  "leaf-lighten-2":    #C1E0CB,
+  "leaf-lighten-3":    #E1F0E6,
+  "minus":             #FF0000,
+  "plus":              #349651
+);
+
+$afrexim: (
+  "primary": #05DDB3, //light-green
+  "secondary": #FEE661, //yellow
+  "tertiary": #00a5b9, //teal
+  "primary-light": #baf5e9,
+  "secondary-light": #fff4b5,
+  "tertiary-light": #a0e0e8,
+  "black": #000000,
+  "white": #FFFFFF,
+  "grey": #636363,
+  "blue": #32B4E6,
+  "red": #E1004B,
+  "purple": #5F509B,
+  "orange": #EB9B00,
+  "lightest-grey": #F3F3F3,
+  "lighter-grey": #D9D9D9,
+  "light-grey": #B3B3B3
+);
+
+$colors: (
+  "materialize-red": $materialize-red,
+  "red": $red,
+  "pink": $pink,
+  "purple": $purple,
+  "demica-purple": $demica-purple,
+  "deep-purple": $deep-purple,
+  "indigo": $indigo,
+  "blue": $blue,
+  "demica-blue": $demica-blue,
+  "light-blue": $light-blue,
+  "cyan": $cyan,
+  "teal": $teal,
+  "green": $green,
+  "light-green": $light-green,
+  "bnp-paribas-green": $bnp-paribas-green,
+  "demica-green": $demica-green,
+  "lime": $lime,
+  "yellow": $yellow,
+  "demica-yellow": $demica-yellow,
+  "amber": $amber,
+  "orange": $orange,
+  "deep-orange": $deep-orange,
+  "brown": $brown,
+  "blue-grey": $blue-grey,
+  "demica-grey": $demica-grey,
+  "grey": $grey,
+  "shades": $shades,
+  "backgrounds": $backgrounds,
+  "basware-blue": $basware-blue,
+  "basware-grey": $basware-grey,
+  "ing": $ing,
+  "gib": $gib,
+  "bbva-primary": $bbva-primary,
+  "bbva-secondary": $bbva-secondary,
+  "bbva-tertiary": $bbva-tertiary,
+  "fci-ocean-blue": $fci-ocean-blue,
+  "fci-capetown-green": $fci-capetown-green,
+  "fci-dark-blue": $fci-dark-blue,
+  "fci": $fci,
+  "bmo-primary": $bmo-primary,
+  "bmo-blues": $bmo-blues,
+  "bmo-greys": $bmo-greys,
+  "coupa-primary": $coupa-primary,
+  "coupa-secondary": $coupa-secondary,
+  "coupa-tertiary": $coupa-tertiary,
+  "deutsche-primary" : $deutsche-primary,
+  "deutsche-secondary" : $deutsche-secondary,
+  "deutsche-tertiary" : $deutsche-tertiary,
+  "sabb" : $sabb,
+  "cbd" :  $cbd,
+  "sabb-primary":$sabb-primary,
+  "lloyds" : $lloyds,
+  "agtb" : $agtb,
+  "ingv2": $ingv2,
+  "afrexim": $afrexim,
+  "pagonxt": $pagonxt
+);
+
+
+// Color Classes - non needed at the moment
+@each $color_name, $color in $colors {
+  @each $color_type, $color_value in $color {
+    @if $color_type == "base" {
+      .#{$color_name} {
+        background-color: $color_value !important;
+      }
+      .#{$color_name}-text {
+        color: $color_value !important;
+      }
+    }
+    @else {
+      .#{$color_name}.#{$color_type} {
+        background-color: $color_value !important;
+      }
+      .#{$color_name}-text.text-#{$color_type} {
+        color: $color_value !important;
+      }
+    }
+  }
+}
+
+// usage: color("name_of_color", "type_of_color")
+// to avoid to repeating map-get($colors, ...)
+
+@function color($color, $type) {
+  @if map-has-key($colors, $color) {
+    $curr_color: map-get($colors, $color);
+    @if map-has-key($curr_color, $type) {
+      @return map-get($curr_color, $type);
+    }
+  }
+  @warn "Unknown `#{name}` in $colors.";
+  @return null;
+}
