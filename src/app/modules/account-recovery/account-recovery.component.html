@@ -5,28 +5,48 @@
           <div class="alert alert-info" role="alert">
             Please fill in this form and an email will be sent to you with the details to access your account again. It may take 5-10 minutes before you receive this email.
           </div>
-  
-        <div class="radio-buttons">
-            <!-- radio-button is a directive -->
-          <!-- <radio-button
-            tabindex="1"
-            value="'FORGOT_USERNAME'">
-            I forgot my username
-          </radio-button>
-          <radio-button
-            tabindex="2"
-            value="'FORGOT_PASSWORD'">
-            I forgot my password
-          </radio-button> -->
+
+          <div class="radio-buttons">
+            <input
+              type="radio"
+              ng-tabindex="1"
+              class="ng-pristine ng-untouched ng-valid ng-isolate-scope ng-not-empty"
+              (click)="recovery('FORGOT_USERNAME')"
+              name="recovery"
+              value="FORGOT_USERNAME"
+            >
+
+            <span class="check hard_disable"></span>
+            <label class="hard_disable">
+               I forgot my username
+            </label>
+
+            <input
+              type="radio"
+              ng-tabindex="2"
+              class="ng-pristine ng-untouched ng-valid ng-isolate-scope ng-not-empty"
+              name="recovery"
+              value="FORGOT_PASSWORD"
+              (click)="recovery('FORGOT_PASSWORD')"
+            >
+            <span class="check hard_disable"></span>
+            <label class="hard_disable">
+              I forgot my password
+           </label>
+
+
+          </div>
+
+          <app-forgot-password *ngIf="action=='FORGOT_PASSWORD'"></app-forgot-password>
+          <app-forgot-username *ngIf="action=='FORGOT_USERNAME'"></app-forgot-username>
         </div>
-  
-        <div ng-include="'app/components/account-recovery/partials/_forgot-password.html'"></div>
-        <div ng-include="'app/components/account-recovery/partials/_forgot-username.html'"></div>
-  
+
+
+
       </div>
-    </div>
-    <div class="login-image"></div>
-  </div>
-  <div class="login-footer">
+  <div class="login-image"></div>
+</div>
+
+<div class="login-footer">
     <app-footer></app-footer>
-  </div>
+</div>

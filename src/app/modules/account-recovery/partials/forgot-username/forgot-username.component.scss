@@ -1,0 +1,59 @@
+@import "../../../../../styles/variables";
+@import "../../../../../styles/mixins";
+
+.btn {
+  white-space: normal;
+  width: 100%;
+  margin-bottom: 10px;
+  text-transform: $login-btn-text-transform;
+  background-color: $login-btn-bg-color;
+}
+.btn-primary {
+  color: $login-second-button-color !important;
+  border-color: $login-second-button-border-color !important;
+  background-color: $login-second-button-backgroud-color !important;
+  &:hover {
+    border-color: $login-second-button-border-color !important;
+  }
+}
+.btn-secondary {
+  color: $login-first-button-color !important;
+  border-color: $login-first-button-color !important;
+  background-color: $login-first-button-backgroud-color !important;
+  &:hover {
+    border-color: $login-first-button-color !important;
+  }
+}
+
+label {
+  color: $login-label-color;
+  font-weight: normal;
+  font-size: 15px;
+  padding-left: 5px;
+}
+
+.g-recaptcha > div {
+  margin: auto;
+}
+
+.demica-login-input {
+  display: inline-block;
+  width: 100%;
+  font-size: 10px;
+  padding: 6px 10px;
+  border: 1px solid $login-input-border-color;
+  border-radius: $input-radius !important;
+  background-color: $login-input-background-color !important;
+  // -webkit-box-shadow: 0 0 0 30px white inset;
+
+  &:focus {
+    outline: none;
+    border: 1px solid $primary-color;
+  }
+}
+
+.p-recaptcha{
+  width: 302px;
+  height: 77px;
+  margin: 6px auto;
+}

@@ -1,0 +1,73 @@
+<form
+  name="forgotUsername"
+  [formGroup]="fg"
+>
+  <div class="form-group">
+    <label
+      for="username"
+      >email</label>
+    <input
+      required
+      type="text"
+      class="form-control demica-login-input"
+      id="username"
+      name="username"
+      formControlName="username"
+    >
+
+    <div
+      ng-messages="forgotUsername.email.$error"
+      ng-if="forgotUsername.email.$touched"
+      role="alert">
+      <div class="login-errorMsg">
+
+      </div>
+      <div class="login-errorMsg" *ngIf="false">
+        fields errors mandatory
+      </div>
+    </div>
+  </div>
+
+  <p class="p-recaptcha">
+
+    <re-captcha
+      (resolved)="resolved($event)"
+      (error)="errored($event)"
+      errorMode="handled"
+      formControlName="recaptcha"
+    ></re-captcha>
+
+
+  </p>
+
+  <p >
+    <button
+      type="submit"
+      class="btn btn-primary"
+      [disabled]="fg.invalid"
+      >Send Username Reminder
+    </button>
+    <button
+      type="button"
+      class="btn btn-secondary"
+      >cancel
+    </button>
+  </p>
+  <div
+    class="alert alert-info"
+    role="alert"
+    *ngIf="false"
+  >
+    <p >username Reminder Sent</p>
+  </div>
+<!--  <div
+    class="alert alert-danger"
+    role="alert"
+  >
+    <p>views account Recovery username Reminder Error</p>
+
+    <p>
+
+    </p>
+  </div>-->
+</form>

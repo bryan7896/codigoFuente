@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./account-recovery.component.scss']
 })
 export class AccountRecoveryComponent implements OnInit {
+  type=false;
+  action ='';
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  recovery(value:string) {
+    this.action = value;
   }
 
 }
